@@ -9,7 +9,10 @@
 		"test": "ng test",
 		"serve:ssr:portfolio": "node dist/portfolio/server/server.mjs",
 		"lint": "ng lint",
-		"prettier:write": "prettier --config ./.prettierrc --write ."
+		"prettier:write": "prettier --config ./.prettierrc --write .",
+		"stylelint:lint": "stylelint '**/*.{css,scss,less}'",
+		"stylelint:fix": "stylelint '**/*.{css,scss,less}' --fix",
+		"eslint:lint": "eslint \"**/*.{js,jsx,ts,tsx}\""
 	},
 	"private": true,
 	"dependencies": {

@@ -5,6 +5,33 @@ const angular = require("angular-eslint");
 
 module.exports = tseslint.config(
 	{
+		ignores: [
+			"dist/**/*",
+			"node_modules/**/*",
+			"tmp/**/*",
+			"out-tsc/**/*",
+			"bazel-out/**/*",
+			".idea/**/*",
+			".project",
+			".classpath",
+			".c9/**/*",
+			"*.launch",
+			".settings/**/*",
+			"*.sublime-workspace",
+			".history/**/*",
+			".angular/cache/**/*",
+			".sass-cache/**/*",
+			"connect.lock",
+			"coverage/**/*",
+			"libpeerconnection.log",
+			"testem.log",
+			"typings/**/*",
+			".DS_Store",
+			"Thumbs.db",
+			"*.md",
+		],
+	},
+	{
 		files: ["**/*.ts"],
 		extends: [
 			eslint.configs.recommended,
