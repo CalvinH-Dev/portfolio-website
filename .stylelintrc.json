@@ -1,12 +1,17 @@
 {
-	"extends": ["stylelint-config-standard-scss"],
-	"rules": {
-		"no-empty-source": null
-	},
-	"overrides": [
-		{
-			"files": ["*.html", "**/*.html"],
-			"customSyntax": "postcss-html"
-		}
-	]
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "no-empty-source": null
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.html",
+        "**/*.html"
+      ],
+      "customSyntax": "postcss-html"
+    }
+  ]
 }

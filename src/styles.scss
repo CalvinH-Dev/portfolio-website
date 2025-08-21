@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@use "global-styles/fonts";
+@use "global-styles/reset";
+@use "global-styles/variables";
+
+body {
+	font-family: Quantico, sans-serif;
+	font-weight: 400;
+	height: 100dvh;
+}
+
+main {
+	height: 100%;
+	width: 100%;
+}
+
+section {
+	width: 100vw;
+	height: 100%;
+	padding-inline: clamp(24px, 24px, 24px);
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: var(--fs-h1);
+}
+
+h2 {
+	font-size: var(--fs-h2);
+}
+
+h3 {
+	font-size: var(--fs-h3);
+}
+
+h4 {
+	font-size: var(--fs-h4);
+}
+
+h5 {
+	font-size: var(--fs-h5);
+}
+
+h6 {
+	font-size: var(--fs-h6);
+}
