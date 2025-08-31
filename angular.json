@@ -67,6 +67,7 @@
 							"buildTarget": "portfolio:build:production"
 						},
 						"development": {
+							"host": "0.0.0.0",
 							"buildTarget": "portfolio:build:development"
 						}
 					},

@@ -1,0 +1,24 @@
+:host {
+	display: contents;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	height: var(--header-heigth);
+	background-color: blue;
+	padding-block: 1rem;
+}
+
+footer {
+	height: 25vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding-block: 2rem;
+}
+
+footer img {
+	height: 20px;
+}

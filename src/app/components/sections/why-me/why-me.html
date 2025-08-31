@@ -1,0 +1,14 @@
+<h2>Why me</h2>
+<p>
+	Write some information about yourself that is IT related. Why are you passionate about coding?
+	What is your source of inspiration for improving your programming skills?
+</p>
+<div class="features">
+	<h3>I am:</h3>
+	@for (feature of featureList; track $index) {
+		<div class="image-list">
+			<img [src]="feature.imgSrc" alt="" />
+			<span>{{ feature.text }}</span>
+		</div>
+	}
+</div>

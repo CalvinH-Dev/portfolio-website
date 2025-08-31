@@ -6,18 +6,22 @@
 body {
 	font-family: Quantico, sans-serif;
 	font-weight: 400;
-	height: 100dvh;
+	min-height: 100svh;
 }
 
 main {
 	height: 100%;
-	width: 100%;
 }
 
 section {
-	width: 100vw;
 	height: 100%;
-	padding-inline: clamp(24px, 24px, 24px);
+	padding-inline: var(--padding-inline-section);
+	padding-block: var(--padding-block-section);
+}
+
+header,
+footer {
+	padding-inline: var(--padding-inline-section);
 }
 
 h1 {
