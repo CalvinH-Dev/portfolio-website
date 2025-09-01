@@ -1,1 +1,4 @@
-<nav><span>1 text</span><button>Hier Menü</button></nav>
+<nav>
+	<span>1 text</span><app-menu-button [(menuOpen)]="menuOpen" />
+	<app-menu [(menuOpen)]="menuOpen" />
+</nav>

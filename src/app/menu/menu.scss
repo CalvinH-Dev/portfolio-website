@@ -1,0 +1,27 @@
+:host {
+	display: contents;
+}
+
+.menu {
+	padding-block: 2rem;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: green;
+	top: var(--header-height);
+	translate: 0 -45vh;
+	left: 0;
+	height: 30svh;
+	width: 100%;
+	transition: translate 225ms;
+}
+
+.menu.active {
+	translate: 0 0;
+}
+
+a {
+	color: red;
+}

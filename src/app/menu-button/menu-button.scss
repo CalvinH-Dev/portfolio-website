@@ -1,0 +1,37 @@
+.menu-btn {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 8px;
+}
+
+.menu-line {
+	--multiplier: 1;
+
+	width: 100%;
+	height: 2px;
+	background-color: black;
+	transition:
+		rotate 225ms,
+		scale 225ms;
+}
+
+.active .menu-line {
+	position: absolute;
+}
+
+.active .line-1 {
+	rotate: -45deg;
+}
+
+.active .line-2 {
+	scale: 0 1;
+}
+
+.active .line-3 {
+	rotate: 45deg;
+}
