@@ -1,0 +1,29 @@
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 2rem;
+	background-color: lightblue;
+}
+
+h2 {
+	align-self: start;
+}
+
+.special {
+	align-self: start;
+	color: green;
+}
+
+.contact-items {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	align-self: start;
+	row-gap: 0.5rem;
+}
+
+.contact-item {
+	display: flex;
+	column-gap: 2rem;
+}

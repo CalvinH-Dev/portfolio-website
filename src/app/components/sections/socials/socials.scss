@@ -1,0 +1,22 @@
+:host {
+	display: contents;
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 2rem;
+	background-color: black;
+}
+
+.img-container {
+	width: 30px;
+	aspect-ratio: 1;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}

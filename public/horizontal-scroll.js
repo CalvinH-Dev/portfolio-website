@@ -1,6 +1,6 @@
 // window.addEventListener(
 // 	"wheel",
-// 	function (e) {
+// 	(e) => {
 // 		e.preventDefault();
 // 		window.scrollBy({
 // 			left: e.deltaY * 3,

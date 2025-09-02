@@ -1,0 +1,18 @@
+<section>
+	<h2>My Skill Set</h2>
+	<p>
+		A short introduction of your skills. Highlight your experience of working on different projects
+		using different front-end technologies and emphasise your openness to learning and adapting to
+		new technologies.
+	</p>
+	<div class="img-grid">
+		@for (img of images; track $index) {
+			<div class="img-container"><img [src]="img.src" [alt]="img.alt" /></div>
+		}
+	</div>
+	<p>
+		Show that you are motivated to improve your skills, implement innovative solutions and stay
+		abreast of new technologies.
+	</p>
+	<button class="primary"><span>Let's Talk</span></button>
+</section>

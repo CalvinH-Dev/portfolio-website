@@ -8,6 +8,7 @@ header {
 	height: var(--header-height);
 	background-color: blue;
 	padding-block: 1rem;
+	z-index: 1;
 }
 
 footer {

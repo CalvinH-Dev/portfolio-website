@@ -48,3 +48,60 @@ h5 {
 h6 {
 	font-size: var(--fs-h6);
 }
+
+button:is(.primary, .secondary) {
+	padding: 13px 30px;
+	border-radius: 30px;
+}
+
+button.primary {
+	background-color: #b5e93b;
+
+	> span {
+		color: #252525;
+		font-size: 14px;
+		font-weight: 400;
+	}
+}
+
+button.primary:hover {
+	background: linear-gradient(to bottom, #b5e93b, #547800);
+}
+
+button.primary:disabled {
+	background-color: #9e9d9d;
+
+	> span {
+		color: #4a4a4a;
+	}
+}
+
+button.secondary {
+	background-color: transparent;
+	border: 1px solid #b5e93b;
+	border-radius: 30px;
+
+	> span {
+		color: #b5e93b;
+		font-size: 14px;
+		font-weight: 400;
+	}
+}
+
+button.secondary:hover {
+	border-color: #d3ed97;
+	background-color: #b5e93b33;
+
+	> span {
+		color: #fffdfd;
+	}
+}
+
+button.secondary:disabled {
+	border-color: #827b7b;
+	background-color: transparent;
+
+	> span {
+		color: #827b7b;
+	}
+}

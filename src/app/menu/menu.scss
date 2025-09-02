@@ -10,16 +10,18 @@
 	align-items: center;
 	justify-content: space-between;
 	background-color: green;
-	top: var(--header-height);
+	top: calc(var(--header-height) - 1px);
 	translate: 0 -45vh;
 	left: 0;
 	height: 30svh;
 	width: 100%;
 	transition: translate 225ms;
+	z-index: -1;
 }
 
 .menu.active {
 	translate: 0 0;
+	z-index: auto;
 }
 
 a {
