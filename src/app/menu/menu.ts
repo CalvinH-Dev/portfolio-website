@@ -8,4 +8,8 @@ import { Component, model } from "@angular/core";
 })
 export class Menu {
 	menuOpen = model<boolean>(false);
+
+	closeMenu() {
+		this.menuOpen.update(() => false);
+	}
 }

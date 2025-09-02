@@ -3,6 +3,10 @@
 @use "global-styles/reset";
 @use "global-styles/variables";
 
+html {
+	scroll-padding-top: var(--header-height);
+}
+
 body {
 	font-family: Quantico, sans-serif;
 	font-weight: 400;
