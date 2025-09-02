@@ -1,19 +1,15 @@
 import { Component } from "@angular/core";
-
-interface Feature {
-	text: string;
-	imgSrc: string;
-	alt: string;
-}
+import { Feature } from "app/interfaces/feature";
+import { Contact } from "../contact/contact";
 
 const featureList: Feature[] = [
-	{ text: "open to relocate", imgSrc: "", alt: "" },
-	{ text: "open to work remote", imgSrc: "", alt: "" },
+	{ text: "open to relocate", imgSrc: "img/why-me/relocate.png", alt: "" },
+	{ text: "open to work remote", imgSrc: "img/why-me/remote.png", alt: "" },
 ];
 
 @Component({
 	selector: "app-why-me",
-	imports: [],
+	imports: [Contact],
 	templateUrl: "./why-me.html",
 	styleUrl: "./why-me.scss",
 })
