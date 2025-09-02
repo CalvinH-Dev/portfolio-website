@@ -41,7 +41,10 @@ const projects: ProjectInterface[] = [
 	styleUrl: "./my-work.scss",
 })
 export class MyWork {
+	activeIdx = 0;
 	projects: ProjectInterface[] = projects;
 
-	getActive(event: any) {}
+	setActiveProject(index: number) {
+		this.activeIdx = index;
+	}
 }

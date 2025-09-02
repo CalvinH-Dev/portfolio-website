@@ -8,7 +8,8 @@ import { ProjectInterface } from "app/interfaces/project";
 	styleUrl: "./project.scss",
 })
 export class Project {
-	showAll = false;
+	isActive = input<boolean>();
+	setActive = output();
 	index = input<number>(1);
 	projectInfo = input<ProjectInterface>({
 		name: "",
@@ -20,13 +21,7 @@ export class Project {
 		pageSrc: "",
 	});
 
-	active = output<number>();
-
 	onShowMore() {
-		console.log(this.showAll);
-		this.showAll = !this.showAll;
-		if (this.showAll) {
-			this.active.emit(this.index());
-		}
+		this.setActive.emit();
 	}
 }

@@ -1,0 +1,12 @@
+<section>
+	<div class="colleague-slider" #slider>
+		<div class="colleague-item"><div class="colleague-card" #card></div></div>
+		<div class="colleague-item"><div class="colleague-card" #card></div></div>
+		<div class="colleague-item"><div class="colleague-card" #card></div></div>
+	</div>
+	<div class="slider-state">
+		@for (colleague of colleagues; track $index) {
+			<div class="state" [class.active]="activeSlideIdx === $index"></div>
+		}
+	</div>
+</section>
