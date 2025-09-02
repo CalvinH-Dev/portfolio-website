@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-socials',
-  imports: [],
-  templateUrl: './socials.html',
-  styleUrl: './socials.scss'
+	selector: "app-socials",
+	imports: [],
+	templateUrl: "./socials.html",
+	styleUrl: "./socials.scss",
 })
-export class Socials {
-
-}
+export class Socials {}
