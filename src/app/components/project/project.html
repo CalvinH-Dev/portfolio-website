@@ -1,0 +1,30 @@
+<div class="grid" [class.active]="showAll">
+	<div class="project">
+		<div class="show">
+			<button (mousedown)="onShowMore()"><span>Show More...</span></button>
+		</div>
+		<div class="name">
+			<h2>{{ index() }}</h2>
+			<h3>Project {{ projectInfo().name }}</h3>
+		</div>
+		<ul>
+			<li class="about">
+				<p>{{ projectInfo().about }}</p>
+			</li>
+			<li class="tech">
+				<p>{{ projectInfo().tech }}</p>
+			</li>
+			<li class="learning">
+				<p>{{ projectInfo().learning }}</p>
+			</li>
+		</ul>
+
+		<div class="img-container">
+			<img [src]="projectInfo().imageSrc" alt="" />
+		</div>
+		<div class="buttons">
+			<button class="secondary"><a [href]="projectInfo().githubSrc">Github</a></button>
+			<button class="primary"><a [href]="projectInfo().pageSrc">Live Test</a></button>
+		</div>
+	</div>
+</div>

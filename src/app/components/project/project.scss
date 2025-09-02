@@ -1,0 +1,38 @@
+.grid {
+	height: 100%;
+	display: grid;
+	grid-template-rows: 0.2fr;
+	grid-template-columns: 100%;
+	transition: grid-template-rows 1s;
+}
+
+.grid.active {
+	grid-template-rows: 1fr;
+}
+
+.project {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: var(--accent-color-2);
+	border-radius: 30px;
+	padding: 1.5rem;
+	padding-bottom: 3rem;
+	position: relative;
+}
+
+.show {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	padding: 0.5rem;
+}
+
+.d-none {
+	display: none;
+}

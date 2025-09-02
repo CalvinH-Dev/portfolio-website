@@ -7,11 +7,11 @@
 		enthusiasm for improving your skills.
 	</p>
 	<div class="contact-items">
-		<div class="contact-item">
-			<img src="img/contact-form/email.png" alt="" /><a href="">test&#64;gmail.com</a>
+		<div class="contact-item" (mouseenter)="onMailEnter()" (mouseleave)="onMailLeave()">
+			<app-mail [hovered]="mailHovered" /><a href="">test&#64;gmail.com</a>
 		</div>
-		<div class="contact-item" style="translate: 9px 0">
-			<img src="img/contact-form/phone.png" alt="" /><a href="">0123203123012302</a>
+		<div class="contact-item" (mouseenter)="onPhoneEnter()" (mouseleave)="onPhoneLeave()">
+			<app-phone [hovered]="phoneHovered" /><a href="">0123203123012302</a>
 		</div>
 	</div>
 	<app-contact-inputs />

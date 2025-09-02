@@ -20,11 +20,17 @@ h2 {
 	align-items: start;
 	align-self: start;
 	row-gap: 0.5rem;
+	cursor: pointer;
 }
 
 .contact-item {
 	display: flex;
-	column-gap: 2rem;
+	align-items: start;
+	column-gap: 0.5rem;
+
+	&:hover a {
+		color: var(--accent-color);
+	}
 
 	> a:active {
 		color: #b5e93b;

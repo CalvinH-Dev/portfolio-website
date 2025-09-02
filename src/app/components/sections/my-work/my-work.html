@@ -1,0 +1,5 @@
+<section>
+	@for (project of projects; track $index) {
+		<app-project [index]="$index" [projectInfo]="project" (active)="getActive($event)" />
+	}
+</section>
