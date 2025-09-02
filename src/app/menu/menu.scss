@@ -9,7 +9,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	background-color: green;
+	background: var(--menu-color);
 	top: calc(var(--header-height) - 1px);
 	translate: 0 -45vh;
 	left: 0;

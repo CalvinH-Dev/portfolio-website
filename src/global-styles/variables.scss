@@ -8,7 +8,14 @@ html {
 	--fs-h4: clamp(24px, 24px, 24px);
 	--fs-h5: clamp(22px, 22px, 22px);
 	--fs-h6: clamp(20px, 20px, 20px);
+	--fs-button: clamp(14px, 14px, 14px);
+	--fs-input: clamp(14px, 14px, 14px);
 	--padding-inline-section: clamp(24px, 24px, 24px);
 	--padding-block-section: clamp(24px, 24px, 24px);
 	--header-height: 10vh;
+	--bg-color: #252525;
+	--accent-color: #b5e93b;
+	--header-color: linear-gradient(to bottom, #b5e93b, #547800);
+	--menu-color: linear-gradient(to bottom, #b5e93b, #547800);
+	--text-color: #fffdfd;
 }

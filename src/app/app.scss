@@ -6,9 +6,13 @@ header {
 	position: fixed;
 	width: 100%;
 	height: var(--header-height);
-	background-color: blue;
+	background: var(--header-color);
 	padding-block: 1rem;
 	z-index: 1;
+}
+
+header:has(.active) {
+	background: var(--accent-color);
 }
 
 footer {

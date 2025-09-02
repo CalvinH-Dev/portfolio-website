@@ -3,7 +3,6 @@ section {
 	flex-direction: column;
 	align-items: center;
 	row-gap: 2rem;
-	background-color: lightblue;
 }
 
 h2 {
@@ -12,7 +11,7 @@ h2 {
 
 .special {
 	align-self: start;
-	color: green;
+	color: #d3ed97;
 }
 
 .contact-items {
@@ -26,4 +25,8 @@ h2 {
 .contact-item {
 	display: flex;
 	column-gap: 2rem;
+
+	> a:active {
+		color: #b5e93b;
+	}
 }

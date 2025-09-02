@@ -7,6 +7,8 @@ body {
 	font-family: Quantico, sans-serif;
 	font-weight: 400;
 	min-height: 100svh;
+	background-color: var(--bg-color);
+	color: var(--text-color);
 }
 
 main {
@@ -30,7 +32,15 @@ h1 {
 }
 
 h2 {
+	--shadow-color: #b5e93b;
+
 	font-size: var(--fs-h2);
+	color: var(--bg-color);
+	text-shadow:
+		1px 1px 1px var(--shadow-color),
+		-1px 1px 1px var(--shadow-color),
+		1px -1px 1px var(--shadow-color),
+		-1px -1px 1px var(--shadow-color);
 }
 
 h3 {
@@ -59,20 +69,8 @@ button.primary {
 
 	> span {
 		color: #252525;
-		font-size: 14px;
+		font-size: var(--fs-button);
 		font-weight: 400;
-	}
-}
-
-button.primary:hover {
-	background: linear-gradient(to bottom, #b5e93b, #547800);
-}
-
-button.primary:disabled {
-	background-color: #9e9d9d;
-
-	> span {
-		color: #4a4a4a;
 	}
 }
 
@@ -83,12 +81,16 @@ button.secondary {
 
 	> span {
 		color: #b5e93b;
-		font-size: 14px;
+		font-size: var(--fs-button);
 		font-weight: 400;
 	}
 }
 
-button.secondary:hover {
+button.primary:hover:not(:disabled) {
+	background: linear-gradient(to bottom, #b5e93b, #547800);
+}
+
+button.secondary:hover:not(:disabled) {
 	border-color: #d3ed97;
 	background-color: #b5e93b33;
 
@@ -97,7 +99,17 @@ button.secondary:hover {
 	}
 }
 
+button.primary:disabled {
+	cursor: auto;
+	background-color: #9e9d9d;
+
+	> span {
+		color: #4a4a4a;
+	}
+}
+
 button.secondary:disabled {
+	cursor: auto;
 	border-color: #827b7b;
 	background-color: transparent;
 
