@@ -2,8 +2,28 @@
 	display: contents;
 }
 
-input {
-	border: 1px solid black;
+input:not([type="checkbox"]) {
+	width: 100%;
+	color: #fffdfd;
+	font-weight: 400;
+	font-size: 14px;
+	border: 1px solid #b5e93b;
+	border-radius: 30px;
+	padding: 25px 21px;
+
+	&:user-invalid {
+		border-color: #fd2e12;
+		color: #fd2e12;
+	}
+
+	&:focus {
+		outline: none;
+		border: 1px solid #b5e93b;
+	}
+
+	&::placeholder {
+		color: #d3ed97;
+	}
 }
 
 .send-message {
