@@ -1,5 +1,5 @@
 import { Component, model } from "@angular/core";
-import { MenuButton } from "app/menu-button/menu-button";
+import { MenuButton } from "app/components/menu-button/menu-button";
 
 @Component({
 	selector: "app-header",
