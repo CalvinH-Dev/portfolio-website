@@ -38,6 +38,7 @@ h1 {
 h2 {
 	--shadow-color: #b5e93b;
 
+	align-self: start;
 	font-size: var(--fs-h2);
 	color: var(--bg-color);
 	text-shadow:
@@ -70,8 +71,9 @@ button:is(.primary, .secondary) {
 
 button.primary {
 	background-color: #b5e93b;
+	font-family: inherit;
 
-	& span {
+	& :is(span, a) {
 		color: #252525;
 		font-size: var(--fs-button);
 		font-weight: 400;
@@ -82,8 +84,9 @@ button.secondary {
 	background-color: transparent;
 	border: 1px solid #b5e93b;
 	border-radius: 30px;
+	font-family: inherit;
 
-	& span {
+	& :is(span, a) {
 		color: #b5e93b;
 		font-size: var(--fs-button);
 		font-weight: 400;
@@ -98,7 +101,7 @@ button.secondary:hover:not(:disabled) {
 	border-color: #d3ed97;
 	background-color: #b5e93b33;
 
-	& span {
+	& :is(span, a) {
 		color: #fffdfd;
 	}
 }
@@ -107,7 +110,7 @@ button.primary:disabled {
 	cursor: auto;
 	background-color: #9e9d9d;
 
-	& span {
+	& :is(span, a) {
 		color: #4a4a4a;
 	}
 }
@@ -117,7 +120,7 @@ button.secondary:disabled {
 	border-color: #827b7b;
 	background-color: transparent;
 
-	& span {
+	& :is(span, a) {
 		color: #827b7b;
 	}
 }

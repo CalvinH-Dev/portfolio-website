@@ -8,10 +8,10 @@
 	</p>
 	<div class="contact-items">
 		<div class="contact-item" (mouseenter)="onMailEnter()" (mouseleave)="onMailLeave()">
-			<app-mail [hovered]="mailHovered" /><a href="">test&#64;gmail.com</a>
+			<app-mail [hovered]="mailHovered" /> <span>E-Mail:</span> <a href="">test&#64;gmail.com</a>
 		</div>
 		<div class="contact-item" (mouseenter)="onPhoneEnter()" (mouseleave)="onPhoneLeave()">
-			<app-phone [hovered]="phoneHovered" /><a href="">0123203123012302</a>
+			<app-phone [hovered]="phoneHovered" /> <span>Tel:</span> <a href="">0123203123012302</a>
 		</div>
 	</div>
 	<app-contact-inputs />
