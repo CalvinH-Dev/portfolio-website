@@ -2,6 +2,7 @@
 @use "global-styles/fonts";
 @use "global-styles/reset";
 @use "global-styles/variables";
+@use "global-styles/mixins";
 
 html {
 	scroll-padding-top: var(--header-height);
@@ -12,7 +13,7 @@ body {
 	font-weight: 400;
 	min-height: 100svh;
 	background-color: var(--bg-color);
-	color: var(--text-color);
+	color: var(--text-color-white);
 }
 
 main {
@@ -41,11 +42,8 @@ h2 {
 	align-self: start;
 	font-size: var(--fs-h2);
 	color: var(--bg-color);
-	text-shadow:
-		1px 1px 1px var(--shadow-color),
-		-1px 1px 1px var(--shadow-color),
-		1px -1px 1px var(--shadow-color),
-		-1px -1px 1px var(--shadow-color);
+
+	@include mixins.multi-shadow(var(--shadow-color));
 }
 
 h3 {

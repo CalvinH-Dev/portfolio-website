@@ -7,7 +7,7 @@ import { Component, model } from "@angular/core";
 	styleUrl: "./menu-button.scss",
 })
 export class MenuButton {
-	menuOpen = model<boolean>(false);
+	menuOpen = model<boolean>();
 
 	onClick() {
 		this.menuOpen.update((value) => !value);

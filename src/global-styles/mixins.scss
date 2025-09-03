@@ -1,0 +1,7 @@
+@mixin multi-shadow($color, $stroke: 1px) {
+	text-shadow:
+		1px 1px $stroke $color,
+		-1px 1px $stroke $color,
+		1px -1px $stroke $color,
+		-1px -1px $stroke $color;
+}

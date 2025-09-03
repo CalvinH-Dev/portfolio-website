@@ -1,0 +1,27 @@
+:host {
+	display: contents;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	height: var(--header-height);
+	background: var(--header-color);
+	padding-block: 1rem;
+	z-index: var(--fixed-z-index);
+	box-shadow: 0 1px 10px black;
+}
+
+header:has(.active) {
+	background: var(--accent-color);
+	box-shadow: none;
+}
+
+nav {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}

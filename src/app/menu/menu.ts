@@ -1,4 +1,6 @@
-import { Component, model } from "@angular/core";
+import { Component, inject, model } from "@angular/core";
+import { Language } from "app/interfaces/languages";
+import { LanguageService } from "app/services/language";
 
 @Component({
 	selector: "app-menu",
@@ -7,9 +9,15 @@ import { Component, model } from "@angular/core";
 	styleUrl: "./menu.scss",
 })
 export class Menu {
-	menuOpen = model<boolean>(false);
+	menuOpen = model<boolean>();
+	languageService = inject(LanguageService);
+	language = this.languageService.getLanguage();
 
 	closeMenu() {
 		this.menuOpen.update(() => false);
+	}
+
+	onLanguageChange(language: Language) {
+		this.languageService.setLanguage(language);
 	}
 }

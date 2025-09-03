@@ -1,9 +1,11 @@
+@use "../../global-styles/mixins";
+
 :host {
 	display: contents;
 }
 
 .menu {
-	padding-block: 2rem;
+	padding-block: 1rem;
 	position: fixed;
 	display: flex;
 	flex-direction: column;
@@ -16,14 +18,42 @@
 	height: 30svh;
 	width: 100%;
 	transition: translate 225ms;
-	z-index: -1;
+	z-index: 50;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	box-shadow: 0 1px 10px black;
 }
 
 .menu.active {
 	translate: 0 0;
-	z-index: auto;
+	z-index: 50;
 }
 
-a {
-	color: red;
+a,
+button {
+	font-family: inherit;
+	font-size: var(--fs-menu-a);
+	color: var(--text-color-gray);
+}
+
+a:hover,
+a.active,
+button:hover,
+button.active {
+	color: var(--accent-color);
+
+	@include mixins.multi-shadow(var(--text-color-gray));
+}
+
+.languages {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 0.5rem;
+}
+
+.divider {
+	width: 1px;
+	height: 66%;
+	border: 1px solid var(--text-color-gray);
 }

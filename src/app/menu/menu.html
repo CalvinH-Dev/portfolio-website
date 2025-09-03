@@ -3,4 +3,9 @@
 	<a href="#skills" (click)="closeMenu()">My Skill Set</a>
 	<a href="#projects" (click)="closeMenu()">My Work</a>
 	<a href="#contact" (click)="closeMenu()">Contact me</a>
+	<div class="languages">
+		<button (click)="onLanguageChange('EN')" [class.active]="language() === 'EN'">EN</button>
+		<div class="divider"></div>
+		<button (click)="onLanguageChange('DE')" [class.active]="language() === 'DE'">DE</button>
+	</div>
 </div>
