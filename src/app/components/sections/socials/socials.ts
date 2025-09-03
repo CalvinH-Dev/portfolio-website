@@ -1,8 +1,9 @@
 import { Component } from "@angular/core";
+import { Languages } from "app/components/languages/languages";
 
 @Component({
 	selector: "app-socials",
-	imports: [],
+	imports: [Languages],
 	templateUrl: "./socials.html",
 	styleUrl: "./socials.scss",
 })

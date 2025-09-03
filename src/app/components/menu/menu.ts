@@ -1,10 +1,11 @@
 import { Component, inject, model } from "@angular/core";
 import { Language } from "app/interfaces/languages";
 import { LanguageService } from "app/services/language";
+import { Languages } from "../languages/languages";
 
 @Component({
 	selector: "app-menu",
-	imports: [],
+	imports: [Languages],
 	templateUrl: "./menu.html",
 	styleUrl: "./menu.scss",
 })

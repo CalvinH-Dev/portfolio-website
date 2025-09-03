@@ -1,8 +1,37 @@
+@use "../../../../global-styles/mixins";
+
 section {
 	padding-block: calc(var(--header-height) + var(--padding-block-section));
 	height: 100svh;
+
+	@include mixins.desktop {
+		position: relative;
+		padding-block: var(--padding-block-section);
+		padding-inline: var(--padding-inline-section);
+		flex: 0 0 100vw;
+		height: 100vh;
+	}
 }
 
 :host {
 	display: contents;
+}
+
+.text {
+	@include mixins.desktop {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		row-gap: 2rem;
+		right: 33%;
+		bottom: 25vh;
+		margin: auto;
+	}
+}
+
+h1,
+h3 {
+	@include mixins.desktop {
+		text-align: right;
+	}
 }

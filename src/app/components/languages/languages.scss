@@ -1,0 +1,35 @@
+@use "../../../global-styles/mixins";
+
+.languages {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 0.5rem;
+}
+
+.divider {
+	width: 1px;
+	height: 1lh;
+	border: 1px solid var(--text-color-gray);
+}
+
+button {
+	font-family: inherit;
+	font-size: var(--fs-menu-a);
+	color: var(--text-color-gray);
+
+	@include mixins.desktop {
+		color: white;
+	}
+}
+
+button:hover,
+button.active {
+	color: var(--accent-color);
+
+	@include mixins.multi-shadow(var(--text-color-gray));
+
+	@include mixins.desktop {
+		text-shadow: none;
+	}
+}

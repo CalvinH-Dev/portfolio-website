@@ -1,11 +1,11 @@
-// window.addEventListener(
-// 	"wheel",
-// 	(e) => {
-// 		e.preventDefault();
-// 		window.scrollBy({
-// 			left: e.deltaY * 3,
-// 			top: 0,
-// 		});
-// 	},
-// 	{ passive: false },
-// );
+window.addEventListener(
+	"wheel",
+	(e) => {
+		e.preventDefault();
+		window.scrollBy({
+			left: e.deltaY * 3,
+			top: 0,
+		});
+	},
+	{ passive: false },
+);

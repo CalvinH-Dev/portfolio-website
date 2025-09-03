@@ -5,3 +5,15 @@
 		1px -1px $stroke $color,
 		-1px -1px $stroke $color;
 }
+
+@mixin desktop {
+	@media (width >= 1024px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (width >= 768px) and (width <= 1024px) {
+		@content;
+	}
+}

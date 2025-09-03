@@ -1,3 +1,5 @@
+@use "../../../../global-styles/mixins";
+
 :host {
 	display: contents;
 }
@@ -8,6 +10,15 @@ section {
 	align-items: center;
 	column-gap: 2rem;
 	background-color: var(--bg-color);
+
+	@include mixins.desktop {
+		position: fixed;
+		top: 0;
+		right: 10vw;
+		margin: auto;
+		height: auto;
+		background-color: transparent;
+	}
 }
 
 .img-container {
@@ -19,4 +30,12 @@ img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+}
+
+.languages {
+	display: none;
+
+	@include mixins.desktop {
+		display: initial;
+	}
 }

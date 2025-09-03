@@ -1,3 +1,5 @@
+@use "../../../global-styles/mixins";
+
 :host {
 	display: contents;
 }
@@ -10,11 +12,53 @@ header {
 	padding-block: 1rem;
 	z-index: var(--fixed-z-index);
 	box-shadow: 0 1px 10px black;
+
+	@include mixins.desktop {
+		display: none;
+	}
+}
+
+aside {
+	display: none;
+
+	@include mixins.desktop {
+		padding-block: var(--padding-block-section);
+		padding-inline: 2rem;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		// row-gap: 5rem;
+		background-color: var(--accent-color);
+		box-shadow: 0 1px 10px black;
+	}
+}
+
+a {
+	font-family: inherit;
+	font-size: var(--fs-menu-a);
+	color: var(--text-color-gray);
+	rotate: -90deg;
+}
+
+a:hover,
+a.active {
+	color: var(--accent-color);
+
+	@include mixins.multi-shadow(var(--text-color-gray));
 }
 
 header:has(.active) {
 	background: var(--accent-color);
 	box-shadow: none;
+}
+
+img {
+	height: 100px;
+	aspect-ratio: 1;
 }
 
 nav {
@@ -24,4 +68,11 @@ nav {
 	align-items: center;
 	height: 100%;
 	width: 100%;
+
+	@include mixins.desktop {
+		flex-direction: column;
+		justify-content: space-around;
+		padding-block: 12rem;
+		// row-gap: 5rem;
+	}
 }
