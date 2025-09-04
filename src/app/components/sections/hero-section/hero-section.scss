@@ -8,8 +8,8 @@ section {
 		position: relative;
 		padding-block: var(--padding-block-section);
 		padding-inline: var(--padding-inline-section);
-		flex: 0 0 100vw;
-		height: 100vh;
+		width: 100vw;
+		height: 100%;
 	}
 }
 

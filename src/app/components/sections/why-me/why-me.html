@@ -1,19 +1,28 @@
 <section>
 	<h2>Why me</h2>
-	<p>
-		Write some information about yourself that is IT related. Why are you passionate about coding?
-		What is your source of inspiration for improving your programming skills?
-	</p>
-	<div class="features">
-		<h3>I am:</h3>
-		@for (feature of featureList; track $index) {
-			<div class="image-list">
-				<img [src]="feature.imgSrc" alt="" />
-				<span>{{ feature.text }}</span>
+	<div class="middle">
+		<p>
+			Write some information about yourself that is IT related. Why are you passionate about coding?
+			What is your source of inspiration for improving your programming skills?
+		</p>
+		<div class="features">
+			<h3>I am:</h3>
+			<div class="images">
+				<div class="image-list desktop">
+					<img src="img/why-me/location-pin.png" alt="" />
+					<span>located in Leipzig</span>
+				</div>
+				@for (feature of featureList; track $index) {
+					<div class="image-list">
+						<img [src]="feature.imgSrc" alt="" />
+						<span>{{ feature.text }}</span>
+					</div>
+				}
 			</div>
-		}
+		</div>
+		<div class="spacer">
+			<app-contact />
+		</div>
 	</div>
-	<div class="spacer">
-		<app-contact />
-	</div>
+	<a class="arrow" href=""><img src="/arrow.png" alt="" /></a>
 </section>

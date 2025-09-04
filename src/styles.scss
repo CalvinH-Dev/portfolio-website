@@ -16,7 +16,8 @@ body {
 	color: var(--text-color-white);
 
 	@include mixins.desktop {
-		// background-color: blue;
+		min-height: 0;
+		height: var(--desktop-height);
 	}
 }
 

@@ -27,13 +27,14 @@ aside {
 		position: fixed;
 		top: 0;
 		left: 0;
-		height: 100vh;
+		height: 100%;
+		width: var(--aside-width);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		// row-gap: 5rem;
 		background-color: var(--accent-color);
 		box-shadow: 0 1px 10px black;
+		z-index: var(--fixed-z-index);
 	}
 }
 

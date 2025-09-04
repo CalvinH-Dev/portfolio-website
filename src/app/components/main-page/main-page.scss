@@ -6,6 +6,7 @@
 
 main {
 	@include mixins.desktop {
-		display: inline-flex;
+		display: flex;
+		width: max-content;
 	}
 }

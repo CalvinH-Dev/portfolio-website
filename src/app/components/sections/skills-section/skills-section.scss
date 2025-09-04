@@ -1,8 +1,29 @@
+@use "../../../../global-styles/mixins";
+
 section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	row-gap: 2rem;
+
+	@include mixins.desktop {
+		flex-direction: row;
+		align-items: end;
+		justify-content: space-between;
+		padding-right: var(--padding-inline-section);
+		padding-left: var(--section-desktop-padding-left);
+		height: 100%;
+		width: 100vw;
+		padding-block: 15vh;
+	}
+}
+
+h2 {
+	@include mixins.desktop {
+		align-self: initial;
+		rotate: -90deg;
+		translate: 8vw -100%;
+	}
 }
 
 .img-grid {
@@ -24,4 +45,47 @@ img {
 	aspect-ratio: 1;
 	width: 100%;
 	object-fit: cover;
+}
+
+.middle {
+	display: contents;
+
+	@include mixins.desktop {
+		padding-inline: 3vw;
+		display: flex;
+		flex-direction: column;
+		width: 70%;
+		row-gap: 5vh;
+	}
+}
+
+.arrow img {
+	aspect-ratio: revert;
+	width: auto;
+	height: auto;
+}
+
+.arrow {
+	display: none;
+
+	@include mixins.desktop {
+		display: initial;
+		align-self: center;
+	}
+}
+
+button.primary {
+	@include mixins.desktop {
+		display: none;
+	}
+}
+
+.first {
+	display: contents;
+
+	@include mixins.desktop {
+		display: flex;
+		column-gap: 5vw;
+		align-items: end;
+	}
 }
