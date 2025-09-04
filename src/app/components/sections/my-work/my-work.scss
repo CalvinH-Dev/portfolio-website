@@ -1,7 +1,38 @@
+@use "../../../../global-styles/mixins";
+
 section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	row-gap: 2rem;
 	width: 100%;
+
+	@include mixins.desktop {
+		flex-direction: row;
+		align-items: start;
+		column-gap: 3vw;
+		padding-right: var(--padding-inline-section);
+		padding-left: var(--section-desktop-padding-left);
+		height: 100%;
+		width: auto;
+		padding-block: 15vh;
+	}
+}
+
+h2 {
+	@include mixins.desktop {
+		text-wrap: nowrap;
+		align-self: start;
+		rotate: -90deg;
+		translate: 50% 100%;
+	}
+}
+
+.arrow {
+	display: none;
+
+	@include mixins.desktop {
+		display: revert;
+		align-self: end;
+	}
 }

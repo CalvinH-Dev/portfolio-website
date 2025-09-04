@@ -6,6 +6,7 @@
 
 html {
 	scroll-padding-top: var(--header-height);
+	scroll-snap-type: x mandatory;
 }
 
 body {
@@ -29,6 +30,7 @@ section {
 	height: 100%;
 	padding-inline: var(--padding-inline-section);
 	padding-block: var(--padding-block-section);
+	scroll-snap-align: center;
 }
 
 header,

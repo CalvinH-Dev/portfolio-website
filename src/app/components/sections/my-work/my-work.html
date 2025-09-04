@@ -1,4 +1,5 @@
 <section>
+	<h2>My Work</h2>
 	@for (project of projects; track $index) {
 		<app-project
 			[index]="$index"
@@ -7,4 +8,5 @@
 			(setActive)="setActiveProject($index)"
 		/>
 	}
+	<a class="arrow" href=""><img src="/arrow.png" alt="" /></a>
 </section>

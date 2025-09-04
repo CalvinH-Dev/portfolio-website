@@ -1,12 +1,16 @@
 <section>
-	<div class="colleague-slider" #slider>
-		<div class="colleague-item"><div class="colleague-card" #card></div></div>
-		<div class="colleague-item"><div class="colleague-card" #card></div></div>
-		<div class="colleague-item"><div class="colleague-card" #card></div></div>
+	<div class="first">
+		<h2>References</h2>
+		<div class="colleague-slider" #slider>
+			<div class="colleague-item"><div class="colleague-card" #card></div></div>
+			<div class="colleague-item"><div class="colleague-card" #card></div></div>
+			<div class="colleague-item"><div class="colleague-card" #card></div></div>
+		</div>
+		<div class="slider-state">
+			@for (colleague of colleagues; track $index) {
+				<div class="state" [class.active]="activeSlideIdx === $index"></div>
+			}
+		</div>
 	</div>
-	<div class="slider-state">
-		@for (colleague of colleagues; track $index) {
-			<div class="state" [class.active]="activeSlideIdx === $index"></div>
-		}
-	</div>
+	<a class="arrow" href=""><img src="/arrow.png" alt="" /></a>
 </section>
