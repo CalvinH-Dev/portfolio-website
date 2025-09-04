@@ -30,7 +30,10 @@ section {
 	height: 100%;
 	padding-inline: var(--padding-inline-section);
 	padding-block: var(--padding-block-section);
-	scroll-snap-align: center;
+
+	@include mixins.desktop {
+		scroll-snap-align: center;
+	}
 }
 
 header,

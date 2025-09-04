@@ -7,6 +7,7 @@ section {
 	row-gap: 2rem;
 
 	@include mixins.desktop {
+		position: relative;
 		flex-direction: row;
 		align-items: start;
 		padding-right: var(--padding-inline-section);
@@ -14,6 +15,7 @@ section {
 		height: 100%;
 		width: calc(100vw - var(--aside-footer-width));
 		padding-block: 15vh;
+		scroll-snap-align: start;
 	}
 }
 

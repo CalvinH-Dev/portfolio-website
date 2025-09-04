@@ -14,7 +14,7 @@ section {
 	@include mixins.desktop {
 		position: fixed;
 		top: 0;
-		right: 10vw;
+		right: calc(3vw + var(--aside-footer-width));
 		margin: auto;
 		height: auto;
 		background-color: transparent;

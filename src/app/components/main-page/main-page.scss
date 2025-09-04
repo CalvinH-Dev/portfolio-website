@@ -10,3 +10,14 @@ main {
 		width: max-content;
 	}
 }
+
+aside {
+	display: none;
+
+	@include mixins.desktop {
+		display: revert;
+		height: 100%;
+		width: var(--aside-footer-width);
+		background: linear-gradient(to bottom, var(--accent-color), #547800);
+	}
+}

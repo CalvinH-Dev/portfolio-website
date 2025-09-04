@@ -1,0 +1,23 @@
+@use "../../../global-styles/mixins";
+
+:host {
+	display: contents;
+}
+
+footer {
+	height: 25vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding-block: 2rem;
+	background: linear-gradient(to bottom, var(--accent-color), #547800);
+
+	@include mixins.desktop {
+		display: none;
+	}
+}
+
+footer img {
+	height: 20px;
+}
