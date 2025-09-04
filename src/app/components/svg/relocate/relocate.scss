@@ -1,0 +1,15 @@
+:host {
+	display: contents;
+}
+
+:host-context(.image-list:hover) .non-hovered {
+	display: none;
+}
+
+.hovered {
+	display: none;
+}
+
+:host-context(.image-list:hover) .hovered {
+	display: revert;
+}

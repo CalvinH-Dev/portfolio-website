@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
 	selector: "app-mail",
@@ -6,6 +6,4 @@ import { Component, input } from "@angular/core";
 	templateUrl: "./mail.html",
 	styleUrl: "./mail.scss",
 })
-export class Mail {
-	hovered = input<boolean>(false);
-}
+export class Mail {}

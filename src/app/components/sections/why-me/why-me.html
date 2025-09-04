@@ -9,15 +9,17 @@
 			<h3>I am:</h3>
 			<div class="images">
 				<div class="image-list desktop">
-					<img src="img/why-me/location-pin.png" alt="" />
+					<app-location />
 					<span>located in Leipzig</span>
 				</div>
-				@for (feature of featureList; track $index) {
-					<div class="image-list">
-						<img [src]="feature.imgSrc" alt="" />
-						<span>{{ feature.text }}</span>
-					</div>
-				}
+				<div class="image-list">
+					<app-relocate />
+					<span>open to relocate</span>
+				</div>
+				<div class="image-list">
+					<app-remote />
+					<span>open to work remote</span>
+				</div>
 			</div>
 		</div>
 		<div class="spacer">

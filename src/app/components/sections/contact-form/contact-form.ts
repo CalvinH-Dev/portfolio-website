@@ -10,23 +10,4 @@ import { Phone } from "app/components/svg/phone/phone";
 	templateUrl: "./contact-form.html",
 	styleUrl: "./contact-form.scss",
 })
-export class ContactForm {
-	phoneHovered = false;
-	mailHovered = false;
-
-	onPhoneEnter() {
-		this.phoneHovered = true;
-	}
-
-	onMailEnter() {
-		this.mailHovered = true;
-	}
-
-	onPhoneLeave() {
-		this.phoneHovered = false;
-	}
-
-	onMailLeave() {
-		this.mailHovered = false;
-	}
-}
+export class ContactForm {}

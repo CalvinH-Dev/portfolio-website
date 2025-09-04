@@ -8,7 +8,7 @@ html {
 	scroll-padding-top: var(--header-height);
 
 	@include mixins.desktop {
-		scroll-padding-top: initial;
+		scroll-padding-top: revert;
 		scroll-snap-type: x mandatory;
 	}
 }
@@ -36,7 +36,7 @@ section {
 	padding-block: var(--padding-block-section);
 
 	@include mixins.desktop {
-		scroll-snap-align: center;
+		scroll-snap-align: start;
 	}
 }
 
@@ -106,11 +106,11 @@ button.secondary {
 }
 
 button.primary:hover:not(:disabled) {
-	background: linear-gradient(to bottom, #b5e93b, #547800);
+	background: var(--menu-color);
 }
 
 button.secondary:hover:not(:disabled) {
-	border-color: #d3ed97;
+	border-color: var(--accent-color-2);
 	background-color: #b5e93b33;
 
 	& :is(span, a) {
@@ -135,4 +135,49 @@ button.secondary:disabled {
 	& :is(span, a) {
 		color: #827b7b;
 	}
+}
+
+.socials .img-container {
+	cursor: pointer;
+}
+
+.hoverable {
+	&:hover svg path {
+		fill: var(--accent-color-2);
+	}
+
+	&:active svg path {
+		fill: var(--accent-color);
+	}
+
+	&:hover :is(a, span) {
+		color: var(--accent-color-2);
+	}
+
+	&:active :is(a, span) {
+		color: var(--accent-color);
+	}
+}
+
+.hoverable span {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		display: none;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: var(--accent-color);
+		bottom: 0;
+	}
+}
+
+.hoverable:active span::after {
+	display: initial;
+}
+
+.socials .img-container:hover svg path {
+	fill: var(--accent-color);
 }

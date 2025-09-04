@@ -15,7 +15,6 @@ section {
 		height: 100%;
 		width: calc(100vw - var(--aside-footer-width));
 		padding-block: 15vh;
-		scroll-snap-align: start;
 	}
 }
 
@@ -52,14 +51,6 @@ h2 {
 	display: flex;
 	align-items: start;
 	column-gap: 0.5rem;
-
-	&:hover :is(a, span) {
-		color: var(--accent-color);
-	}
-
-	> a:active {
-		color: #b5e93b;
-	}
 }
 
 .first {

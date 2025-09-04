@@ -22,7 +22,7 @@ aside {
 	display: none;
 
 	@include mixins.desktop {
-		padding-block: var(--padding-block-section);
+		padding-block: calc(var(--padding-block-section) * 2);
 		padding-inline: 2rem;
 		position: fixed;
 		top: 0;
@@ -60,6 +60,14 @@ header:has(.active) {
 img {
 	height: 100px;
 	aspect-ratio: 1;
+
+	@include mixins.desktop {
+		width: 100%;
+		rotate: 90deg;
+		height: auto;
+		aspect-ratio: revert;
+		object-fit: cover;
+	}
 }
 
 nav {
@@ -73,7 +81,7 @@ nav {
 	@include mixins.desktop {
 		flex-direction: column;
 		justify-content: space-around;
-		padding-block: 12rem;
+		padding-block: 8rem;
 		// row-gap: 5rem;
 	}
 }

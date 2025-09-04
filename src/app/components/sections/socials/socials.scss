@@ -12,6 +12,7 @@ section {
 	background-color: var(--bg-color);
 
 	@include mixins.desktop {
+		scroll-snap-align: revert;
 		position: fixed;
 		top: 0;
 		right: calc(3vw + var(--aside-footer-width));

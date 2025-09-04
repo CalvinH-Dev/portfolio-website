@@ -3,7 +3,7 @@ window.addEventListener(
 	(e) => {
 		e.preventDefault();
 		window.scrollBy({
-			left: e.deltaY * 3,
+			left: e.deltaY * 15,
 			top: 0,
 		});
 	},

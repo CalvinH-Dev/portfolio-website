@@ -11,7 +11,7 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	padding-block: 2rem;
-	background: linear-gradient(to bottom, var(--accent-color), #547800);
+	background: var(--menu-color);
 
 	@include mixins.desktop {
 		display: none;

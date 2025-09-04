@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
 	selector: "app-phone",
@@ -6,6 +6,4 @@ import { Component, input } from "@angular/core";
 	templateUrl: "./phone.html",
 	styleUrl: "./phone.scss",
 })
-export class Phone {
-	hovered = input<boolean>(false);
-}
+export class Phone {}

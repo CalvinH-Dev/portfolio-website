@@ -1,0 +1,7 @@
+:host {
+	display: contents;
+}
+
+:host-context(.image-list:hover) svg path:last-of-type {
+	stroke-width: 2px;
+}

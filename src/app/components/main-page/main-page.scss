@@ -18,6 +18,6 @@ aside {
 		display: revert;
 		height: 100%;
 		width: var(--aside-footer-width);
-		background: linear-gradient(to bottom, var(--accent-color), #547800);
+		background: var(--menu-color);
 	}
 }

@@ -9,5 +9,5 @@ import { Component, input } from "@angular/core";
 export class LinkArrow {
 	href = input<string>("");
 	orientation = input<"left" | "right">("right");
-	align = input<"start" | "center" | "end">("end");
+	alignSelf = input<"start" | "center" | "end">("end");
 }

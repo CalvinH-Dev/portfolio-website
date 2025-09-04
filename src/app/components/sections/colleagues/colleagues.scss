@@ -10,11 +10,13 @@ section {
 	@include mixins.desktop {
 		align-items: end;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: start;
+		column-gap: 3vw;
 		padding-right: var(--padding-inline-section);
 		padding-left: var(--section-desktop-padding-left);
 		height: 100%;
-		width: 65vw;
+		min-width: auto;
+		width: 70vw;
 		padding-block: 15vh;
 	}
 }
@@ -29,7 +31,8 @@ section {
 	scroll-snap-type: x mandatory;
 
 	@include mixins.desktop {
-		width: 25vw;
+		width: 50vw;
+		max-width: 500px;
 		flex-direction: column;
 		overflow-x: initial;
 		row-gap: 3vh;
@@ -53,6 +56,7 @@ h2 {
 	aspect-ratio: 1;
 
 	@include mixins.desktop {
+		scroll-snap-align: revert;
 		width: 100%;
 		height: 15vh;
 		aspect-ratio: revert;
@@ -92,7 +96,7 @@ h2 {
 
 .state.active {
 	border: revert;
-	background: linear-gradient(to bottom, var(--accent-color), #547800);
+	background: var(--menu-color);
 	width: 20px;
 }
 
@@ -102,5 +106,6 @@ h2 {
 	@include mixins.desktop {
 		display: flex;
 		align-items: end;
+		width: 70%;
 	}
 }
