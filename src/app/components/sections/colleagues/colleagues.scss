@@ -96,15 +96,6 @@ h2 {
 	width: 20px;
 }
 
-.arrow {
-	display: none;
-
-	@include mixins.desktop {
-		display: revert;
-		align-self: center;
-	}
-}
-
 .first {
 	display: contents;
 

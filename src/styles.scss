@@ -6,7 +6,11 @@
 
 html {
 	scroll-padding-top: var(--header-height);
-	scroll-snap-type: x mandatory;
+
+	@include mixins.desktop {
+		scroll-padding-top: initial;
+		scroll-snap-type: x mandatory;
+	}
 }
 
 body {

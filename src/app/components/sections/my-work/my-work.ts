@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { LinkArrow } from "app/components/link-arrow/link-arrow";
 import { Project } from "app/components/project/project";
 import { ProjectInterface } from "app/interfaces/project";
 
@@ -36,7 +37,7 @@ const projects: ProjectInterface[] = [
 
 @Component({
 	selector: "app-my-work",
-	imports: [Project],
+	imports: [Project, LinkArrow],
 	templateUrl: "./my-work.html",
 	styleUrl: "./my-work.scss",
 })

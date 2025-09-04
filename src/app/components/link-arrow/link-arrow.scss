@@ -1,0 +1,26 @@
+@use "../../../global-styles/mixins";
+
+:host {
+	display: contents;
+}
+
+.arrow {
+	display: none;
+
+	@include mixins.desktop {
+		display: revert;
+		align-self: end;
+	}
+}
+
+.left img {
+	rotate: 180deg;
+}
+
+.align-self-start {
+	align-self: start;
+}
+
+.align-self-center {
+	align-self: center;
+}

@@ -21,6 +21,13 @@ section {
 
 h2 {
 	align-self: start;
+
+	@include mixins.desktop {
+		text-wrap: nowrap;
+		transform-origin: right;
+		rotate: -90deg;
+		translate: -25% -50%;
+	}
 }
 
 .special {
@@ -91,16 +98,6 @@ h2 {
 	@include mixins.desktop {
 		text-align: end;
 		align-self: end;
-	}
-}
-
-.arrow {
-	display: none;
-
-	@include mixins.desktop {
-		display: revert;
-		align-self: end;
-		rotate: 180deg;
 	}
 }
 

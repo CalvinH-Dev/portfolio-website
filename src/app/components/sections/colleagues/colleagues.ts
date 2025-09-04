@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, viewChild, viewChildren } from "@angular/core";
+import { LinkArrow } from "app/components/link-arrow/link-arrow";
 import { ColleagueReview } from "app/interfaces/colleague-review";
 
 const colleagues: ColleagueReview[] = [
@@ -21,7 +22,7 @@ const colleagues: ColleagueReview[] = [
 
 @Component({
 	selector: "app-colleagues",
-	imports: [],
+	imports: [LinkArrow],
 	templateUrl: "./colleagues.html",
 	styleUrl: "./colleagues.scss",
 })

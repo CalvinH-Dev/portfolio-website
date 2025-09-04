@@ -59,21 +59,6 @@ img {
 	}
 }
 
-.arrow img {
-	aspect-ratio: revert;
-	width: auto;
-	height: auto;
-}
-
-.arrow {
-	display: none;
-
-	@include mixins.desktop {
-		display: initial;
-		align-self: center;
-	}
-}
-
 button.primary {
 	@include mixins.desktop {
 		display: none;

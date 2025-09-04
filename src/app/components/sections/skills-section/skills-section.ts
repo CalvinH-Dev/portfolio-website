@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { LinkArrow } from "app/components/link-arrow/link-arrow";
 import { Image } from "app/interfaces/image";
 
 const imageList: Image[] = [
@@ -14,7 +15,7 @@ const imageList: Image[] = [
 
 @Component({
 	selector: "app-skills-section",
-	imports: [],
+	imports: [LinkArrow],
 	templateUrl: "./skills-section.html",
 	styleUrl: "./skills-section.scss",
 })
