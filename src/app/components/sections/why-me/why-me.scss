@@ -12,7 +12,6 @@ section {
 		justify-content: center;
 		align-items: start;
 		position: relative;
-
 		padding-right: var(--padding-inline-section);
 		padding-left: var(--section-desktop-padding-left);
 		height: 100%;
@@ -41,8 +40,7 @@ img {
 	grid-template-columns: auto;
 	grid-template-rows: 60px auto;
 	flex-direction: column;
-	align-items: center;
-	justify-items: center;
+	place-items: center center;
 	justify-content: center;
 	row-gap: 1rem;
 	overflow: visible;

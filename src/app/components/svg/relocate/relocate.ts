@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-relocate',
-  imports: [],
-  templateUrl: './relocate.html',
-  styleUrl: './relocate.scss'
+	selector: "app-relocate",
+	imports: [],
+	templateUrl: "./relocate.html",
+	styleUrl: "./relocate.scss",
 })
-export class Relocate {
-
-}
+export class Relocate {}

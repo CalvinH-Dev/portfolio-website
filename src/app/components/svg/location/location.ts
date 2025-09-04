@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-location',
-  imports: [],
-  templateUrl: './location.html',
-  styleUrl: './location.scss'
+	selector: "app-location",
+	imports: [],
+	templateUrl: "./location.html",
+	styleUrl: "./location.scss",
 })
-export class Location {
-
-}
+export class Location {}
