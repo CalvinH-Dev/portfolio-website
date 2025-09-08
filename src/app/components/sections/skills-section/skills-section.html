@@ -1,11 +1,23 @@
 <section>
 	<div class="first">
-		<h2>My Skill Set</h2>
+		<h2>
+			@if (language() === "EN") {
+				My Skill Set
+			} @else {
+				Meine Skills
+			}
+		</h2>
 		<div class="middle">
 			<p>
-				A short introduction of your skills. Highlight your experience of working on different
-				projects using different front-end technologies and emphasise your openness to learning and
-				adapting to new technologies.
+				@if (language() === "EN") {
+					I have strong CSS and Angular skills and excel at implementing complex logic in JavaScript
+					and JS classes. I have contributed to various projects using different front-end
+					technologies.
+				} @else {
+					Ich verfüge über sehr gute CSS- und Angular-Kenntnisse und kann komplexe Logik in
+					JavaScript und Klassen effizient umsetzen. In meiner bisherigen Arbeit habe ich an
+					verschiedenen Projekten mit unterschiedlichen Frontend-Technologien mitgewirkt.
+				}
 			</p>
 			<div class="img-grid">
 				@for (img of images; track $index) {
@@ -13,10 +25,24 @@
 				}
 			</div>
 			<p>
-				Show that you are motivated to improve your skills, implement innovative solutions and stay
-				abreast of new technologies.
+				@if (language() === "EN") {
+					I am open to learning new technologies and quickly adapt to changing requirements. My
+					focus is on writing clean, maintainable code and creating optimal user interfaces.
+				} @else {
+					Ich bin offen für neue Technologien und lerne schnell, um mich flexibel an neue
+					Anforderungen anzupassen. Mein Fokus liegt darauf, sauberen, wartbaren Code zu schreiben
+					und optimale Benutzeroberflächen zu entwickeln..
+				}
 			</p>
-			<button class="primary"><span>Let's Talk</span></button>
+			<button class="primary">
+				<span>
+					@if (language() === "EN") {
+						Let's Talk
+					} @else {
+						Zum Gespräch
+					}
+				</span>
+			</button>
 		</div>
 	</div>
 	<app-link-arrow href="#projects" alignSelf="center" />

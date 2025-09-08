@@ -1,13 +1,33 @@
 <section>
-	<h2>Contact me</h2>
+	<h2>
+		@if (language() === "EN") {
+			Contact me
+		} @else {
+			Kontakt
+		}
+	</h2>
 	<div class="middle">
 		<div class="last">
 			<div class="last-top">
-				<span class="special">Let us work together.</span>
+				<span class="special">
+					@if (language() === "EN") {
+						Let us work together.
+					} @else {
+						Lassen sie uns gemeinsam etwas erschaffen.
+					}
+				</span>
 				<p>
-					Encourage people to contact you and describe what role you are interested in. Express
-					confidence in your ability to make a meaningful contribution to a team through your
-					expertise and enthusiasm for improving your skills.
+					@if (language() === "EN") {
+						I welcome any contact and am particularly interested in roles within a front-end
+						development team. With strong communication skills and experience working in larger
+						teams with Git, I am confident that I can make a meaningful contribution through my
+						expertise and enthusiasm for continuous learning.
+					} @else {
+						Ich freue mich über jede Kontaktaufnahme und bin besonders an Rollen im
+						Frontend-Entwicklungsteam interessiert. Mit sehr guten Kommunikationsfähigkeiten und
+						Erfahrung in größeren Teams mit Git bin ich überzeugt, dass ich durch meine Expertise
+						und Begeisterung für ständiges Lernen einen wertvollen Beitrag leisten kann.
+					}
 				</p>
 				<div class="contact-items">
 					<div class="contact-item hoverable">

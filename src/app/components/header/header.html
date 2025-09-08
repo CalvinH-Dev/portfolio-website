@@ -4,9 +4,33 @@
 <aside>
 	<a href="#"><img src="/img/logo.png" alt="Logo" /></a>
 	<nav>
-		<a href="#why-me">Why me</a>
-		<a href="#skills">My Skill Set</a>
-		<a href="#projects">My Work</a>
-		<a href="#contact">Contact me</a>
+		<a href="#why-me">
+			@if (language() === "EN") {
+				Why me
+			} @else {
+				Wieso ich
+			}
+		</a>
+		<a href="#skills">
+			@if (language() === "EN") {
+				My Skill Set
+			} @else {
+				Meine Skills
+			}
+		</a>
+		<a href="#projects">
+			@if (language() === "EN") {
+				My Work
+			} @else {
+				Projekte
+			}
+		</a>
+		<a href="#contact">
+			@if (language() === "EN") {
+				Contact me
+			} @else {
+				Kontakt
+			}
+		</a>
 	</nav>
 </aside>

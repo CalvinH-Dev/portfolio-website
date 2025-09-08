@@ -47,14 +47,14 @@ textarea {
 	border-radius: 30px;
 	padding: 25px 21px;
 
-	&:user-invalid {
-		border-color: #fd2e12;
-		color: #fd2e12;
-	}
-
 	&:focus {
 		outline: none;
 		border: 1px solid #b5e93b;
+	}
+
+	&.ng-invalid:is(.ng-touched, .ng-dirty) {
+		border-color: var(--error-color);
+		color: var(--error-color);
 	}
 
 	&::placeholder {

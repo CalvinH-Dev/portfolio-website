@@ -23,9 +23,10 @@ h2 {
 
 	@include mixins.desktop {
 		text-wrap: nowrap;
-		transform-origin: right;
+		transform-origin: right center;
 		rotate: -90deg;
 		translate: -25% -50%;
+		max-width: 20%;
 	}
 }
 

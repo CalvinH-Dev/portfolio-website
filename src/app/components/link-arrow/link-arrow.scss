@@ -8,8 +8,11 @@
 	display: none;
 
 	@include mixins.desktop {
-		display: revert;
+		--arrow-width: clamp(4rem, 0.298rem + 7.702vw, 8rem);
+
+		display: inline-block;
 		align-self: end;
+		width: var(--arrow-width);
 	}
 
 	&:hover {
@@ -17,7 +20,7 @@
 	}
 }
 
-.left img {
+.left {
 	rotate: 180deg;
 }
 
@@ -27,4 +30,8 @@
 
 .align-self-center {
 	align-self: center;
+}
+
+img {
+	height: auto;
 }

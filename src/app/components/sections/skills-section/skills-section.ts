@@ -1,6 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { LinkArrow } from "app/components/link-arrow/link-arrow";
 import { Image } from "app/interfaces/image";
+import { LanguageService } from "app/services/language";
 
 const imageList: Image[] = [
 	{ src: "img/skills/angular.png", alt: "" },
@@ -20,5 +21,7 @@ const imageList: Image[] = [
 	styleUrl: "./skills-section.scss",
 })
 export class SkillsSection {
+	languageService = inject(LanguageService);
+	language = this.languageService.getLanguage();
 	images: Image[] = imageList;
 }

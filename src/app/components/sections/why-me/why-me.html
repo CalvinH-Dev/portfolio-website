@@ -1,29 +1,77 @@
 <section>
-	<h2>Why me</h2>
+	<h2>
+		@if (language() === "EN") {
+			Why me
+		} @else {
+			Wieso ich
+		}
+	</h2>
 	<div class="middle">
 		<p>
-			Write some information about yourself that is IT related. Why are you passionate about coding?
-			What is your source of inspiration for improving your programming skills?
+			@if (language() === "EN") {
+				I enjoy tackling logical challenges and breaking down complex problems into manageable
+				parts. Programming allows me to transform these problems into practical solutions that can
+				make a real difference in people's lives. It's fulfilling to know that the code I write can
+				simplify tasks, improve efficiency, and contribute positively to the world around me.
+			} @else {
+				Ich schätze es, komplexe, logische Probleme zu analysieren und in strukturierte Lösungen zu
+				übersetzen. Die Möglichkeit, mit Programmierung reale Herausforderungen zu meistern und das
+				Leben anderer zu erleichtern, motiviert mich stets, meine Fähigkeiten weiterzuentwickeln.
+				Für mich ist Programmieren nicht nur ein technisches Handwerk, sondern eine kreative
+				Ausdrucksform, die unmittelbare Auswirkungen auf die Welt hat.
+			}
 		</p>
 		<div class="features">
-			<h4>I am:</h4>
+			<h4>
+				@if (language() === "EN") {
+					I am:
+				} @else {
+					Ich bin:
+				}
+			</h4>
 			<div class="images">
 				<div class="image-list desktop">
 					<app-location />
-					<span>located in Leipzig</span>
+					<span>
+						@if (language() === "EN") {
+							located in Leipzig
+						} @else {
+							aktuell in Leipzig
+						}
+					</span>
 				</div>
 				<div class="image-list">
 					<app-relocate />
-					<span>open to relocate</span>
+					<span>
+						@if (language() === "EN") {
+							open to relocate
+						} @else {
+							Offen für einen Standortwechsel
+						}
+					</span>
 				</div>
 				<div class="image-list">
 					<app-remote />
-					<span>open to work remote</span>
+					<span>
+						@if (language() === "EN") {
+							open to work remote
+						} @else {
+							Flexibel beim Arbeitsort (remote möglich)
+						}
+					</span>
 				</div>
 			</div>
 		</div>
 		<div class="spacer">
-			<app-contact />
+			<button class="primary">
+				<span>
+					@if (language() === "EN") {
+						Contact me
+					} @else {
+						Kontakt
+					}
+				</span>
+			</button>
 		</div>
 	</div>
 	<app-link-arrow href="#skills" />
