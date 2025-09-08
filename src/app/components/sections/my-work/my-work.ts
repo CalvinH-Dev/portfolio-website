@@ -5,11 +5,11 @@ import { ProjectInterface } from "app/interfaces/project";
 
 const projects: ProjectInterface[] = [
 	{
-		name: "Join",
+		name: "Join1",
 		about: "Loremsadasd as asdasd asd sadas asd asdas saasdsa sad sasa asdas asdas",
 		tech: "test2",
 		learning: "test3",
-		imageSrc: "",
+		imageSrc: "/testbild.png",
 		githubSrc: "",
 		pageSrc: "",
 	},
@@ -46,6 +46,14 @@ export class MyWork {
 	projects: ProjectInterface[] = projects;
 
 	setActiveProject(index: number) {
-		this.activeIdx = index;
+		if (index === this.activeIdx) {
+			if (index === projects.length - 1) {
+				this.activeIdx = index - 1;
+			} else {
+				this.activeIdx = index + 1;
+			}
+		} else {
+			this.activeIdx = index;
+		}
 	}
 }

@@ -1,30 +1,36 @@
-<div class="grid" [class.active]="isActive()">
+<div class="wrapper" [class.active]="isActive()">
 	<div class="project">
-		<div class="show">
-			<button (mousedown)="onShowMore()"><span>Show More...</span></button>
-		</div>
 		<div class="name">
 			<h2>{{ index() }}</h2>
-			<h3>Project {{ projectInfo().name }}</h3>
+			<h4>Project {{ projectInfo().name }}</h4>
 		</div>
-		<ul>
-			<li class="about">
-				<p>{{ projectInfo().about }}</p>
-			</li>
-			<li class="tech">
+		<div class="item">
+			<h5>About the project</h5>
+			<p>{{ projectInfo().about }}</p>
+		</div>
+		<div class="collapsable-grid" [class.active]="isActive()">
+			<div class="item">
+				<h5>Technologies i have used</h5>
 				<p>{{ projectInfo().tech }}</p>
-			</li>
-			<li class="learning">
+			</div>
+			<div class="item">
+				<h5>What i have learned</h5>
 				<p>{{ projectInfo().learning }}</p>
-			</li>
-		</ul>
+			</div>
 
-		<div class="img-container">
-			<img [src]="projectInfo().imageSrc" alt="" />
+			<div class="img-container">
+				<img [src]="projectInfo().imageSrc" alt="" />
+			</div>
+			<div class="buttons">
+				<button class="secondary"><a [href]="projectInfo().githubSrc">Github</a></button>
+				<button class="primary"><a [href]="projectInfo().pageSrc">Live Test</a></button>
+			</div>
 		</div>
-		<div class="buttons">
-			<button class="secondary"><a [href]="projectInfo().githubSrc">Github</a></button>
-			<button class="primary"><a [href]="projectInfo().pageSrc">Live Test</a></button>
-		</div>
+	</div>
+	<div class="show">
+		<button (mousedown)="onShowMore()">
+			<span>{{ isActive() ? "Show me less" : "Show me more" }}</span>
+			<img src="/my-work/show-icon-project.svg" alt="" />
+		</button>
 	</div>
 </div>
