@@ -1,16 +1,16 @@
 html {
 	--fs-small: clamp(16px, 16px, 16px);
-	--fs-medium: clamp(20px, 20px, 20px);
+	--fs-medium: clamp(1rem, 0.969rem + 0.156vw, 1.125rem);
 	--fs-large: clamp(24px, 24px, 24px);
 	--fs-h1: clamp(36px, 36px, 36px);
-	--fs-h2: clamp(34px, 34px, 34px);
-	--fs-h3: clamp(32px, 32px, 32px);
-	--fs-h4: clamp(24px, 24px, 24px);
-	--fs-h5: clamp(22px, 22px, 22px);
-	--fs-h6: clamp(20px, 20px, 20px);
+	--fs-h2: clamp(2rem, 1.656rem + 1.719vw, 3.375rem);
+	--fs-h3: clamp(2.5rem, 1.563rem + 4.688vw, 6.25rem);
+	--fs-h4: clamp(2rem, 1.75rem + 1.25vw, 3rem);
+	--fs-h5: clamp(1.5rem, 1.031rem + 2.344vw, 3.375rem);
+	--fs-h6: clamp(1.375rem, 1.344rem + 0.156vw, 1.5rem);
 	--fs-button: clamp(14px, 14px, 14px);
 	--fs-input: clamp(14px, 14px, 14px);
-	--fs-menu-a: clamp(18px, 18px, 18px);
+	--fs-menu-a: clamp(1.125rem, 0.938rem + 0.938vw, 1.875rem);
 	--padding-inline-section: clamp(24px, 24px, 24px);
 	--padding-block-section: clamp(24px, 24px, 24px);
 	--header-height: 10vh;
@@ -28,4 +28,6 @@ html {
 	--text-color-white: #fffdfd;
 	--text-color-gray: #4a4a4a;
 	--fixed-z-index: 100;
+	--padding-1: clamp(0.5rem, 0.125rem + 1.875vw, 2rem);
+	--padding-2: clamp(4rem, 3.5rem + 2.5vw, 6rem);
 }

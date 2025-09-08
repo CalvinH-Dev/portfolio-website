@@ -19,6 +19,7 @@ body {
 	min-height: 100svh;
 	background-color: var(--bg-color);
 	color: var(--text-color-white);
+	font-size: var(--fs-medium);
 
 	@include mixins.desktop {
 		min-height: 0;
@@ -61,18 +62,23 @@ h2 {
 }
 
 h3 {
+	--shadow-color: #b5e93b;
+
+	color: var(--bg-color);
 	font-size: var(--fs-h3);
+
+	@include mixins.multi-shadow(var(--shadow-color));
 }
 
 h4 {
 	font-size: var(--fs-h4);
 	font-weight: 400;
-	color: var(--accent-color);
 }
 
 h5 {
 	font-size: var(--fs-h5);
 	font-weight: 400;
+	color: var(--accent-color);
 }
 
 h6 {

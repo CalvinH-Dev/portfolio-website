@@ -23,7 +23,7 @@ aside {
 
 	@include mixins.desktop {
 		padding-block: calc(var(--padding-block-section) * 2);
-		padding-inline: 2rem;
+		padding-inline: var(--padding-1);
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -43,6 +43,11 @@ a {
 	font-size: var(--fs-menu-a);
 	color: var(--text-color-gray);
 	rotate: -90deg;
+}
+
+nav a {
+	display: inline-block;
+	width: max-content;
 }
 
 a:hover,
@@ -81,8 +86,6 @@ nav {
 	@include mixins.desktop {
 		flex-direction: column;
 		justify-content: space-around;
-		padding-block: 8rem;
-
-		// row-gap: 5rem;
+		padding-block: var(--padding-2);
 	}
 }

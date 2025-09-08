@@ -1,29 +1,31 @@
 <div class="wrapper" [class.active]="isActive()">
 	<div class="project">
 		<div class="name">
-			<h2>{{ index() }}</h2>
-			<h4>Project {{ projectInfo().name }}</h4>
+			<h3>{{ index() }}</h3>
+			<h5>Project {{ projectInfo().name }}</h5>
 		</div>
-		<div class="item">
-			<h5>About the project</h5>
-			<p>{{ projectInfo().about }}</p>
-		</div>
-		<div class="collapsable-grid" [class.active]="isActive()">
+		<div class="content">
 			<div class="item">
-				<h5>Technologies i have used</h5>
-				<p>{{ projectInfo().tech }}</p>
+				<h6>About the project</h6>
+				<p>{{ projectInfo().about }}</p>
 			</div>
-			<div class="item">
-				<h5>What i have learned</h5>
-				<p>{{ projectInfo().learning }}</p>
-			</div>
+			<div class="collapsable-grid" [class.active]="isActive()">
+				<div class="item">
+					<h6>Technologies i have used</h6>
+					<p>{{ projectInfo().tech }}</p>
+				</div>
+				<div class="item">
+					<h6>What i have learned</h6>
+					<p>{{ projectInfo().learning }}</p>
+				</div>
 
-			<div class="img-container">
-				<img [src]="projectInfo().imageSrc" alt="" />
-			</div>
-			<div class="buttons">
-				<button class="secondary"><a [href]="projectInfo().githubSrc">Github</a></button>
-				<button class="primary"><a [href]="projectInfo().pageSrc">Live Test</a></button>
+				<div class="img-container">
+					<img [src]="projectInfo().imageSrc" alt="" />
+				</div>
+				<div class="buttons">
+					<button class="secondary"><a [href]="projectInfo().githubSrc">Github</a></button>
+					<button class="primary"><a [href]="projectInfo().pageSrc">Live Test</a></button>
+				</div>
 			</div>
 		</div>
 	</div>
