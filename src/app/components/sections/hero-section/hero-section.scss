@@ -20,20 +20,72 @@ section {
 }
 
 .text {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+
 	@include mixins.desktop {
 		position: absolute;
 		display: flex;
 		flex-direction: column;
+		align-items: end;
 		row-gap: 2rem;
-		right: 33%;
-		bottom: 25vh;
+		right: 25%;
+		bottom: 10vh;
 		margin: auto;
 	}
 }
 
 h1,
-h3 {
+.dev {
 	@include mixins.desktop {
 		text-align: right;
+		filter: drop-shadow(0 0 4px var(--bg-color));
+	}
+}
+
+h1 {
+	@include mixins.desktop {
+		@include mixins.multi-shadow(var(--bg-color));
+	}
+}
+
+.img-container {
+	height: 66%;
+
+	@include mixins.desktop {
+		position: absolute;
+		height: auto;
+		width: 33vw;
+		bottom: 0;
+		right: 30%;
+		margin: auto;
+	}
+}
+
+img {
+	object-fit: contain;
+
+	@include mixins.desktop {
+		position: relative;
+	}
+}
+
+.dev {
+	color: var(--accent-color);
+	font-size: clamp(1.5rem, 1.071rem + 2.143vw, 3rem);
+
+	@include mixins.desktop {
+		color: var(--bg-color);
+
+		@include mixins.multi-shadow(var(--accent-color));
+	}
+}
+
+span:not(.dev) {
+	font-size: 18px;
+
+	@include mixins.desktop {
+		display: none;
 	}
 }
