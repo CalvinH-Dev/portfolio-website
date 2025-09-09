@@ -1,0 +1,76 @@
+@use "../../../global-styles/mixins";
+
+:host {
+	display: none;
+
+	@include mixins.desktop {
+		display: contents;
+	}
+}
+
+.special {
+	align-self: start;
+	color: #d3ed97;
+}
+
+.contact-items {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	align-self: start;
+	row-gap: 0.5rem;
+
+	@include mixins.desktop {
+		row-gap: 2vh;
+		cursor: pointer;
+	}
+}
+
+.contact-item {
+	display: flex;
+	align-items: start;
+	column-gap: 0.5rem;
+}
+
+.last {
+	display: contents;
+
+	@include mixins.desktop {
+		width: 20vw;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+.last * {
+	@include mixins.desktop {
+		text-align: end;
+		align-self: end;
+	}
+}
+
+.last-bottom {
+	display: none;
+
+	@include mixins.desktop {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.last-top {
+	display: contents;
+
+	@include mixins.desktop {
+		display: flex;
+		flex-direction: column;
+		row-gap: 3vh;
+	}
+}
+
+p.inactive,
+.special.inactive {
+	display: none;
+}

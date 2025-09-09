@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, input } from "@angular/core";
 
 @Component({
 	selector: "app-back-to-top",
@@ -6,4 +6,6 @@ import { Component } from "@angular/core";
 	templateUrl: "./back-to-top.html",
 	styleUrl: "./back-to-top.scss",
 })
-export class BackToTop {}
+export class BackToTop {
+	href = input<string>("#");
+}

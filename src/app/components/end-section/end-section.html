@@ -1,0 +1,38 @@
+<div class="last">
+	<div class="last-top">
+		<span class="special" [class.inactive]="!showText()">
+			@if (language() === "EN") {
+				Let us work together.
+			} @else {
+				Lassen Sie uns gemeinsam etwas erschaffen.
+			}
+		</span>
+		<p [class.inactive]="!showText()">
+			@if (language() === "EN") {
+				I welcome any contact and am particularly interested in roles within a front-end development
+				team. With strong communication skills and experience working in larger teams with Git, I am
+				confident that I can make a meaningful contribution through my expertise and enthusiasm for
+				continuous learning.
+			} @else {
+				Ich freue mich über jede Kontaktaufnahme und bin besonders an Rollen im
+				Frontend-Entwicklungsteam interessiert. Mit sehr guten Kommunikationsfähigkeiten und
+				Erfahrung in größeren Teams mit Git bin ich überzeugt, dass ich durch meine Expertise und
+				Begeisterung für ständiges Lernen einen wertvollen Beitrag leisten kann.
+			}
+		</p>
+		<div class="contact-items">
+			<div class="contact-item hoverable">
+				<app-mail /> <span>E-Mail: <a href="">test&#64;gmail.com</a></span>
+			</div>
+			<div class="contact-item hoverable">
+				<app-phone /> <span>Tel: <a href="">0123203123012302</a></span>
+			</div>
+		</div>
+	</div>
+	<app-link-arrow orientation="left" href="#" />
+	<div class="last-bottom">
+		<div class="hoverable">
+			<span><a href="/legal">Legal Notice</a></span>
+		</div>
+	</div>
+</div>
