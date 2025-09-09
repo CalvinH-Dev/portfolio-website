@@ -2,21 +2,20 @@ html {
 	--fs-small: clamp(16px, 16px, 16px);
 	--fs-medium: clamp(1rem, 0.969rem + 0.156vw, 1.125rem);
 	--fs-large: clamp(24px, 24px, 24px);
-	--fs-h1: clamp(2.5rem, 1.429rem + 5.357vw, 6.25rem);
-	--fs-h2: clamp(2rem, 1.656rem + 1.719vw, 3.375rem);
-	--fs-h3: clamp(2.5rem, 1.563rem + 4.688vw, 6.25rem);
-	--fs-h4: clamp(2rem, 1.75rem + 1.25vw, 3rem);
+	--fs-h1: clamp(2.2rem, 1.188rem + 5.063vw, 6.25rem);
+	--fs-h2: clamp(1.8rem, 1.406rem + 1.969vw, 3.375rem);
+	--fs-h3: clamp(2.3rem, 1.312rem + 4.938vw, 6.25rem);
+	--fs-h4: clamp(1.8rem, 1.5rem + 1.5vw, 3rem);
 	--fs-h5: clamp(1.5rem, 1.031rem + 2.344vw, 3.375rem);
-	--fs-h6: clamp(1.375rem, 1.344rem + 0.156vw, 1.5rem);
-	--fs-button: clamp(14px, 14px, 14px);
-	--fs-input: clamp(14px, 14px, 14px);
+	--fs-h6: clamp(1.275rem, 1.219rem + 0.281vw, 1.5rem);
+	--fs-button: clamp(0.875rem, 0.813rem + 0.313vw, 1.125rem);
+	--fs-input: clamp(0.875rem, 0.813rem + 0.313vw, 1.125rem);
 	--fs-menu-a: clamp(1.125rem, 0.938rem + 0.938vw, 1.875rem);
-	--padding-inline-section: clamp(24px, 24px, 24px);
+	--padding-inline-section: clamp(1.5rem, -1.25rem + 13.75vw, 12.5rem);
 	--padding-block-section: clamp(24px, 24px, 24px);
 	--header-height: 10vh;
 	--desktop-height: calc(100vh - 1rem);
-	--aside-width: 10vw;
-	--aside-footer-width: 8vw;
+	--aside-width: clamp(6rem, 1.373rem + 9.627vw, 11rem);
 	--section-desktop-padding-left: calc(var(--aside-width) + 2vw);
 	--bg-color: #252525;
 	--bg-color-card: hsl(75deg 32% 23%);
@@ -29,6 +28,6 @@ html {
 	--text-color-gray: #4a4a4a;
 	--fixed-z-index: 100;
 	--padding-1: clamp(0.5rem, 0.125rem + 1.875vw, 2rem);
-	--padding-2: clamp(4rem, 3.5rem + 2.5vw, 6rem);
+	--padding-2: clamp(2rem, -1.702rem + 7.702vw, 6rem);
 	--error-color: #fd2e12;
 }

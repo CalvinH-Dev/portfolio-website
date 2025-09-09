@@ -5,16 +5,19 @@ section {
 	flex-direction: column;
 	align-items: center;
 	row-gap: 2rem;
+	padding-inline: 24px;
 
 	@include mixins.desktop {
 		position: relative;
 		flex-direction: row;
 		align-items: start;
-		padding-right: var(--padding-inline-section);
+		justify-content: space-between;
+		padding-right: 24px;
 		padding-left: calc(var(--section-desktop-padding-left));
 		height: 100%;
-		width: calc(100vw - var(--aside-footer-width));
+		width: calc(100vw - var(--aside-width));
 		padding-block: 15vh;
+		column-gap: 2vw;
 	}
 }
 
@@ -22,11 +25,7 @@ h2 {
 	align-self: start;
 
 	@include mixins.desktop {
-		text-wrap: nowrap;
-		transform-origin: right center;
-		rotate: -90deg;
-		translate: -25% -50%;
-		max-width: 20%;
+		writing-mode: sideways-lr;
 	}
 }
 

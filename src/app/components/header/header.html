@@ -1,9 +1,12 @@
 <header>
-	<nav><span>1 text</span><app-menu-button [(menuOpen)]="menuOpen" /></nav>
+	<nav class="nav-mobile">
+		<a href="#"><img class="img-mobile" src="/img/logo.png" alt="" /></a
+		><app-menu-button [(menuOpen)]="menuOpen" />
+	</nav>
 </header>
 <aside>
-	<a href="#"><img src="/img/logo.png" alt="Logo" /></a>
-	<nav>
+	<a href="#"><img class="img-desktop" src="/img/logo.png" alt="Logo" /></a>
+	<nav class="nav-desktop">
 		<a href="#why-me">
 			@if (language() === "EN") {
 				Why me

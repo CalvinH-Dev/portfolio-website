@@ -38,23 +38,23 @@ aside {
 	}
 }
 
-a {
+.nav-desktop a {
 	font-family: inherit;
 	font-size: var(--fs-menu-a);
 	color: var(--text-color-gray);
-	rotate: -90deg;
-}
-
-nav a {
+	writing-mode: sideways-lr;
 	display: inline-block;
-	width: max-content;
+
+	&:hover,
+	&.active {
+		color: var(--accent-color);
+
+		@include mixins.multi-shadow(var(--text-color-gray));
+	}
 }
 
-a:hover,
-a.active {
-	color: var(--accent-color);
-
-	@include mixins.multi-shadow(var(--text-color-gray));
+.nav-mobile a {
+	height: 100%;
 }
 
 header:has(.active) {
@@ -62,17 +62,20 @@ header:has(.active) {
 	box-shadow: none;
 }
 
-img {
-	height: 100px;
-	aspect-ratio: 1;
-
+.img-desktop {
 	@include mixins.desktop {
 		width: 100%;
-		rotate: 90deg;
 		height: auto;
 		aspect-ratio: revert;
 		object-fit: cover;
 	}
+}
+
+.img-mobile {
+	object-fit: contain;
+	height: 100%;
+	width: auto;
+	align-self: end;
 }
 
 nav {

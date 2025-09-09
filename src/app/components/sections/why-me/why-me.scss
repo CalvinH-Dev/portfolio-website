@@ -9,8 +9,8 @@ section {
 
 	@include mixins.desktop {
 		flex-direction: row;
-		justify-content: center;
 		align-items: start;
+		justify-content: space-between;
 		position: relative;
 		padding-right: var(--padding-inline-section);
 		padding-left: var(--section-desktop-padding-left);
@@ -20,13 +20,15 @@ section {
 	}
 }
 
+span {
+	text-align: center;
+}
+
 h2 {
 	align-self: start;
 
 	@include mixins.desktop {
-		align-self: initial;
-		rotate: -90deg;
-		translate: 0 100%;
+		writing-mode: sideways-lr;
 	}
 }
 
@@ -113,5 +115,15 @@ h4 {
 	@include mixins.desktop {
 		display: initial;
 		align-self: end;
+	}
+}
+
+.first {
+	display: contents;
+
+	@include mixins.desktop {
+		display: flex;
+		column-gap: 2vw;
+		align-items: end;
 	}
 }

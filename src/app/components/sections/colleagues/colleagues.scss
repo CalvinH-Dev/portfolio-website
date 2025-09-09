@@ -10,8 +10,7 @@ section {
 	@include mixins.desktop {
 		align-items: end;
 		flex-direction: row;
-		justify-content: start;
-		column-gap: 3vw;
+		justify-content: space-between;
 		padding-right: var(--padding-inline-section);
 		padding-left: var(--section-desktop-padding-left);
 		height: 100%;
@@ -32,7 +31,7 @@ section {
 
 	@include mixins.desktop {
 		width: 50vw;
-		max-width: 35vw;
+		max-width: 40vw;
 		flex-direction: column;
 		overflow-x: initial;
 		row-gap: 3vh;
@@ -41,12 +40,8 @@ section {
 
 h2 {
 	@include mixins.desktop {
-		text-wrap: nowrap;
+		writing-mode: sideways-lr;
 		align-self: end;
-		transform-origin: left center;
-		rotate: -90deg;
-		translate: 8vw 50%;
-		max-width: 20%;
 	}
 }
 
@@ -106,6 +101,7 @@ h2 {
 
 	@include mixins.desktop {
 		display: flex;
+		column-gap: 2vw;
 		align-items: end;
 		width: 70%;
 	}

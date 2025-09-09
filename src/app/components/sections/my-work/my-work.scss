@@ -10,7 +10,7 @@ section {
 	@include mixins.desktop {
 		flex-direction: row;
 		align-items: start;
-		column-gap: 3vw;
+		column-gap: 2vw;
 		padding-right: var(--padding-inline-section);
 		padding-left: var(--section-desktop-padding-left);
 		height: 100%;
@@ -19,12 +19,14 @@ section {
 	}
 }
 
+.projects {
+	display: flex;
+	column-gap: 3vw;
+}
+
 h2 {
 	@include mixins.desktop {
-		text-wrap: nowrap;
-		align-self: start;
-		rotate: -90deg;
-		translate: 50% 100%;
+		writing-mode: sideways-lr;
 	}
 }
 

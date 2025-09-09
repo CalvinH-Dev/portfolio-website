@@ -33,7 +33,6 @@
 	}
 
 	@include mixins.desktop {
-		width: 50vw;
 		display: contents;
 	}
 }
@@ -49,7 +48,7 @@
 	overflow: hidden;
 	background-color: var(--bg-color-card);
 	border-radius: 30px;
-	padding: 1.25rem;
+	padding: clamp(1.25rem, -0.369rem + 3.369vw, 3rem);
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -57,7 +56,7 @@
 
 	@include mixins.desktop {
 		height: 60vh;
-		width: 50vw;
+		width: max(50vw, 70ch);
 	}
 }
 

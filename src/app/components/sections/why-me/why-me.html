@@ -1,77 +1,79 @@
 <section>
-	<h2>
-		@if (language() === "EN") {
-			Why me
-		} @else {
-			Wieso ich
-		}
-	</h2>
-	<div class="middle">
-		<p>
+	<div class="first">
+		<h2>
 			@if (language() === "EN") {
-				I enjoy tackling logical challenges and breaking down complex problems into manageable
-				parts. Programming allows me to transform these problems into practical solutions that can
-				make a real difference in people's lives. It's fulfilling to know that the code I write can
-				simplify tasks, improve efficiency, and contribute positively to the world around me.
+				Why me
 			} @else {
-				Ich schätze es, komplexe, logische Probleme zu analysieren und in strukturierte Lösungen zu
-				übersetzen. Die Möglichkeit, mit Programmierung reale Herausforderungen zu meistern und das
-				Leben anderer zu erleichtern, motiviert mich stets, meine Fähigkeiten weiterzuentwickeln.
-				Für mich ist Programmieren nicht nur ein technisches Handwerk, sondern eine kreative
-				Ausdrucksform, die unmittelbare Auswirkungen auf die Welt hat.
+				Wieso ich
 			}
-		</p>
-		<div class="features">
-			<h4>
+		</h2>
+		<div class="middle">
+			<p>
 				@if (language() === "EN") {
-					I am:
+					I enjoy tackling logical challenges and breaking down complex problems into manageable
+					parts. Programming allows me to transform these problems into practical solutions that can
+					make a real difference in people's lives. It's fulfilling to know that the code I write
+					can simplify tasks, improve efficiency, and contribute positively to the world around me.
 				} @else {
-					Ich bin:
+					Ich schätze es, komplexe, logische Probleme zu analysieren und in strukturierte Lösungen
+					zu übersetzen. Die Möglichkeit, mit Programmierung reale Herausforderungen zu meistern und
+					das Leben anderer zu erleichtern, motiviert mich stets, meine Fähigkeiten
+					weiterzuentwickeln. Für mich ist Programmieren nicht nur ein technisches Handwerk, sondern
+					eine kreative Ausdrucksform, die unmittelbare Auswirkungen auf die Welt hat.
 				}
-			</h4>
-			<div class="images">
-				<div class="image-list desktop">
-					<app-location />
-					<span>
-						@if (language() === "EN") {
-							located in Leipzig
-						} @else {
-							aktuell in Leipzig
-						}
-					</span>
-				</div>
-				<div class="image-list">
-					<app-relocate />
-					<span>
-						@if (language() === "EN") {
-							open to relocate
-						} @else {
-							Offen für einen Standortwechsel
-						}
-					</span>
-				</div>
-				<div class="image-list">
-					<app-remote />
-					<span>
-						@if (language() === "EN") {
-							open to work remote
-						} @else {
-							Flexibel beim Arbeitsort (remote möglich)
-						}
-					</span>
+			</p>
+			<div class="features">
+				<h4>
+					@if (language() === "EN") {
+						I am:
+					} @else {
+						Ich bin:
+					}
+				</h4>
+				<div class="images">
+					<div class="image-list desktop">
+						<app-location />
+						<span>
+							@if (language() === "EN") {
+								located in Leipzig
+							} @else {
+								aktuell in Leipzig
+							}
+						</span>
+					</div>
+					<div class="image-list">
+						<app-relocate />
+						<span>
+							@if (language() === "EN") {
+								open to relocate
+							} @else {
+								Offen für einen Standortwechsel
+							}
+						</span>
+					</div>
+					<div class="image-list">
+						<app-remote />
+						<span>
+							@if (language() === "EN") {
+								open to work remote
+							} @else {
+								Flexibel beim Arbeitsort (remote möglich)
+							}
+						</span>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="spacer">
-			<button class="primary">
-				<span>
-					@if (language() === "EN") {
-						Contact me
-					} @else {
-						Kontakt
-					}
-				</span>
-			</button>
+			<div class="spacer">
+				<button class="primary">
+					<span>
+						@if (language() === "EN") {
+							Contact me
+						} @else {
+							Kontakt
+						}
+					</span>
+				</button>
+			</div>
 		</div>
 	</div>
 	<app-link-arrow href="#skills" />

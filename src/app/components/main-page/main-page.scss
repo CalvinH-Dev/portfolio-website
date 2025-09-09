@@ -17,7 +17,7 @@ aside {
 	@include mixins.desktop {
 		display: revert;
 		height: 100%;
-		width: var(--aside-footer-width);
+		width: var(--aside-width);
 		background: var(--menu-color);
 	}
 }

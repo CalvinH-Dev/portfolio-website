@@ -9,7 +9,7 @@ section {
 	@include mixins.desktop {
 		flex-direction: row;
 		align-items: end;
-		column-gap: 5vw;
+		justify-content: space-between;
 		padding-right: var(--padding-inline-section);
 		padding-left: var(--section-desktop-padding-left);
 		height: 100%;
@@ -20,12 +20,8 @@ section {
 
 h2 {
 	@include mixins.desktop {
-		align-self: initial;
-		rotate: -90deg;
-		transform-origin: left center;
-		translate: 12vw 50%;
-		text-wrap: nowrap;
-		max-width: 20%;
+		writing-mode: sideways-lr;
+		align-self: end;
 	}
 }
 
@@ -54,7 +50,6 @@ img {
 	display: contents;
 
 	@include mixins.desktop {
-		padding-inline: 3vw;
 		display: flex;
 		flex-direction: column;
 		width: 100%;
@@ -73,8 +68,8 @@ button.primary {
 
 	@include mixins.desktop {
 		display: flex;
-		column-gap: 5vw;
+		column-gap: 2vw;
 		align-items: end;
-		width: 70%;
+		width: 50%;
 	}
 }

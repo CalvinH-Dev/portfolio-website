@@ -1,12 +1,14 @@
 <section>
 	<h2>My Work</h2>
-	@for (project of projects; track $index) {
-		<app-project
-			[index]="$index"
-			[projectInfo]="project"
-			[isActive]="activeIdx === $index"
-			(setActive)="setActiveProject($index)"
-		/>
-	}
+	<div class="projects">
+		@for (project of projects; track $index) {
+			<app-project
+				[index]="$index"
+				[projectInfo]="project"
+				[isActive]="activeIdx === $index"
+				(setActive)="setActiveProject($index)"
+			/>
+		}
+	</div>
 	<app-link-arrow href="#references" />
 </section>
