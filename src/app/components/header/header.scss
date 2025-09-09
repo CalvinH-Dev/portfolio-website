@@ -89,6 +89,6 @@ nav {
 	@include mixins.desktop {
 		flex-direction: column;
 		justify-content: space-around;
-		padding-block: var(--padding-2);
+		padding-block: var(--padding-3);
 	}
 }

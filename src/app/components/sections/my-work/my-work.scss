@@ -20,8 +20,12 @@ section {
 }
 
 .projects {
-	display: flex;
-	column-gap: 3vw;
+	display: contents;
+
+	@include mixins.desktop {
+		display: flex;
+		column-gap: 3vw;
+	}
 }
 
 h2 {

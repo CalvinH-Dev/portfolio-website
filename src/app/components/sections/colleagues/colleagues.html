@@ -2,9 +2,18 @@
 	<div class="first">
 		<h2>References</h2>
 		<div class="colleague-slider" #slider>
-			<div class="colleague-item"><div class="colleague-card" #card></div></div>
-			<div class="colleague-item"><div class="colleague-card" #card></div></div>
-			<div class="colleague-item"><div class="colleague-card" #card></div></div>
+			@for (colleague of colleagues; track $index) {
+				<div class="colleague-item">
+					<div class="colleague-card" #card>
+						<p class="text">"{{ colleague.text[language()] }}"</p>
+						<div class="spacer"></div>
+						<div class="info">
+							<span class="name">{{ colleague.name }}</span>
+							<span class="project">{{ colleague.project }}</span>
+						</div>
+					</div>
+				</div>
+			}
 		</div>
 		<div class="slider-state">
 			@for (colleague of colleagues; track $index) {

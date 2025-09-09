@@ -11,7 +11,7 @@ html {
 	--fs-button: clamp(0.875rem, 0.813rem + 0.313vw, 1.125rem);
 	--fs-input: clamp(0.875rem, 0.813rem + 0.313vw, 1.125rem);
 	--fs-menu-a: clamp(1.125rem, 0.938rem + 0.938vw, 1.875rem);
-	--padding-inline-section: clamp(1.5rem, -1.25rem + 13.75vw, 12.5rem);
+	--padding-inline-section: clamp(1.5rem, 0rem + 7.5vw, 7.5rem);
 	--padding-block-section: clamp(24px, 24px, 24px);
 	--header-height: 10vh;
 	--desktop-height: calc(100vh - 1rem);
@@ -28,6 +28,7 @@ html {
 	--text-color-gray: #4a4a4a;
 	--fixed-z-index: 100;
 	--padding-1: clamp(0.5rem, 0.125rem + 1.875vw, 2rem);
-	--padding-2: clamp(2rem, -1.702rem + 7.702vw, 6rem);
+	--padding-2: clamp(1rem, 0.75rem + 1.25vw, 2rem);
+	--padding-3: clamp(2rem, -1.702rem + 7.702vw, 6rem);
 	--error-color: #fd2e12;
 }
