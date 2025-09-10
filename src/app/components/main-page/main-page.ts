@@ -6,11 +6,10 @@ import { ContactForm } from "../sections/contact-form/contact-form";
 import { HeroSection } from "../sections/hero-section/hero-section";
 import { MyWork } from "../sections/my-work/my-work";
 import { SkillsSection } from "../sections/skills-section/skills-section";
-import { Socials } from "../sections/socials/socials";
 
 @Component({
 	selector: "app-main-page",
-	imports: [HeroSection, WhyMe, SkillsSection, ContactForm, BackToTop, Socials, MyWork, Colleagues],
+	imports: [HeroSection, WhyMe, SkillsSection, ContactForm, BackToTop, MyWork, Colleagues],
 	templateUrl: "./main-page.html",
 	styleUrl: "./main-page.scss",
 })

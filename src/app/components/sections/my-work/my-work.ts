@@ -19,14 +19,14 @@ const projects: ProjectInterface[] = [
 			EN: "I learned how to create a game loop using `requestAnimationFrame`, utilize classes in JavaScript, and time animations effectively.",
 		},
 		imageSrc: "/sharkie.png",
-		githubSrc: "",
+		githubSrc: "https://github.com/CalvinH-Dev/da-oop-game-1",
 		pageSrc: "https://sharkie.hanisch-dev.de",
 	},
 	{
 		name: "Pokédex API",
 		about: {
-			DE: "Die Pokédex-API ermöglicht den Abruf von Pokémon-Daten über RESTful-Endpunkte wie `/api/v2/pokemon/{id}`. Die Antworten werden im JSON-Format bereitgestellt und enthalten Informationen wie Name, Typen, Fähigkeiten und Basiswerte. Entwickler können die API nutzen, um interaktive Anwendungen zu erstellen, die auf umfangreiche Pokémon-Daten zugreifen.",
-			EN: "The Pokédex API allows fetching Pokémon data through RESTful endpoints like `/api/v2/pokemon/{id}`. Responses are provided in JSON format and include information such as name, types, abilities, and base stats. Developers can use the API to create interactive applications that access extensive Pokémon data.",
+			DE: "Die Pokédex-API ermöglicht den Abruf von Pokémon-Daten über RESTful-Endpunkte wie `/api/v2/pokemon/{id}`. Die Antworten werden im JSON-Format bereitgestellt und enthalten Informationen wie Name, Typen, Fähigkeiten und Basiswerte.",
+			EN: "The Pokédex API allows fetching Pokémon data through RESTful endpoints like `/api/v2/pokemon/{id}`. Responses are provided in JSON format and include information such as name, types, abilities, and base stats.",
 		},
 		tech: {
 			DE: "Ich habe Vanilla JavaScript mit `fetch` und `async/await` genutzt, um Daten asynchron im Hintergrund abzurufen. Dabei wird die Seite initialisiert, ein Lade-Spinner angezeigt und nach dem Laden der ersten Daten verschwindet der Spinner, während weitere Daten im Hintergrund geladen werden.",
@@ -37,7 +37,7 @@ const projects: ProjectInterface[] = [
 			EN: "I learned how to fetch data from a Pokédex API in JSON format, implement a search function, and display additional Pokémon information.",
 		},
 		imageSrc: "/pokedex.png",
-		githubSrc: "",
+		githubSrc: "https://github.com/CalvinH-Dev/pokemon-app",
 		pageSrc: "https://pokedex.hanisch-dev.de",
 	},
 ];
