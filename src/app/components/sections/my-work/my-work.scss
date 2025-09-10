@@ -15,7 +15,7 @@ section {
 		padding-left: var(--section-desktop-padding-left);
 		height: 100%;
 		width: auto;
-		padding-block: 15vh;
+		padding-block: var(--padding-block-section-desktop);
 	}
 }
 
@@ -25,6 +25,7 @@ section {
 	@include mixins.desktop {
 		display: flex;
 		column-gap: 3vw;
+		height: 100%;
 	}
 }
 

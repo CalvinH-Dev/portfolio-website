@@ -16,7 +16,7 @@ section {
 		padding-left: calc(var(--section-desktop-padding-left));
 		height: 100%;
 		width: calc(100vw - var(--aside-width));
-		padding-block: 15vh;
+		padding-block: var(--padding-block-section-desktop);
 		column-gap: 2vw;
 	}
 }

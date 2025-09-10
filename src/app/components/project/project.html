@@ -18,13 +18,14 @@
 					<h6>What i have learned</h6>
 					<p>{{ projectInfo().learning }}</p>
 				</div>
-
-				<div class="img-container">
-					<img [src]="projectInfo().imageSrc" alt="" />
-				</div>
-				<div class="buttons">
-					<button class="secondary"><a [href]="projectInfo().githubSrc">Github</a></button>
-					<button class="primary"><a [href]="projectInfo().pageSrc">Live Test</a></button>
+				<div class="container-desktop">
+					<div class="img-container">
+						<img [src]="projectInfo().imageSrc" alt="" />
+					</div>
+					<div class="buttons">
+						<button class="secondary"><a [href]="projectInfo().githubSrc">Github</a></button>
+						<button class="primary"><a [href]="projectInfo().pageSrc">Live Test</a></button>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -34,7 +34,7 @@ main {
 section {
 	height: 100%;
 	padding-inline: var(--padding-inline-section);
-	padding-block: var(--padding-block-section);
+	padding-block: var(--padding-block-section-mobile);
 
 	@include mixins.desktop {
 		scroll-snap-align: start;

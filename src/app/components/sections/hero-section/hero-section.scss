@@ -1,7 +1,7 @@
 @use "../../../../global-styles/mixins";
 
 section {
-	padding-block: calc(var(--header-height) + var(--padding-block-section));
+	padding-block: calc(var(--header-height) + var(--padding-block-section-mobile));
 	height: 100svh;
 	display: flex;
 	flex-direction: column;
@@ -9,10 +9,13 @@ section {
 	row-gap: 2rem;
 
 	@include mixins.desktop {
-		display: block;
+		display: flex;
+		flex-direction: row;
+		justify-content: end;
+		column-gap: 10vw;
 		position: relative;
 		scroll-snap-align: center;
-		padding-block: var(--padding-block-section);
+		padding-block: var(--padding-block-section-desktop);
 		padding-right: var(--padding-inline-section);
 		padding-left: var(--section-desktop-padding-left);
 		width: 100vw;
@@ -35,7 +38,6 @@ section {
 		align-items: end;
 		justify-content: end;
 		height: 100%;
-		padding-inline: 25%;
 		padding-block: 10%;
 		row-gap: 2rem;
 	}
@@ -68,6 +70,7 @@ h1 {
 		position: absolute;
 		height: auto;
 		width: max(35vw, 550px);
+		max-width: 1000px;
 		bottom: 0;
 		right: 0;
 		left: 0;

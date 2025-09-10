@@ -14,7 +14,7 @@ section {
 		padding-left: var(--section-desktop-padding-left);
 		height: 100%;
 		width: 100vw;
-		padding-block: 15vh;
+		padding-block: var(--padding-block-section-desktop);
 	}
 }
 
