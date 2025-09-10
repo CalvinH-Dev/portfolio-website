@@ -5,12 +5,12 @@ import { EndSection } from "../end-section/end-section";
 import { LinkArrow } from "../link-arrow/link-arrow";
 
 @Component({
-	selector: "app-legal-page",
+	selector: "app-privacy",
 	imports: [EndSection, LinkArrow, BackToTop],
-	templateUrl: "./legal-page.html",
-	styleUrl: "./legal-page.scss",
+	templateUrl: "./privacy.html",
+	styleUrl: "./privacy.scss",
 })
-export class LegalPage {
+export class Privacy {
 	languageService = inject(LanguageService);
 	language = this.languageService.getLanguage();
 }

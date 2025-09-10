@@ -23,8 +23,12 @@
 						<img [src]="projectInfo().imageSrc" alt="" />
 					</div>
 					<div class="buttons">
-						<button class="secondary"><a [href]="projectInfo().githubSrc">Github</a></button>
-						<button class="primary"><a [href]="projectInfo().pageSrc">Live Test</a></button>
+						<button class="secondary">
+							<a target="_blank" [href]="projectInfo().githubSrc">Github</a>
+						</button>
+						<button class="primary">
+							<a target="_blank" [href]="projectInfo().pageSrc">Live Test</a>
+						</button>
 					</div>
 				</div>
 			</div>

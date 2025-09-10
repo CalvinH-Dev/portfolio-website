@@ -2,6 +2,20 @@
 	<div class="img-container">
 		<img src="/img/logo_dark.png" alt="" />
 	</div>
-	<span>Das ist Copyright</span>
-	<div><a href="legal">Legal Notice</a><a href="">2Link</a></div>
+	<span>&copy; Calvin Hanisch 2025</span>
+	<div class="last">
+		<a href="legal">
+			@if (language() === "EN") {
+				Legal Notice
+			} @else {
+				Impressum
+			}</a
+		><a href="privacy">
+			@if (language() === "EN") {
+				Privacy Policy
+			} @else {
+				Datenschutz
+			}
+		</a>
+	</div>
 </footer>

@@ -22,3 +22,12 @@ footer .img-container {
 	height: 64px;
 	aspect-ratio: 1;
 }
+
+footer :is(a, span) {
+	color: var(--text-color-gray);
+}
+
+.last {
+	display: flex;
+	column-gap: 2rem;
+}

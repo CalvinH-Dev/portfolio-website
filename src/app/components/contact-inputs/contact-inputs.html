@@ -1,9 +1,13 @@
-<form action="/" method="post" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
 	<input
 		type="text"
 		name="name"
 		id=""
-		[placeholder]="language() === 'EN' ? 'Your Name' : 'Ihr Name'"
+		[placeholder]="
+			name.invalid && name.touched
+				? placeholders.name[language()].error
+				: placeholders.name[language()].valid
+		"
 		[(ngModel)]="contactData.name"
 		#name="ngModel"
 		required
@@ -14,7 +18,11 @@
 		type="email"
 		name="email"
 		id=""
-		[placeholder]="language() === 'EN' ? 'Your Email' : 'Ihre Email-Adresse'"
+		[placeholder]="
+			email.invalid && email.touched
+				? placeholders.email[language()].error
+				: placeholders.email[language()].valid
+		"
 		[(ngModel)]="contactData.email"
 		#email="ngModel"
 		required
@@ -23,14 +31,24 @@
 		name="message"
 		rows="8"
 		cols="30"
-		[placeholder]="language() === 'EN' ? 'Your Message' : 'Ihre Nachricht an mich'"
+		[placeholder]="
+			message.invalid && message.touched
+				? placeholders.message[language()].error
+				: placeholders.message[language()].valid
+		"
 		[(ngModel)]="contactData.message"
 		#message="ngModel"
 		required
 	></textarea>
 	<div class="send-message">
 		<div class="checkbox-text">
-			<input type="checkbox" name="" />
+			<input
+				type="checkbox"
+				name="privacy"
+				required
+				#privacy="ngModel"
+				[(ngModel)]="contactData.privacy"
+			/>
 			<span class="legal">
 				@if (language() === "EN") {
 					I've read the <a class="privacy" href="privacy">privacy policy</a> and agree to the
@@ -41,6 +59,8 @@
 				}
 			</span>
 		</div>
-		<button type="submit" class="primary"><span>Send</span></button>
+		<button type="submit" class="primary" [disabled]="!contactForm.form.valid">
+			<span>Send</span>
+		</button>
 	</div>
 </form>

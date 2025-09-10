@@ -22,17 +22,36 @@
 		</p>
 		<div class="contact-items">
 			<div class="contact-item hoverable">
-				<app-mail /> <span>E-Mail: <a href="">test&#64;gmail.com</a></span>
+				<app-mail /> <span>E-Mail: <a href="">calvin.hanisch&#64;gmail.com</a></span>
 			</div>
 			<div class="contact-item hoverable">
-				<app-phone /> <span>Tel: <a href="">0123203123012302</a></span>
+				<app-phone /> <span>Tel: <a href="">(+49) 176 724 35 482</a></span>
 			</div>
 		</div>
 	</div>
 	<app-link-arrow orientation="left" href="#" />
 	<div class="last-bottom">
 		<div class="hoverable">
-			<span><a href="/legal">Legal Notice</a></span>
+			<span
+				><a href="/legal">
+					@if (language() === "EN") {
+						Legal Notice
+					} @else {
+						Impressum
+					}
+				</a></span
+			>
+		</div>
+		<div class="hoverable">
+			<span
+				><a href="/privacy">
+					@if (language() === "EN") {
+						Privacy Policy
+					} @else {
+						Datenschutz
+					}
+				</a></span
+			>
 		</div>
 	</div>
 </div>

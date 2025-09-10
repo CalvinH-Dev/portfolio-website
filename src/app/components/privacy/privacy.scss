@@ -11,6 +11,7 @@ section {
 	align-items: center;
 	row-gap: 2rem;
 	padding-inline: 24px;
+	padding-block: var(--padding-block-section-mobile);
 
 	@include mixins.desktop {
 		position: relative;
@@ -26,6 +27,10 @@ section {
 }
 
 .first {
+	padding-top: var(--header-height);
+}
+
+section:not(.last) {
 	@include mixins.desktop {
 		width: 100vw;
 		display: flex;
@@ -41,6 +46,10 @@ section {
 }
 
 .content {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.5rem;
+
 	@include mixins.desktop {
 		height: 100%;
 		max-width: 70vw;
@@ -52,7 +61,7 @@ section {
 	}
 }
 
-.second {
+.last {
 	@include mixins.desktop {
 		width: calc(100vw - var(--aside-width));
 	}
@@ -67,6 +76,11 @@ h2 {
 .paragraph {
 	display: flex;
 	flex-direction: column;
+	row-gap: 1rem;
+}
+
+p {
+	font-size: var(--fs-small);
 }
 
 .headline {
