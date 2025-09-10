@@ -14,5 +14,7 @@ export class EndSection {
 	languageService = inject(LanguageService);
 	language = this.languageService.getLanguage();
 
+	href = input<string>("#");
+
 	showText = input<boolean>(true);
 }
