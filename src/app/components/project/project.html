@@ -1,22 +1,40 @@
 <div class="wrapper" [class.active]="isActive()">
 	<div class="project">
 		<div class="name">
-			<h3>{{ index() }}</h3>
-			<h5>Project {{ projectInfo().name }}</h5>
+			<h3>{{ index() + 1 }}</h3>
+			<h5>{{ projectInfo().name }}</h5>
 		</div>
 		<div class="content">
 			<div class="item">
-				<h6>About the project</h6>
-				<p>{{ projectInfo().about }}</p>
+				<h6>
+					@if (language() === "EN") {
+						About the project
+					} @else {
+						Über das Projekt
+					}
+				</h6>
+				<p>{{ projectInfo().about[language()] }}</p>
 			</div>
 			<div class="collapsable-grid" [class.active]="isActive()">
 				<div class="item">
-					<h6>Technologies i have used</h6>
-					<p>{{ projectInfo().tech }}</p>
+					<h6>
+						@if (language() === "EN") {
+							Technologies i have used
+						} @else {
+							Software die ich verwendet habe
+						}
+					</h6>
+					<p>{{ projectInfo().tech[language()] }}</p>
 				</div>
 				<div class="item">
-					<h6>What i have learned</h6>
-					<p>{{ projectInfo().learning }}</p>
+					<h6>
+						@if (language() === "EN") {
+							What i have learned
+						} @else {
+							Was ich gelernt habe
+						}
+					</h6>
+					<p>{{ projectInfo().learning[language()] }}</p>
 				</div>
 				<div class="container-desktop">
 					<div class="img-container">
