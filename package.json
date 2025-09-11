@@ -6,6 +6,7 @@
 		"start": "ng serve --hmr",
 		"build": "ng build",
 		"watch": "ng build --watch --configuration development",
+		"build:prod": "ng build --configuration production && npm run postbuild",
 		"test": "ng test",
 		"serve:ssr:portfolio": "node dist/portfolio/server/server.mjs",
 		"lint": "ng lint",

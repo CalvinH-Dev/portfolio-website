@@ -4,7 +4,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case ("OPTIONS"): //Allow preflighting to take place.
         header("Access-Control-Allow-Origin: *");
         header("Access-Control-Allow-Methods: POST");
-        header("Access-Control-Allow-Headers: content-type");
+        header("Access-Control-Allow-Headers: Content-Type");
         exit;
         case("POST"): //Send the email;
             header("Access-Control-Allow-Origin: *");

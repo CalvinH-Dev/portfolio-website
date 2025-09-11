@@ -50,6 +50,7 @@ export class ContactInputs {
 
 	onSubmit(form: NgForm) {
 		if (form.submitted && form.form.valid) {
+			console.log(this.contactData);
 			this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
 				next: () => {
 					form.resetForm();
