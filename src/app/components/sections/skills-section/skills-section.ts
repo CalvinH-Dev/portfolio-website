@@ -4,14 +4,14 @@ import { Image } from "app/interfaces/image";
 import { LanguageService } from "app/services/language";
 
 const imageList: Image[] = [
-	{ src: "img/skills/angular.png", alt: "" },
-	{ src: "img/skills/api.png", alt: "" },
-	{ src: "img/skills/css.png", alt: "" },
-	{ src: "img/skills/git.png", alt: "" },
-	{ src: "img/skills/html.png", alt: "" },
-	{ src: "img/skills/javascript.png", alt: "" },
-	{ src: "img/skills/typescript.png", alt: "" },
-	{ src: "img/skills/question-mark.png", alt: "" },
+	{ src: "img/skills/angular.webp", alt: "" },
+	{ src: "img/skills/api.webp", alt: "" },
+	{ src: "img/skills/css.webp", alt: "" },
+	{ src: "img/skills/git.webp", alt: "" },
+	{ src: "img/skills/html.webp", alt: "" },
+	{ src: "img/skills/javascript.webp", alt: "" },
+	{ src: "img/skills/typescript.webp", alt: "" },
+	{ src: "img/skills/question-mark.webp", alt: "" },
 ];
 
 @Component({

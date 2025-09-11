@@ -38,7 +38,7 @@ export class ContactInputs {
 	};
 
 	post = {
-		endPoint: "https://hanisch-dev.de/sendMail.php",
+		endPoint: "https://portfolio.hanisch-dev.de/sendMail.php",
 		body: (payload: any) => JSON.stringify(payload),
 		options: {
 			headers: {
