@@ -1,4 +1,5 @@
 import { Component, inject } from "@angular/core";
+import { RouterLink } from "@angular/router";
 import { LinkArrow } from "app/components/link-arrow/link-arrow";
 import { Image } from "app/interfaces/image";
 import { LanguageService } from "app/services/language";
@@ -16,7 +17,7 @@ const imageList: Image[] = [
 
 @Component({
 	selector: "app-skills-section",
-	imports: [LinkArrow],
+	imports: [LinkArrow, RouterLink],
 	templateUrl: "./skills-section.html",
 	styleUrl: "./skills-section.scss",
 })

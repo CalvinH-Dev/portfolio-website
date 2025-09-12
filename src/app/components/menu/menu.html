@@ -1,7 +1,7 @@
 <div class="menu" [class.active]="menuOpen()">
-	<a href="#why-me" (click)="closeMenu()">Why me</a>
-	<a href="#skills" (click)="closeMenu()">My Skill Set</a>
-	<a href="#projects" (click)="closeMenu()">My Work</a>
-	<a href="#contact" (click)="closeMenu()">Contact me</a>
+	<a routerLink="/" fragment="why-me" (click)="closeMenu()">Why me</a>
+	<a routerLink="/" fragment="skills" (click)="closeMenu()">My Skill Set</a>
+	<a routerLink="/" fragment="projects" (click)="closeMenu()">My Work</a>
+	<a routerLink="/" fragment="contact" (click)="closeMenu()">Contact me</a>
 	<app-languages />
 </div>

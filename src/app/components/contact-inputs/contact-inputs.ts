@@ -1,12 +1,13 @@
 import { HttpClient } from "@angular/common/http";
 import { Component, inject } from "@angular/core";
 import { FormsModule, NgForm } from "@angular/forms";
+import { RouterLink } from "@angular/router";
 import { ContactInformation } from "app/interfaces/contact-information";
 import { LanguageService } from "app/services/language";
 
 @Component({
 	selector: "app-contact-inputs",
-	imports: [FormsModule],
+	imports: [FormsModule, RouterLink],
 	templateUrl: "./contact-inputs.html",
 	styleUrl: "./contact-inputs.scss",
 })
@@ -38,7 +39,7 @@ export class ContactInputs {
 	};
 
 	post = {
-		endPoint: "https://portfolio.hanisch-dev.de/sendMail.php",
+		endPoint: "https://hanisch-dev.de/sendMail.php",
 		body: (payload: any) => JSON.stringify(payload),
 		options: {
 			headers: {

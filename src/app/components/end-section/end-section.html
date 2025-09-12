@@ -29,11 +29,11 @@
 			</div>
 		</div>
 	</div>
-	<app-link-arrow orientation="left" [href]="href()" />
+	<app-link-arrow orientation="left" fragment="" />
 	<div class="last-bottom">
 		<div class="hoverable">
 			<span
-				><a href="/legal">
+				><a routerLink="legal">
 					@if (language() === "EN") {
 						Legal Notice
 					} @else {
@@ -44,7 +44,7 @@
 		</div>
 		<div class="hoverable">
 			<span
-				><a href="/privacy">
+				><a routerLink="privacy">
 					@if (language() === "EN") {
 						Privacy Policy
 					} @else {
