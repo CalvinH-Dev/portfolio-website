@@ -209,10 +209,11 @@ h5 {
 	height: 1lh;
 	width: auto;
 	transition: rotate 225ms;
+	rotate: -180deg;
 }
 
 .active .show button img {
-	rotate: -180deg;
+	rotate: -0deg;
 }
 
 @media (width <= 1024px) and (width >= 769px) {

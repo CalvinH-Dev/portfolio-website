@@ -81,6 +81,7 @@ h1 {
 img {
 	object-fit: contain;
 	width: min(100%, 400px);
+	mask-image: radial-gradient(black 45%, transparent 70%);
 
 	@include mixins.desktop {
 		width: 100%;
