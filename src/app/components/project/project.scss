@@ -1,6 +1,8 @@
 @use "../../../global-styles/mixins";
 
 :host {
+	--row-gap-grid: 1.5rem;
+
 	display: contents;
 }
 
@@ -23,15 +25,25 @@
 	}
 }
 
+.grid {
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-rows: auto auto auto auto;
+	row-gap: var(--row-gap-grid);
+
+	@include mixins.desktop {
+		display: contents;
+	}
+}
+
 .collapsable-grid {
 	width: 100%;
 	display: grid;
-	grid-template-rows: 0fr 0fr 0fr 0fr;
-	transition: grid-template-rows 1s;
-
-	& > * {
-		overflow: hidden;
-	}
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 1s cubic-bezier(0, 0, 0.2, 1);
+	align-items: center;
 
 	@include mixins.desktop {
 		display: contents;
@@ -39,7 +51,7 @@
 }
 
 .collapsable-grid.active {
-	grid-template-rows: 1fr 1fr 1fr 0.35fr;
+	grid-template-rows: 1fr;
 	align-items: center;
 }
 
@@ -48,17 +60,17 @@
 	height: 100%;
 	overflow: hidden;
 	background-color: var(--bg-color-card);
-	border-radius: 30px;
+	border-radius: var(--border-radius-card);
 	padding: clamp(1.25rem, 1.1rem + 0.75vw, 2rem);
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	row-gap: 1.5rem;
+	row-gap: var(--row-gap-grid);
 
 	@include mixins.desktop {
 		max-height: 100%;
 		height: auto;
-		width: max(50vw, 70ch);
+		width: 65vw;
 	}
 }
 
@@ -111,21 +123,19 @@ h5 {
 
 .item:nth-child(1) {
 	@include mixins.desktop {
-		// grid-row: 1/2;
 		grid-column: 1/2;
 	}
 }
 
-.collapsable-grid .item:nth-child(1) {
+.grid .item:nth-child(1) {
 	@include mixins.desktop {
 		grid-row: 2/3;
-		grid-column: 1/3;
+		grid-column: 1/2;
 	}
 }
 
-.collapsable-grid .item:nth-child(2) {
+.grid .item:nth-child(2) {
 	@include mixins.desktop {
-		grid-row: 3/4;
 		grid-column: 1/3;
 	}
 }
@@ -144,7 +154,6 @@ h5 {
 }
 
 .img-container {
-	border: 30px;
 	height: auto;
 	width: 100%;
 	overflow: hidden;
@@ -159,15 +168,16 @@ h5 {
 	flex-direction: column;
 	row-gap: 1rem;
 	align-items: center;
+	align-self: center;
 
 	@include mixins.desktop {
-		grid-row: 1/2;
+		grid-row: 1/3;
 		grid-column: 2/3;
 	}
 }
 
 .img-container img {
-	border-radius: 30px;
+	border-radius: var(--border-radius-card);
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
@@ -203,4 +213,20 @@ h5 {
 
 .active .show button img {
 	rotate: -180deg;
+}
+
+@media (width <= 1024px) and (width >= 769px) {
+	.buttons {
+		flex-direction: column;
+		row-gap: 1rem;
+	}
+
+	.container-img-buttons {
+		grid-row: 1/2;
+	}
+
+	.grid .item:nth-child(1) {
+		grid-row: 2/3;
+		grid-column: 1/3;
+	}
 }

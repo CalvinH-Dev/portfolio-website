@@ -87,8 +87,8 @@ h6 {
 }
 
 button:is(.primary, .secondary) {
-	padding: 13px 30px;
-	border-radius: 30px;
+	padding: var(--padding-block-button) var(--padding-inline-button);
+	border-radius: var(--border-radius-button);
 }
 
 button.primary {
@@ -105,7 +105,6 @@ button.primary {
 button.secondary {
 	background-color: transparent;
 	border: 1px solid #b5e93b;
-	border-radius: 30px;
 	font-family: inherit;
 
 	& :is(span, a) {

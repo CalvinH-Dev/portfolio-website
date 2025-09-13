@@ -69,7 +69,7 @@ h2 {
 	column-gap: var(--padding-w-1);
 	border: 1px solid;
 	border-color: var(--accent-color-2);
-	border-radius: 30px;
+	border-radius: var(--border-radius-card);
 	height: 100%;
 
 	@include mixins.desktop {

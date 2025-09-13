@@ -44,7 +44,7 @@ textarea {
 	font-weight: 400;
 	font-size: var(--fs-input);
 	border: 1px solid #b5e93b;
-	border-radius: 30px;
+	border-radius: var(--border-radius-button);
 	padding: 25px 21px;
 
 	&:focus {
