@@ -21,9 +21,10 @@
 .arrow {
 	--arrow-width: 3.25rem;
 
-	display: inline-block;
+	display: inline-flex;
 	align-self: end;
 	width: var(--arrow-width);
+	align-content: center;
 
 	@include mixins.desktop {
 		--arrow-width: clamp(4rem, 0.298rem + 7.702vw, 8rem);
@@ -52,4 +53,5 @@
 
 img {
 	height: auto;
+	object-fit: cover;
 }

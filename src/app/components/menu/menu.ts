@@ -1,3 +1,4 @@
+import { ViewportScroller } from "@angular/common";
 import { Component, inject, model } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { Language } from "app/interfaces/languages";
@@ -14,6 +15,8 @@ export class Menu {
 	menuOpen = model<boolean>();
 	languageService = inject(LanguageService);
 	language = this.languageService.getLanguage();
+
+	private viewportScroller = inject(ViewportScroller).setOffset([0, 80]);
 
 	closeMenu() {
 		this.menuOpen.update(() => false);

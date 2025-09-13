@@ -12,4 +12,6 @@ import { LinkArrow } from "../link-arrow/link-arrow";
 export class Privacy {
 	languageService = inject(LanguageService);
 	language = this.languageService.getLanguage();
+
+	alignArrow: "center" | "start" | "end" = "center";
 }
