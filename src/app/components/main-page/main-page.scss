@@ -3,3 +3,14 @@
 :host {
 	display: contents;
 }
+
+.back-to-top {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include mixins.desktop {
+		display: none;
+	}
+}

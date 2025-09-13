@@ -6,9 +6,11 @@ import { RouterLink } from "@angular/router";
 	imports: [RouterLink],
 	templateUrl: "./link-arrow.html",
 	styleUrl: "./link-arrow.scss",
+	host: { "[class.mobile]": 'show() === "mobile"', "[class.desktop]": 'show() === "desktop"' },
 })
 export class LinkArrow {
+	show = input<"mobile" | "desktop" | "both">("both");
 	fragment = input<string>("");
-	orientation = input<"left" | "right">("right");
+	orientation = input<"left" | "right" | "up">("right");
 	alignSelf = input<"start" | "center" | "end">("end");
 }

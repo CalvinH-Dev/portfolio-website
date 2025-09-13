@@ -4,15 +4,29 @@
 	display: contents;
 }
 
-.arrow {
+:host.mobile {
+	@include mixins.desktop {
+		display: none;
+	}
+}
+
+:host.desktop {
 	display: none;
 
 	@include mixins.desktop {
-		--arrow-width: clamp(4rem, 0.298rem + 7.702vw, 8rem);
+		display: contents;
+	}
+}
 
-		display: inline-block;
-		align-self: end;
-		width: var(--arrow-width);
+.arrow {
+	--arrow-width: 3.25rem;
+
+	display: inline-block;
+	align-self: end;
+	width: var(--arrow-width);
+
+	@include mixins.desktop {
+		--arrow-width: clamp(4rem, 0.298rem + 7.702vw, 8rem);
 	}
 
 	&:hover {
@@ -22,6 +36,10 @@
 
 .left {
 	rotate: 180deg;
+}
+
+.up {
+	rotate: -90deg;
 }
 
 .align-self-start {
