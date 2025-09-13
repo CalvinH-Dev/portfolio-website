@@ -1,5 +1,11 @@
 <section>
-	<h2>My Work</h2>
+	<h2>
+		@if (language() === "EN") {
+			My Work
+		} @else {
+			Projekte
+		}
+	</h2>
 	<div class="projects">
 		@for (project of projects; track $index) {
 			<app-project

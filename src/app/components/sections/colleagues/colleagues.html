@@ -1,6 +1,12 @@
 <section>
 	<div class="first">
-		<h2>References</h2>
+		<h2>
+			@if (language() === "EN") {
+				References
+			} @else {
+				Referenzen
+			}
+		</h2>
 		<div class="colleague-slider" #slider>
 			@for (colleague of colleagues; track $index) {
 				<div class="colleague-item">
@@ -9,7 +15,14 @@
 						<div class="spacer"></div>
 						<div class="info">
 							<span class="name">{{ colleague.name }}</span>
-							<span class="project">{{ colleague.project }}</span>
+							<span class="project">
+								@if (language() === "EN") {
+									Project
+								} @else {
+									Projekt
+								}
+								{{ colleague.project }}</span
+							>
 						</div>
 					</div>
 				</div>

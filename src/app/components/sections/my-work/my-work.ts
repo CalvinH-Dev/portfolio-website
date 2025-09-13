@@ -1,7 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { LinkArrow } from "app/components/link-arrow/link-arrow";
 import { Project } from "app/components/project/project";
 import { ProjectInterface } from "app/interfaces/project";
+import { LanguageService } from "app/services/language";
 
 const projects: ProjectInterface[] = [
 	{
@@ -49,6 +50,9 @@ const projects: ProjectInterface[] = [
 	styleUrl: "./my-work.scss",
 })
 export class MyWork {
+	languageService = inject(LanguageService);
+	language = this.languageService.getLanguage();
+
 	activeIdx = 0;
 	projects: ProjectInterface[] = projects;
 

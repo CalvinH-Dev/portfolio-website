@@ -13,7 +13,7 @@ import { LanguageService } from "app/services/language";
 const colleagues: ColleagueReview[] = [
 	{
 		name: "Noah Mueller",
-		project: "Project Pollo Loco",
+		project: "Pollo Loco",
 		text: {
 			EN: "Michael had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person.",
 			DE: "Michael musste Inhalte in Zusammenarbeit mit den Teammitgliedern entwickeln, formatieren und liefern. Er ist eine zuverlässige und freundliche Person.",
@@ -21,7 +21,7 @@ const colleagues: ColleagueReview[] = [
 	},
 	{
 		name: "James Rugman",
-		project: "Project Join",
+		project: "Join",
 		text: {
 			EN: "Michael is a reliable and friendly person. Work in a structured way and write a clear code. I recommend him as a colleague.",
 			DE: "Michael ist eine zuverlässige und freundliche Person. Er arbeitet strukturiert und schreibt klaren Code. Ich empfehle ihn als Kollegen.",
@@ -29,7 +29,7 @@ const colleagues: ColleagueReview[] = [
 	},
 	{
 		name: "Evelyn Marx",
-		project: "Project DA Bubble",
+		project: "DA Bubble",
 		text: {
 			EN: "He is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code.",
 			DE: "Er ist ein vertrauenswürdiger Teamplayer und kommt mit dem Stress von Deadlines gut zurecht. Er arbeitet strukturiert und schreibt klaren Code.",
@@ -46,6 +46,7 @@ const colleagues: ColleagueReview[] = [
 export class Colleagues implements AfterViewInit {
 	languageService = inject(LanguageService);
 	language = this.languageService.getLanguage();
+
 	activeSlideIdx = 0;
 	observer: IntersectionObserver | null = null;
 
