@@ -19,7 +19,7 @@ const projects: ProjectInterface[] = [
 			DE: "Ich habe gelernt, wie man eine Game Loop mit `requestAnimationFrame` erstellt, Klassen in JavaScript verwendet und Animationen zeitlich steuert.",
 			EN: "I learned how to create a game loop using `requestAnimationFrame`, utilize classes in JavaScript, and time animations effectively.",
 		},
-		imageSrc: "img/my-work/sharkie.webp",
+		imageSrc: "img/projects/sharkie.webp",
 		githubSrc: "https://github.com/CalvinH-Dev/da-oop-game-1",
 		pageSrc: "https://sharkie.hanisch-dev.de",
 	},
@@ -37,19 +37,19 @@ const projects: ProjectInterface[] = [
 			DE: "Ich habe gelernt, wie man Daten von einer Pokédex-API im JSON-Format abruft, eine Suchfunktion implementiert und zusätzliche Pokémon-Informationen anzeigt.",
 			EN: "I learned how to fetch data from a Pokédex API in JSON format, implement a search function, and display additional Pokémon information.",
 		},
-		imageSrc: "img/my-work/pokedex.webp",
+		imageSrc: "img/projects/pokedex.webp",
 		githubSrc: "https://github.com/CalvinH-Dev/pokemon-app",
 		pageSrc: "https://pokedex.hanisch-dev.de",
 	},
 ];
 
 @Component({
-	selector: "app-my-work",
+	selector: "app-projects",
 	imports: [Project, LinkArrow],
-	templateUrl: "./my-work.html",
-	styleUrl: "./my-work.scss",
+	templateUrl: "./projects.html",
+	styleUrl: "./projects.scss",
 })
-export class MyWork {
+export class Projects {
 	languageService = inject(LanguageService);
 	language = this.languageService.getLanguage();
 
