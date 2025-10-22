@@ -38,12 +38,12 @@ const colleagues: ColleagueReview[] = [
 ];
 
 @Component({
-	selector: "app-colleagues",
+	selector: "app-references",
 	imports: [LinkArrow],
-	templateUrl: "./colleagues.html",
-	styleUrl: "./colleagues.scss",
+	templateUrl: "./references.html",
+	styleUrl: "./references.scss",
 })
-export class Colleagues implements AfterViewInit {
+export class References implements AfterViewInit {
 	languageService = inject(LanguageService);
 	language = this.languageService.getLanguage();
 
