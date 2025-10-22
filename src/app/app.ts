@@ -1,5 +1,4 @@
-import { isPlatformBrowser } from "@angular/common";
-import { AfterViewInit, Component, inject, PLATFORM_ID, signal } from "@angular/core";
+import { afterNextRender, Component, signal } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { Footer } from "./components/footer/footer";
 import { Header } from "./components/header/header";
@@ -12,22 +11,20 @@ import { Socials } from "./components/sections/socials/socials";
 	templateUrl: "./app.html",
 	styleUrl: "./app.scss",
 })
-export class App implements AfterViewInit {
+export class App {
 	protected readonly title = signal("portfolio");
 	menuOpen = false;
-	platformId = inject(PLATFORM_ID);
 
-	ngAfterViewInit() {
-		if (isPlatformBrowser(this.platformId)) {
-			window.addEventListener("wheel", this.onWheelDesktop, { passive: false });
-		}
-	}
-
-	onWheelDesktop(event: WheelEvent) {
-		window.scrollBy({
-			left: event.deltaY * 5,
-			top: 0,
+	constructor() {
+		afterNextRender(() => {
+			function onWheelDesktop(event: WheelEvent) {
+				window.scrollBy({
+					left: event.deltaY * 5,
+					top: 0,
+				});
+				return false;
+			}
+			window.addEventListener("wheel", onWheelDesktop, { passive: false });
 		});
-		return false;
 	}
 }

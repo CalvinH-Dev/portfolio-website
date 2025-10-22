@@ -1,8 +1,8 @@
 import { Routes } from "@angular/router";
-import { MainPage } from "./components/main-page/main-page";
-import { Privacy } from "./components/privacy/privacy";
+import { Home } from "./components/pages/home/home";
+import { Privacy } from "./components/pages/privacy/privacy";
 
 export const routes: Routes = [
-	{ path: "", component: MainPage },
+	{ path: "", component: Home },
 	{ path: "privacy", component: Privacy },
 ];
