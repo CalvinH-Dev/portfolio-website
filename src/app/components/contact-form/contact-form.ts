@@ -6,12 +6,12 @@ import { ContactInformation } from "app/interfaces/contact-information";
 import { LanguageService } from "app/services/language";
 
 @Component({
-	selector: "app-contact-inputs",
+	selector: "app-contact-form",
 	imports: [FormsModule, RouterLink],
-	templateUrl: "./contact-inputs.html",
-	styleUrl: "./contact-inputs.scss",
+	templateUrl: "./contact-form.html",
+	styleUrl: "./contact-form.scss",
 })
-export class ContactInputs {
+export class ContactForm {
 	placeholders = {
 		name: {
 			EN: { valid: "Your name", error: "Your name is required" },

@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { ContactForm } from "./contact-form";
 
-describe("ContactForm", () => {
+describe("ContactInputs", () => {
 	let component: ContactForm;
 	let fixture: ComponentFixture<ContactForm>;
 
