@@ -100,6 +100,19 @@ button.primary {
 		font-size: var(--fs-button);
 		font-weight: 400;
 	}
+
+	&:disabled {
+		cursor: auto;
+		background-color: #9e9d9d;
+
+		& :is(span, a) {
+			color: #4a4a4a;
+		}
+	}
+
+	&:hover:not(:disabled) {
+		background: var(--menu-color);
+	}
 }
 
 button.secondary {
@@ -112,37 +125,24 @@ button.secondary {
 		font-size: var(--fs-button);
 		font-weight: 400;
 	}
-}
 
-button.primary:hover:not(:disabled) {
-	background: var(--menu-color);
-}
+	&:disabled {
+		cursor: auto;
+		border-color: #827b7b;
+		background-color: transparent;
 
-button.secondary:hover:not(:disabled) {
-	border-color: var(--accent-color-2);
-	background-color: #b5e93b33;
-
-	& :is(span, a) {
-		color: #fffdfd;
+		& :is(span, a) {
+			color: #827b7b;
+		}
 	}
-}
 
-button.primary:disabled {
-	cursor: auto;
-	background-color: #9e9d9d;
+	&:hover:not(:disabled) {
+		border-color: var(--accent-color-2);
+		background-color: #b5e93b33;
 
-	& :is(span, a) {
-		color: #4a4a4a;
-	}
-}
-
-button.secondary:disabled {
-	cursor: auto;
-	border-color: #827b7b;
-	background-color: transparent;
-
-	& :is(span, a) {
-		color: #827b7b;
+		& :is(span, a) {
+			color: #fffdfd;
+		}
 	}
 }
 

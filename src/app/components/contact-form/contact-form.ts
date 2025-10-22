@@ -40,7 +40,7 @@ export class ContactForm {
 
 	post = {
 		endPoint: "https://hanisch-dev.de/sendMail.php",
-		body: (payload: any) => JSON.stringify(payload),
+		body: (payload: ContactInformation) => JSON.stringify(payload),
 		options: {
 			headers: {
 				"Content-Type": "text/plain",
