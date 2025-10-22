@@ -13,4 +13,19 @@ export class Header {
 	languageService = inject(LanguageService);
 	language = this.languageService.getLanguage();
 	menuOpen = model<boolean>();
+
+	onProjectRefClicked(event: MouseEvent) {
+		const id = "projects";
+		const target = document.getElementById(id);
+
+		if (target) {
+			event.preventDefault();
+
+			target.scrollIntoView({
+				behavior: "smooth",
+				inline: "start",
+				block: "nearest",
+			});
+		}
+	}
 }

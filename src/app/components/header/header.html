@@ -21,7 +21,7 @@
 				Meine Skills
 			}
 		</a>
-		<a routerLink="/" fragment="projects">
+		<a routerLink="/" fragment="projects" (click)="onProjectRefClicked($event)">
 			@if (language() === "EN") {
 				My Work
 			} @else {
