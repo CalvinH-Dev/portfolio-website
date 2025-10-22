@@ -16,12 +16,12 @@ const skillsList: Skill[] = [
 ];
 
 @Component({
-	selector: "app-skills-section",
+	selector: "app-skills",
 	imports: [LinkArrow, RouterLink],
-	templateUrl: "./skills-section.html",
-	styleUrl: "./skills-section.scss",
+	templateUrl: "./skills.html",
+	styleUrl: "./skills.scss",
 })
-export class SkillsSection {
+export class Skills {
 	languageService = inject(LanguageService);
 	language = this.languageService.getLanguage();
 	skills: Skill[] = skillsList;
