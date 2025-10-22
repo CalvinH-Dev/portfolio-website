@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { EndSection } from "./end-section";
+import { End } from "./end";
 
 describe("EndSection", () => {
-	let component: EndSection;
-	let fixture: ComponentFixture<EndSection>;
+	let component: End;
+	let fixture: ComponentFixture<End>;
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [EndSection],
+			imports: [End],
 		}).compileComponents();
 
-		fixture = TestBed.createComponent(EndSection);
+		fixture = TestBed.createComponent(End);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

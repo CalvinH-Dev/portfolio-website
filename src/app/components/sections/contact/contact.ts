@@ -1,11 +1,11 @@
 import { Component, inject } from "@angular/core";
 import { ContactForm } from "app/components/contact-form/contact-form";
-import { EndSection } from "app/components/end-section/end-section";
+import { End } from "app/components/sections/end/end";
 import { LanguageService } from "app/services/language";
 
 @Component({
 	selector: "app-contact",
-	imports: [EndSection, ContactForm],
+	imports: [ContactForm, End],
 	templateUrl: "./contact.html",
 	styleUrl: "./contact.scss",
 })

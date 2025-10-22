@@ -1,11 +1,11 @@
 import { Component, inject } from "@angular/core";
 import { LanguageService } from "app/services/language";
-import { EndSection } from "../end-section/end-section";
 import { LinkArrow } from "../link-arrow/link-arrow";
+import { End } from "../sections/end/end";
 
 @Component({
 	selector: "app-privacy",
-	imports: [EndSection, LinkArrow],
+	imports: [LinkArrow, End],
 	templateUrl: "./privacy.html",
 	styleUrl: "./privacy.scss",
 })
