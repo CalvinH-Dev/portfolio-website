@@ -29,19 +29,28 @@ h2 {
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, 45px);
-	grid-template-rows: 45px;
-	gap: 2rem;
+	grid-template-rows: 90px;
+	gap: 2.5rem 3.5rem;
 	justify-content: center;
 	align-items: center;
 }
 
+.skill-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	row-gap: 0.5rem;
+}
+
 .img-container {
-	height: 100%;
-	width: 100%;
+	height: 40px;
+	aspect-ratio: 1;
+	overflow: hidden;
 }
 
 img {
-	aspect-ratio: 1;
+	height: 100%;
 	width: 100%;
 	object-fit: cover;
 }

@@ -20,8 +20,13 @@
 				}
 			</p>
 			<div class="img-grid">
-				@for (img of images; track $index) {
-					<div class="img-container"><img [src]="img.src" [alt]="img.alt" /></div>
+				@for (skill of skills; track $index) {
+					@let img = skill.image;
+					@let title = skill.title;
+					<div class="skill-container">
+						<div class="img-container"><img [src]="img.src" [alt]="img.alt" /></div>
+						<span>{{ title }}</span>
+					</div>
 				}
 			</div>
 			<p>
