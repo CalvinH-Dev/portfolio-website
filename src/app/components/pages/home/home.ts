@@ -8,7 +8,7 @@ import { References } from "../../sections/references/references";
 import { Skills } from "../../sections/skills/skills";
 
 @Component({
-	selector: "app-main-page",
+	selector: "app-home",
 	imports: [WhyMe, LinkArrow, Contact, References, Hero, Projects, Skills],
 	templateUrl: "./home.html",
 	styleUrl: "./home.scss",

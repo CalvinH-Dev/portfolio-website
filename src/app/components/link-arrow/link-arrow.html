@@ -1,5 +1,6 @@
 <a
 	class="arrow"
+	(click)="onProjectRefClicked($event, fragment().toString())"
 	[routerLink]="[]"
 	[fragment]="fragment()"
 	[class.left]="orientation() === 'left'"

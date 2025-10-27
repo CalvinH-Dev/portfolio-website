@@ -1,22 +1,19 @@
-import { Component, input } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { RouterLink } from "@angular/router";
+import { LanguageService } from "app/services/language";
 
 @Component({
-	selector: "app-link-arrow",
+	selector: "app-header-desktop",
 	imports: [RouterLink],
-	templateUrl: "./link-arrow.html",
-	styleUrl: "./link-arrow.scss",
-	host: { "[class.mobile]": 'show() === "mobile"', "[class.desktop]": 'show() === "desktop"' },
+	templateUrl: "./header-desktop.html",
+	styleUrl: "./header-desktop.scss",
 })
-export class LinkArrow {
-	show = input<"mobile" | "desktop" | "both">("both");
-	fragment = input<string>("");
-	orientation = input<"left" | "right" | "up">("right");
-	alignSelf = input<"start" | "center" | "end">("end");
+export class HeaderDesktop {
+	languageService = inject(LanguageService);
+	language = this.languageService.getLanguage();
 
 	onProjectRefClicked(event: MouseEvent, id: string) {
 		event.preventDefault();
-		console.log(id);
 
 		const scrollContainer = document.querySelector("main") as HTMLElement;
 		if (!scrollContainer) return;

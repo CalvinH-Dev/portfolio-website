@@ -4,20 +4,20 @@
 	display: contents;
 }
 
-main {
-	@include mixins.desktop {
-		display: flex;
-		width: max-content;
-	}
-}
-
 aside {
 	display: none;
 
 	@include mixins.desktop {
 		display: revert;
 		height: 100%;
-		width: var(--aside-width);
+		flex: 0 0 var(--aside-width);
 		background: var(--menu-color);
+		margin-left: 1rem;
+	}
+}
+
+main {
+	@include mixins.desktop {
+		position: relative;
 	}
 }

@@ -1,8 +1,9 @@
 <app-menu [(menuOpen)]="menuOpen" />
 <app-header [(menuOpen)]="menuOpen" />
 <main>
+	<app-header-desktop />
 	<router-outlet />
-	<app-socials />
 	<aside></aside>
 </main>
+<app-socials />
 <app-footer />

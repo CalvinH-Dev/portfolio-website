@@ -8,36 +8,76 @@ html {
 	scroll-padding-top: var(--header-height);
 
 	@include mixins.desktop {
+		scroll-padding-left: var(--aside-width);
 		scroll-padding-top: revert;
-		scroll-snap-type: x mandatory;
+		// scroll-snap-type: x mandatory;
+		// overflow-y: clip;
 	}
 }
 
 body {
 	font-family: Quantico, sans-serif;
 	font-weight: 400;
-	min-height: 100svh;
+	height: 100svh;
 	background-color: var(--bg-color);
 	color: var(--text-color-white);
 	font-size: var(--fs-medium);
 
 	@include mixins.desktop {
-		min-height: 0;
-		height: var(--desktop-height);
+		height: 100vh;
 	}
 }
 
+/* Webkit-Browser (Chrome, Safari, Edge) */
+main::-webkit-scrollbar {
+	height: var(--scrollbar-height-desktop); /* Höhe der horizontalen Scrollbar */
+}
+
+main::-webkit-scrollbar-track {
+	background: black; /* Hintergrund der Scrollleiste */
+	border-radius: 0;
+}
+
+main::-webkit-scrollbar-thumb {
+	background: gray; /* Farbe des Scrollbalkens */
+	border-radius: 0;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+	background: #555; /* Farbe beim Hover */
+}
+
 main {
-	height: 100%;
+	@include mixins.desktop {
+		height: 100%;
+		scroll-snap-type: x proximity;
+		scroll-padding-left: var(--aside-width);
+		position: relative;
+		scroll-behavior: smooth;
+		width: 100vw;
+		display: flex;
+		justify-content: start;
+		align-items: start;
+		overflow: auto;
+		contain: strict;
+		scrollbar-width: thin; /* 'auto', 'thin', oder 'none' */
+		scrollbar-color: #888 black; /* thumb-Farbe track-Farbe */
+	}
 }
 
 section {
-	height: 100%;
 	padding-inline: var(--padding-inline-section);
 	padding-block: var(--padding-block-section-mobile);
+	width: 100%;
 
 	@include mixins.desktop {
-		scroll-snap-align: start;
+		width: revert;
+		height: 100%;
+		// scroll-snap-align: start;
+		flex: 0 0 100vw;
+		padding-block: var(--padding-block-section-desktop);
+		padding-right: var(--padding-inline-section);
+		padding-left: var(--section-desktop-padding-left);
 	}
 }
 

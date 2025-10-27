@@ -1,22 +1,20 @@
 @use "../../../../global-styles/mixins";
 
+:host {
+	display: contents;
+}
+
 section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	row-gap: 1rem;
-	width: 100%;
 
 	@include mixins.desktop {
 		flex-direction: row;
 		align-items: start;
 		justify-content: space-between;
 		position: relative;
-		padding-right: var(--padding-inline-section);
-		padding-left: var(--section-desktop-padding-left);
-		height: 100%;
-		width: 100vw;
-		padding-block: var(--padding-block-section-desktop);
 	}
 }
 

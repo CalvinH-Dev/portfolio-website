@@ -2,9 +2,17 @@
 
 :host {
 	display: contents;
+
+	@include mixins.desktop {
+		display: revert;
+		position: fixed;
+		top: 1rem;
+		right: calc(2vw + var(--aside-width));
+	}
 }
 
 section {
+	padding: revert;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -13,10 +21,7 @@ section {
 
 	@include mixins.desktop {
 		scroll-snap-align: revert;
-		position: fixed;
-		top: 0;
-		right: calc(2vw + var(--aside-width));
-		margin: auto;
+		margin: 0 auto;
 		height: auto;
 		background-color: transparent;
 	}

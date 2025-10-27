@@ -4,36 +4,3 @@
 		><app-menu-button [(menuOpen)]="menuOpen" />
 	</nav>
 </header>
-<aside>
-	<a routerLink="/"><img class="img-desktop" src="img/logos/logo_dark.webp" alt="Logo" /></a>
-	<nav class="nav-desktop">
-		<a routerLink="/" fragment="why-me">
-			@if (language() === "EN") {
-				Why me
-			} @else {
-				Wieso ich
-			}
-		</a>
-		<a routerLink="/" fragment="skills">
-			@if (language() === "EN") {
-				My Skill Set
-			} @else {
-				Meine Skills
-			}
-		</a>
-		<a routerLink="/" fragment="projects" (click)="onProjectRefClicked($event)">
-			@if (language() === "EN") {
-				My Work
-			} @else {
-				Projekte
-			}
-		</a>
-		<a routerLink="/" fragment="contact">
-			@if (language() === "EN") {
-				Contact me
-			} @else {
-				Kontakt
-			}
-		</a>
-	</nav>
-</aside>

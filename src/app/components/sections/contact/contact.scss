@@ -1,5 +1,9 @@
 @use "../../../../global-styles/mixins";
 
+:host {
+	display: contents;
+}
+
 section {
 	display: flex;
 	flex-direction: column;
@@ -12,11 +16,8 @@ section {
 		flex-direction: row;
 		align-items: start;
 		justify-content: space-between;
-		padding-right: 24px;
-		padding-left: calc(var(--section-desktop-padding-left));
-		height: 100%;
-		width: calc(100vw - var(--aside-width));
-		padding-block: var(--padding-block-section-desktop);
+		flex-basis: calc(100vw - var(--aside-width));
+		padding-right: 0;
 		column-gap: 2vw;
 	}
 }
