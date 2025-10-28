@@ -18,8 +18,9 @@ export class App {
 
 	constructor() {
 		afterNextRender(() => {
+			const container = document.querySelector("main")!;
 			function onWheelDesktop(event: WheelEvent) {
-				window.scrollBy({
+				container.scrollBy({
 					left: event.deltaY * 5,
 					top: 0,
 				});
