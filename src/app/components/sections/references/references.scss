@@ -30,11 +30,17 @@ section {
 	scroll-snap-type: x mandatory;
 
 	@include mixins.desktop {
+		padding-block: 2rem;
+		max-height: 100%;
 		display: grid;
 		grid-template-columns: revert;
-		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-rows: auto;
 		overflow-x: initial;
 		row-gap: 3vh;
+		overflow-y: auto;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+		-webkit-overflow-scrolling: auto;
 	}
 }
 
@@ -63,7 +69,7 @@ h2 {
 .colleague-card {
 	display: grid;
 	grid-template-columns: 2fr auto 1fr;
-	padding: var(--padding-w-2);
+	padding: var(--padding-w-3);
 	column-gap: var(--padding-w-1);
 	border: 1px solid;
 	border-color: var(--accent-color-2);
@@ -73,6 +79,7 @@ h2 {
 	@include mixins.desktop {
 		width: 100%;
 		height: 100%;
+		align-items: center;
 	}
 }
 
@@ -108,6 +115,7 @@ h2 {
 		column-gap: 2vw;
 		align-items: end;
 		width: 100%;
+		height: 100%;
 	}
 }
 
@@ -120,20 +128,49 @@ h2 {
 .text {
 	text-align: center;
 	align-content: center;
+	font-size: var(--fs-small);
+	max-inline-size: 30ch;
+	line-height: 1.5;
+	max-block-size: calc(8 * 1lh);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 8;
+	line-clamp: 8;
+	-webkit-box-orient: vertical;
+
+	@include mixins.desktop {
+		max-inline-size: revert;
+		max-block-size: revert;
+		overflow: revert;
+		text-overflow: revert;
+		display: revert;
+		-webkit-line-clamp: revert;
+		line-clamp: revert;
+	}
 }
 
 .info {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
+	justify-content: space-between;
+	align-items: start;
 	width: 100%;
+	height: 4em;
+
+	@include mixins.desktop {
+		align-items: center;
+	}
 }
 
 .name {
-	text-align: center;
 	font-size: var(--fs-h6);
 	color: var(--accent-color);
+	text-align: start;
+
+	@include mixins.desktop {
+		align-items: center;
+	}
 }
 
 .project {

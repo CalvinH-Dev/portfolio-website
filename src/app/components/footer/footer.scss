@@ -5,12 +5,11 @@
 }
 
 footer {
-	height: 25vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	padding-block: 2rem;
+	padding-block: 1rem;
 	background: var(--menu-color);
 
 	@include mixins.desktop {

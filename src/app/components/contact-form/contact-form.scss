@@ -11,7 +11,12 @@ form {
 	row-gap: 1rem;
 
 	@include mixins.desktop {
+		row-gap: 0.5rem;
 		width: 30vw;
+	}
+
+	@media (width <= 1100px) and (width >= 768px) {
+		width: 100%;
 	}
 }
 
@@ -45,7 +50,7 @@ textarea {
 	font-size: var(--fs-input);
 	border: 1px solid #b5e93b;
 	border-radius: var(--border-radius-button);
-	padding: 25px 21px;
+	padding: 1em;
 
 	&:focus {
 		outline: none;

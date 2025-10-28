@@ -7,7 +7,7 @@
 				Lassen Sie uns gemeinsam etwas erschaffen.
 			}
 		</span>
-		<p [class.inactive]="!showText()">
+		<p class="text" [class.inactive]="!showText()">
 			@if (language() === "EN") {
 				I welcome any contact and am particularly interested in roles within a front-end development
 				team. With strong communication skills and experience working in larger teams with Git, I am
@@ -33,7 +33,7 @@
 	<div class="last-bottom">
 		<div class="hoverable">
 			<span
-				><a routerLink="legal">
+				><a routerLink="/legal">
 					@if (language() === "EN") {
 						Legal Notice
 					} @else {
@@ -44,7 +44,7 @@
 		</div>
 		<div class="hoverable">
 			<span
-				><a routerLink="privacy">
+				><a routerLink="/privacy" (click)="onClick($event)">
 					@if (language() === "EN") {
 						Privacy Policy
 					} @else {

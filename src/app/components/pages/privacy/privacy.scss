@@ -15,11 +15,10 @@ section:not(.back-to-top) {
 
 	@include mixins.desktop {
 		position: relative;
-		flex-direction: row;
 		align-items: start;
 		justify-content: space-between;
+		padding-left: 0;
 		padding-right: 24px;
-		padding-left: calc(var(--section-desktop-padding-left));
 		height: 100%;
 		padding-block: var(--padding-block-section-desktop);
 		column-gap: 2vw;
@@ -43,9 +42,10 @@ section:not(.back-to-top) {
 
 section:not(.last, .back-to-top) {
 	@include mixins.desktop {
-		width: 100vw;
+		flex-basis: calc(100vw - var(--aside-width));
 		display: flex;
 		justify-content: space-between;
+		flex-direction: row;
 	}
 }
 
@@ -59,14 +59,14 @@ section:not(.last, .back-to-top) {
 .content {
 	display: flex;
 	flex-direction: column;
-	row-gap: 1.5rem;
+	row-gap: 0.5rem;
 
 	@include mixins.desktop {
 		height: 100%;
 		max-width: 70vw;
 		display: flex;
 		flex-direction: column;
-		row-gap: 2rem;
+		row-gap: 1rem;
 		padding-inline: var(--padding-w-1);
 		overflow-y: auto;
 	}
@@ -74,7 +74,13 @@ section:not(.last, .back-to-top) {
 
 .last {
 	@include mixins.desktop {
-		width: calc(100vw - var(--aside-width));
+		flex-basis: calc(100vw - 2 * var(--aside-width));
+		flex-direction: row !important;
+	}
+
+	@media (width <= 1100px) and (width >= 768px) {
+		flex-direction: column;
+		row-gap: 1rem;
 	}
 }
 

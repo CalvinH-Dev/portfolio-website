@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 @use "global-styles/fonts";
 @use "global-styles/reset";
 @use "global-styles/variables";
@@ -10,8 +9,8 @@ html {
 	@include mixins.desktop {
 		scroll-padding-left: var(--aside-width);
 		scroll-padding-top: revert;
-		// scroll-snap-type: x mandatory;
-		// overflow-y: clip;
+		scroll-snap-type: x mandatory;
+		overflow-y: clip;
 	}
 }
 
@@ -28,23 +27,22 @@ body {
 	}
 }
 
-/* Webkit-Browser (Chrome, Safari, Edge) */
 main::-webkit-scrollbar {
-	height: var(--scrollbar-height-desktop); /* Höhe der horizontalen Scrollbar */
+	height: var(--scrollbar-height-desktop);
 }
 
 main::-webkit-scrollbar-track {
-	background: black; /* Hintergrund der Scrollleiste */
+	background: black;
 	border-radius: 0;
 }
 
 main::-webkit-scrollbar-thumb {
-	background: gray; /* Farbe des Scrollbalkens */
+	background: gray;
 	border-radius: 0;
 }
 
 main::-webkit-scrollbar-thumb:hover {
-	background: #555; /* Farbe beim Hover */
+	background: #555;
 }
 
 main {
@@ -60,8 +58,8 @@ main {
 		align-items: start;
 		overflow: auto;
 		contain: strict;
-		scrollbar-width: thin; /* 'auto', 'thin', oder 'none' */
-		scrollbar-color: #888 black; /* thumb-Farbe track-Farbe */
+		scrollbar-width: thin;
+		scrollbar-color: #888 black;
 	}
 }
 
@@ -73,7 +71,7 @@ section {
 	@include mixins.desktop {
 		width: revert;
 		height: 100%;
-		// scroll-snap-align: start;
+		scroll-snap-align: start;
 		flex: 0 0 100vw;
 		padding-block: var(--padding-block-section-desktop);
 		padding-right: var(--padding-inline-section);

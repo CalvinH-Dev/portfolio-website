@@ -1,5 +1,5 @@
 html {
-	--fs-small: clamp(16px, 16px, 16px);
+	--fs-small: clamp(0.875rem, 0.875rem + 0.3125vw, 1.125rem);
 	--fs-medium: clamp(1rem, 0.969rem + 0.156vw, 1.125rem);
 	--fs-large: clamp(24px, 24px, 24px);
 	--fs-h1: clamp(2.2rem, 1.39rem + 4.05vw, 6.25rem);
@@ -7,15 +7,15 @@ html {
 	--fs-h3: clamp(2.3rem, 2.06rem + 1.2vw, 3.5rem);
 	--fs-h4: clamp(1.8rem, 1.56rem + 1.2vw, 3rem);
 	--fs-h5: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
-	--fs-h6: clamp(1.175rem, 1.135rem + 0.2vw, 1.375rem);
+	--fs-h6: clamp(1.375rem, 1.25vw + 1rem, 1.5rem);
 	--fs-button: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
 	--fs-input: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
 	--fs-menu-a: clamp(1.275rem, 0.573vw + 0.901rem, 1.875rem);
 	--padding-inline-section: clamp(1.5rem, 0rem + 7.5vw, 7.5rem);
 	--padding-block-header: clamp(24px, 24px, 24px);
 	--padding-block-section-mobile: clamp(24px, 24px, 24px);
-	--padding-block-section-desktop: 8vh;
-	--header-height: 10vh;
+	--padding-block-section-desktop: min(60px, 7vh);
+	--header-height: max(90px, 10vh);
 	--desktop-height: calc(100vh - 1rem);
 	--aside-width: clamp(5rem, 0.373rem + 9.627vw, 10rem);
 	--scrollbar-height-desktop: 0.5rem;
@@ -33,10 +33,17 @@ html {
 	--fixed-z-index: 100;
 	--padding-w-1: clamp(0.5rem, 0.125rem + 1.875vw, 2rem);
 	--padding-w-2: clamp(1rem, 0.75rem + 1.25vw, 2rem);
+	--padding-w-3: clamp(1rem, 0.875rem + 0.625vw, 1.5rem);
 	--padding-h-1: clamp(0rem, -1.67rem + 3.475vw, 2.5rem);
 	--error-color: #fd2e12;
 	--padding-block-button: clamp(10px, 0.1967vw + 8.486px, 13px);
 	--padding-inline-button: clamp(20px, 0.579vw + 15.542px, 30px);
 	--border-radius-button: 30px;
 	--border-radius-card: clamp(20px, 0.579vw + 15.542px, 30px);
+}
+
+@media (height < 800px) {
+	html {
+		--padding-block-section-desktop: 50px;
+	}
 }

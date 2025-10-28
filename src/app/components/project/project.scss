@@ -2,6 +2,7 @@
 
 :host {
 	--row-gap-grid: 1.5rem;
+	--row-gap-grid-desktop: 1rem;
 
 	display: contents;
 }
@@ -61,7 +62,7 @@
 	overflow: hidden;
 	background-color: var(--bg-color-card);
 	border-radius: var(--border-radius-card);
-	padding: clamp(1.25rem, 1.1rem + 0.75vw, 2rem);
+	padding: clamp(1rem, 0.9rem + 0.75vw, 1.75rem);
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -71,6 +72,8 @@
 		max-height: 100%;
 		height: auto;
 		width: min(65vw, 900px);
+		row-gap: var(--row-gap-grid-desktop);
+		overflow-y: auto;
 	}
 }
 
