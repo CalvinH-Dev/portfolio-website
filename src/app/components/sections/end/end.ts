@@ -25,18 +25,13 @@ export class End {
 		const container = document.querySelector("main")!;
 
 		const link = (target as HTMLAnchorElement).getAttribute("href");
-		console.log(link);
+
 		if (!link) return;
 
 		const currentPath = this.router.url.split(/[?#]/)[0];
 		const targetPath = link.split(/[?#]/)[0];
 
-		console.log(currentPath);
-		console.log(targetPath);
-
 		if (targetPath === currentPath) {
-			console.log("hier");
-			console.log(container);
 			event.preventDefault();
 			container.scrollTo({ left: 0, behavior: "smooth" });
 		}
