@@ -6,13 +6,12 @@
 	@include mixins.desktop {
 		display: revert;
 		position: fixed;
-		top: 1rem;
-		right: calc(2vw + var(--aside-width));
+		top: 0;
+		right: calc(1rem + var(--aside-width));
 	}
 }
 
 section {
-	padding: revert;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,9 +19,11 @@ section {
 	background-color: var(--bg-color);
 
 	@include mixins.desktop {
+		padding-block: revert;
+		padding-right: revert;
 		scroll-snap-align: revert;
 		margin: 0 auto;
-		height: auto;
+		height: 8vh;
 		background-color: transparent;
 	}
 }

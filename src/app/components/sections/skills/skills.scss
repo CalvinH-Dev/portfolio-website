@@ -27,11 +27,16 @@ h2 {
 .img-grid {
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, 45px);
-	grid-template-rows: 90px;
-	gap: 2.5rem 3.5rem;
-	justify-content: center;
+	grid-template-columns: repeat(3, 45px);
 	align-items: center;
+	justify-content: space-between;
+	row-gap: 2rem;
+
+	@include mixins.desktop {
+		grid-template-columns: repeat(auto-fill, 45px);
+		grid-template-rows: 90px;
+		gap: 2.5rem 3.5rem;
+	}
 }
 
 .skill-container {
@@ -40,6 +45,14 @@ h2 {
 	align-items: center;
 	justify-content: space-between;
 	row-gap: 0.5rem;
+
+	& span {
+		display: none;
+
+		@include mixins.desktop {
+			display: revert;
+		}
+	}
 }
 
 .img-container {

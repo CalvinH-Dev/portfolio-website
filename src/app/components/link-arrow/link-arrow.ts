@@ -16,7 +16,6 @@ export class LinkArrow {
 
 	onProjectRefClicked(event: MouseEvent, id: string) {
 		event.preventDefault();
-		console.log(id);
 
 		const scrollContainer = document.querySelector("main") as HTMLElement;
 		if (!scrollContainer) return;
@@ -29,7 +28,6 @@ export class LinkArrow {
 		const target = document.getElementById(id);
 		if (target && scrollContainer.contains(target)) {
 			const targetPosition = target.offsetLeft;
-			console.log(targetPosition);
 			scrollContainer.scrollTo({
 				left: targetPosition,
 				behavior: "smooth",

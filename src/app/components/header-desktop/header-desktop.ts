@@ -26,7 +26,6 @@ export class HeaderDesktop {
 		const target = document.getElementById(id);
 		if (target && scrollContainer.contains(target)) {
 			const targetPosition = target.offsetLeft;
-			console.log(targetPosition);
 			scrollContainer.scrollTo({
 				left: targetPosition,
 				behavior: "smooth",

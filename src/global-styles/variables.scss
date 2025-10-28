@@ -17,7 +17,7 @@ html {
 	--padding-block-section-desktop: 8vh;
 	--header-height: 10vh;
 	--desktop-height: calc(100vh - 1rem);
-	--aside-width: clamp(6rem, 1.373rem + 9.627vw, 11rem);
+	--aside-width: clamp(5rem, 0.373rem + 9.627vw, 10rem);
 	--scrollbar-height-desktop: 0.5rem;
 	--main-height-desktop: calc(100vh - var(--scrollbar-height-desktop));
 	--section-desktop-padding-left: calc(var(--aside-width) + 2vw);

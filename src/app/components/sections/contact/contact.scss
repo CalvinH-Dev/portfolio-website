@@ -16,8 +16,8 @@ section {
 		flex-direction: row;
 		align-items: start;
 		justify-content: space-between;
-		flex-basis: calc(100vw - var(--aside-width));
-		padding-right: 0;
+		flex-basis: calc(100vw - 2 * var(--aside-width));
+		padding-right: 1rem;
 		column-gap: 2vw;
 	}
 }

@@ -1,7 +1,11 @@
-* {
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgb(0 0 0 / 0%); /* oder 'transparent' */
+	-webkit-touch-callout: none; /* verhindert iOS Callout bei langem Druck */
 }
 
 html {

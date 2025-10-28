@@ -70,7 +70,7 @@
 	@include mixins.desktop {
 		max-height: 100%;
 		height: auto;
-		width: 65vw;
+		width: min(65vw, 900px);
 	}
 }
 
@@ -216,7 +216,7 @@ h5 {
 	rotate: -0deg;
 }
 
-@media (width <= 1024px) and (width >= 769px) {
+@include mixins.tablet {
 	.buttons {
 		flex-direction: column;
 		row-gap: 1rem;
