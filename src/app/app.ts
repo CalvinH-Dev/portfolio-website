@@ -1,5 +1,5 @@
-import { afterNextRender, Component, signal } from "@angular/core";
-import { RouterOutlet } from "@angular/router";
+import { afterNextRender, Component, inject, signal } from "@angular/core";
+import { Router, RouterOutlet } from "@angular/router";
 import { Footer } from "./components/footer/footer";
 import { HeaderDesktop } from "./components/header-desktop/header-desktop";
 import { Header } from "./components/header/header";
@@ -15,6 +15,7 @@ import { Socials } from "./components/sections/socials/socials";
 export class App {
 	protected readonly title = signal("portfolio");
 	menuOpen = false;
+	router = inject(Router);
 
 	constructor() {
 		afterNextRender(() => {
@@ -27,6 +28,12 @@ export class App {
 				return false;
 			}
 			window.addEventListener("wheel", onWheelDesktop, { passive: false });
+
+			this.router.events.subscribe((event) => {
+				if (event.type === 1 && !event.url.includes("#")) {
+					container.scrollTo({ left: 0, behavior: "smooth" });
+				}
+			});
 		});
 	}
 }

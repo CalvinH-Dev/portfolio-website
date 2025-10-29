@@ -1,0 +1,62 @@
+@use "../../../global-styles/mixins";
+
+:host {
+	display: contents;
+}
+
+.form-group {
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	flex-direction: column;
+}
+
+.mobile-images {
+	position: absolute;
+	right: 1lh;
+	top: 0.6lh;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: 1lh;
+	grid-template-rows: 1lh;
+
+	@include mixins.desktop {
+		display: none;
+	}
+}
+
+.form-group:has(.ng-valid.ng-touched).bottom .mobile-images {
+	top: revert;
+	bottom: 0.6lh;
+}
+
+.mobile-images img {
+	display: none;
+	height: 100%;
+	width: 100%;
+}
+
+.error-message {
+	user-select: none;
+	text-align: center;
+	opacity: 0;
+	color: var(--error-color);
+	font-size: var(--fs-small);
+	transition: opacity 225ms;
+}
+
+.form-group:has(.ng-valid.ng-touched) .mobile-images .valid {
+	display: revert;
+}
+
+.form-group:has(.ng-invalid.ng-dirty) .mobile-images .error {
+	display: revert;
+}
+
+.form-group:has(.ng-invalid.ng-dirty) .error-message {
+	user-select: revert;
+	opacity: 1;
+}

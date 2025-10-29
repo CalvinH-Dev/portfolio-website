@@ -7,11 +7,10 @@
 form {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	row-gap: 1rem;
+	align-items: start;
+	row-gap: 0.25rem;
 
 	@include mixins.desktop {
-		row-gap: 0.5rem;
 		width: 30vw;
 	}
 
@@ -33,11 +32,58 @@ form {
 }
 
 input[type="checkbox"] {
-	width: 30px;
-	border: 2px solid white;
+	flex-shrink: 0;
+	position: relative;
+	width: 18px;
+	margin-top: 5px;
 	background: none;
 	background-color: transparent;
 	aspect-ratio: 1;
+	appearance: none;
+
+	@include mixins.desktop {
+		margin-top: revert;
+	}
+}
+
+input[type="checkbox"].ng-invalid::after {
+	content: "";
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	inset: 0;
+	background-color: var(--bg-color);
+	border: 2px solid var(--text-color-white);
+	color: var(--text-color-white);
+}
+
+input[type="checkbox"].ng-valid::after {
+	content: "✓";
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	inset: 0;
+	background-color: var(--bg-color);
+	border: 2px solid var(--accent-color);
+	color: var(--accent-color);
+}
+
+textarea {
+	resize: none;
+}
+
+input:-webkit-autofill {
+	font-family: Quantico, sans-serif;
+	font-weight: 400;
+	background-color: var(--bg-color);
+	color: var(--text-color-white);
+	font-size: var(--fs-input);
+	-webkit-text-fill-color: var(--text-color-white);
+	transition: background-color 5000s ease-in-out 0s;
 }
 
 input:not([type="checkbox"]),
@@ -57,9 +103,13 @@ textarea {
 		border: 1px solid #b5e93b;
 	}
 
-	&.ng-invalid:is(.ng-touched, .ng-dirty) {
+	&.ng-invalid:is(.ng-dirty) {
 		border-color: var(--error-color);
 		color: var(--error-color);
+
+		&::placeholder {
+			color: var(--error-color);
+		}
 	}
 
 	&::placeholder {
@@ -78,6 +128,8 @@ textarea {
 .checkbox-text {
 	align-self: start;
 	display: flex;
+	align-items: start;
+	justify-content: start;
 	column-gap: 1rem;
 }
 

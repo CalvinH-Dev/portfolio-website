@@ -1,45 +1,58 @@
 <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-	<input
-		type="text"
-		name="name"
-		id=""
-		[placeholder]="
-			name.invalid && name.touched
-				? placeholders.name[language()].error
-				: placeholders.name[language()].valid
-		"
-		[(ngModel)]="contactData.name"
-		#name="ngModel"
-		required
-	/>
-	<input
-		ngModel
-		pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-		type="email"
-		name="email"
-		id=""
-		[placeholder]="
-			email.invalid && email.touched
-				? placeholders.email[language()].error
-				: placeholders.email[language()].valid
-		"
-		[(ngModel)]="contactData.email"
-		#email="ngModel"
-		required
-	/>
-	<textarea
-		name="message"
-		rows="8"
-		cols="30"
-		[placeholder]="
-			message.invalid && message.touched
-				? placeholders.message[language()].error
-				: placeholders.message[language()].valid
-		"
-		[(ngModel)]="contactData.message"
-		#message="ngModel"
-		required
-	></textarea>
+	<app-form-group>
+		<input
+			ngProjectAs="input-element"
+			type="text"
+			name="name"
+			id=""
+			[placeholder]="
+				name.invalid && name.dirty
+					? placeholders.name[language()].error
+					: placeholders.name[language()].valid
+			"
+			[(ngModel)]="contactData.name"
+			#name="ngModel"
+			required
+		/>
+	</app-form-group>
+
+	<app-form-group>
+		<input
+			ngProjectAs="input-element"
+			ngModel
+			pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+			type="email"
+			name="email"
+			id=""
+			[placeholder]="
+				email.invalid && email.dirty
+					? placeholders.email.required[language()].error
+					: placeholders.email.required[language()].valid
+			"
+			[(ngModel)]="contactData.email"
+			#email="ngModel"
+			required
+		/>
+		<span ngProjectAs="error-message">{{
+			email.hasError("pattern") ? placeholders.email.pattern[language()].error : ""
+		}}</span>
+	</app-form-group>
+	<app-form-group [checkAlign]="'bottom'">
+		<textarea
+			ngProjectAs="input-element"
+			name="message"
+			rows="8"
+			cols="30"
+			[placeholder]="
+				message.invalid && message.dirty
+					? placeholders.message[language()].error
+					: placeholders.message[language()].valid
+			"
+			[(ngModel)]="contactData.message"
+			#message="ngModel"
+			required
+		></textarea>
+	</app-form-group>
 	<div class="send-message">
 		<div class="checkbox-text">
 			<input

@@ -1,0 +1,8 @@
+<div class="form-group" [class.bottom]="checkAlign() === 'bottom'">
+	<ng-content select="input-element"></ng-content>
+	<div class="mobile-images">
+		<img class="valid" src="img/contact-form/check.svg" alt="Check" />
+		<img class="error" src="img/contact-form/exclamation_mark.svg" alt="Exclamation Mark" />
+	</div>
+	<div class="error-message"><ng-content select="error-message"></ng-content></div>
+</div>

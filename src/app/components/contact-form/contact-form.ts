@@ -4,10 +4,11 @@ import { FormsModule, NgForm } from "@angular/forms";
 import { RouterLink } from "@angular/router";
 import { ContactInformation } from "app/interfaces/contact-information";
 import { LanguageService } from "app/services/language";
+import { FormGroup } from "../form-group/form-group";
 
 @Component({
 	selector: "app-contact-form",
-	imports: [FormsModule, RouterLink],
+	imports: [FormsModule, RouterLink, FormGroup],
 	templateUrl: "./contact-form.html",
 	styleUrl: "./contact-form.scss",
 })
@@ -18,8 +19,18 @@ export class ContactForm {
 			DE: { valid: "Ihr Name", error: "Ihr Name ist erforderlich" },
 		},
 		email: {
-			EN: { valid: "Your email", error: "Your email is required" },
-			DE: { valid: "Ihre Email-Adresse", error: "Ihre Email-Adresse ist erforderlich" },
+			required: {
+				EN: { valid: "Your email", error: "Your email is required" },
+				DE: { valid: "Ihre Email-Adresse", error: "Ihre Email-Adresse ist erforderlich" },
+			},
+			pattern: {
+				EN: {
+					error: "Please enter a valid email address (e.g. example.email@domain.com)",
+				},
+				DE: {
+					error: "Bitte geben Sie eine gültige Email-Adresse ein (z. B. example.email@domain.com)",
+				},
+			},
 		},
 		message: {
 			EN: { valid: "Your message", error: "Your message is required" },
