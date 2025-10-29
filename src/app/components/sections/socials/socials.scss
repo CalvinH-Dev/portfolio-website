@@ -6,8 +6,12 @@
 	@include mixins.desktop {
 		display: revert;
 		position: fixed;
-		top: 0.5rem;
+		top: 1rem;
 		right: calc(1rem + var(--aside-width));
+	}
+
+	@media (width <= 1100px) and (width >= 768px) {
+		top: 0;
 	}
 }
 
@@ -45,4 +49,10 @@ img {
 	@include mixins.desktop {
 		display: initial;
 	}
+}
+
+.socials {
+	display: flex;
+	align-items: center;
+	column-gap: 1rem;
 }

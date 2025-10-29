@@ -50,6 +50,8 @@ section:not(.last, .back-to-top) {
 }
 
 .start {
+	height: 100%;
+
 	@include mixins.desktop {
 		display: flex;
 		column-gap: 2vw;

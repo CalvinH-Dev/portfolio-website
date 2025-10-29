@@ -156,11 +156,6 @@ h2 {
 	justify-content: space-between;
 	align-items: start;
 	width: 100%;
-	height: 4em;
-
-	@include mixins.desktop {
-		align-items: center;
-	}
 }
 
 .name {
