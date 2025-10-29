@@ -1,0 +1,127 @@
+<section class="first">
+	<div class="left">
+		<h2>
+			@if (language() === "EN") {
+				Legal Notice
+			} @else {
+				Impressum
+			}
+		</h2>
+		<div class="content">
+			<p>
+				<strong>
+					@if (language() === "EN") {
+						Information according to § 5 TMG
+					} @else {
+						Angaben gemäß § 5 TMG
+					}
+					:</strong
+				>
+			</p>
+			<p>
+				@if (language() === "EN") {
+					Name: Calvin Hanisch<br />
+					Address: Ferdinand-Jost-Straße 14, 04299 Leipzig, Germany<br />
+					Phone: <a href="tel:+4917672435482">+49 176 724 35 482</a><br />
+					Email: <a href="mailto:calvin.hanisch@gmail.com">calvin.hanisch&#64;gmail.com</a>
+				} @else {
+					Name: Calvin Hanisch<br />
+					Anschrift: Ferdinand-Jost-Straße 14, 04299 Leipzig, Deutschland<br />
+					Telefon: <a href="tel:+4917672435482">+49 176 724 35 482</a><br />
+					E-Mail: <a href="mailto:calvin.hanisch@gmail.com">calvin.hanisch&#64;gmail.com</a>
+				}
+			</p>
+
+			<p>
+				<strong>
+					@if (language() === "EN") {
+						Responsible for content according to § 55 Abs. 2 RStV
+					} @else {
+						Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+					}
+					:</strong
+				>
+			</p>
+			<p>
+				@if (language() === "EN") {
+					Max Mustermann<br />
+					Address as above
+				} @else {
+					Max Mustermann<br />
+					Anschrift wie oben
+				}
+			</p>
+
+			<p>
+				<strong>
+					@if (language() === "EN") {
+						Disclaimer
+					} @else {
+						Haftungsausschluss
+					}
+				</strong>
+			</p>
+			<p>
+				@if (language() === "EN") {
+					Despite careful content control, we assume no liability for the content of external links.
+					The content of the linked pages is the sole responsibility of their operators.
+				} @else {
+					Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte
+					externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber
+					verantwortlich.
+				}
+			</p>
+
+			<p>
+				<strong>
+					@if (language() === "EN") {
+						Copyright
+					} @else {
+						Urheberrecht
+					}
+				</strong>
+			</p>
+			<p>
+				@if (language() === "EN") {
+					The content and works created by the site operators on this website are subject to German
+					copyright law. Third-party contributions are marked as such. Duplication, processing,
+					distribution, and any kind of utilization beyond the limits of copyright require the
+					written consent of the respective author or creator.
+				} @else {
+					Die durch die Seitenbetreiber erstellten Inhalte und Werke auf dieser Webseite unterliegen
+					dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die
+					Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
+					Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw.
+					Erstellers.
+				}
+			</p>
+
+			<p>
+				<strong>
+					@if (language() === "EN") {
+						Source / Template
+					} @else {
+						Quelle / Template
+					}
+				</strong>
+			</p>
+			<p>
+				@if (language() === "EN") {
+					This legal notice was created based on typical German portfolio websites. Please replace
+					the placeholders with your own data.
+				} @else {
+					Dieses Impressum wurde auf Grundlage typischer deutscher Portfolio-Webseiten erstellt.
+					Bitte die Platzhalter durch deine eigenen Daten ersetzen.
+				}
+			</p>
+		</div>
+	</div>
+	<app-link-arrow fragment="legal-2" [alignSelf]="'center'" show="desktop" />
+</section>
+<section id="legal-2" class="last">
+	<app-end [showText]="false" href="privacy#" />
+</section>
+
+<section class="back-to-top">
+	<app-link-arrow fragment="" orientation="up" show="mobile" />
+</section>

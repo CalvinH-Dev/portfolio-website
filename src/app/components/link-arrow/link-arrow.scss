@@ -26,6 +26,7 @@
 	width: var(--arrow-width);
 	align-content: center;
 	z-index: 10;
+	flex-shrink: 0;
 
 	@include mixins.desktop {
 		--arrow-width: clamp(4rem, 0.298rem + 7.702vw, 8rem);

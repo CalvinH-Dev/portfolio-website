@@ -1,0 +1,72 @@
+@use "../../../../global-styles/mixins";
+
+:host {
+	display: contents;
+}
+
+section {
+	@include mixins.desktop {
+		height: 100%;
+	}
+}
+
+.first {
+	padding-top: var(--header-height);
+
+	@include mixins.desktop {
+		padding-left: revert;
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-basis: calc(100vw - var(--aside-width));
+	}
+}
+
+h2 {
+	@include mixins.desktop {
+		writing-mode: sideways-lr;
+	}
+}
+
+.left {
+	display: contents;
+
+	@include mixins.desktop {
+		display: flex;
+		justify-content: start;
+		align-items: start;
+	}
+}
+
+.content {
+	@include mixins.desktop {
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.5rem;
+		padding-inline: 2rem;
+		height: 100%;
+		width: 60%;
+		overflow-y: auto;
+	}
+}
+
+.last {
+	@include mixins.desktop {
+		display: flex;
+		justify-content: end;
+		height: 100%;
+		flex-basis: calc(100vw - 2 * var(--aside-width));
+		padding-right: 2rem;
+	}
+}
+
+.back-to-top {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include mixins.desktop {
+		display: none;
+	}
+}
