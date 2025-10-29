@@ -41,6 +41,24 @@ const projects: ProjectInterface[] = [
 		githubSrc: "https://github.com/CalvinH-Dev/pokemon-app",
 		pageSrc: "https://pokedex.hanisch-dev.de",
 	},
+	{
+		name: "Join",
+		about: {
+			DE: "Join ist ein Kanban-Board, auf dem man Kontakte hinzufügen und Tasks erstellen, bearbeiten sowie zuweisen kann. Nutzer können sich anmelden und authentifizieren.",
+			EN: "Join is a Kanban board where you can add contacts and create, edit, and assign tasks. Users can sign up and authenticate.",
+		},
+		tech: {
+			DE: "Programmiert mit TypeScript, Angular und Firebase für Authentifizierung und Datenhaltung in Echtzeit.",
+			EN: "Built with TypeScript, Angular, and Firebase for authentication and real-time data management.",
+		},
+		learning: {
+			DE: "Ich lernte, Benutzer-Authentifizierung zu implementieren, CRUD-Operationen für Tasks zu gestalten und Daten in Echtzeit mit Firebase zu synchronisieren.",
+			EN: "I learned to implement user authentication, handle CRUD operations for tasks, and sync data in real-time with Firebase.",
+		},
+		imageSrc: "img/projects/pokedex.webp",
+		githubSrc: "https://github.com/CalvinH-Dev/join",
+		pageSrc: "https://join.hanisch-dev.de",
+	},
 ];
 
 @Component({
