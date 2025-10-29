@@ -9,11 +9,34 @@ import { LanguageService } from "app/services/language";
 	styleUrl: "./project.scss",
 })
 export class Project {
+	/**
+	 * Language service instance for retrieving the current language.
+	 */
 	languageService = inject(LanguageService);
+
+	/**
+	 * The current language signal.
+	 */
 	language = this.languageService.getLanguage();
+
+	/**
+	 * Indicates whether the project is active.
+	 */
 	isActive = input<boolean>();
+
+	/**
+	 * Output event emitter for setting the active project.
+	 */
 	setActive = output();
+
+	/**
+	 * Index of the project in the list. Defaults to 1.
+	 */
 	index = input<number>(1);
+
+	/**
+	 * Project information including name, descriptions, technologies, and links.
+	 */
 	projectInfo = input<ProjectInterface>({
 		name: "",
 		about: { EN: "", DE: "" },
@@ -24,6 +47,9 @@ export class Project {
 		pageSrc: "",
 	});
 
+	/**
+	 * Emits the `setActive` event when the "Show More" action is triggered.
+	 */
 	onShowMore() {
 		this.setActive.emit();
 	}

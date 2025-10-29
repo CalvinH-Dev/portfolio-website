@@ -9,9 +9,21 @@ import { LanguageService } from "app/services/language";
 	styleUrl: "./header-desktop.scss",
 })
 export class HeaderDesktop {
+	/**
+	 * Language service instance for retrieving the current language.
+	 */
 	languageService = inject(LanguageService);
+
+	/**
+	 * The current language signal.
+	 */
 	language = this.languageService.getLanguage();
 
+	/**
+	 * Scrolls smoothly to a section in the main container when a link is clicked.
+	 * @param event The mouse event triggered by clicking the link.
+	 * @param id The target element ID to scroll to. Use "#" or "root" to scroll to the start.
+	 */
 	onProjectRefClicked(event: MouseEvent, id: string) {
 		event.preventDefault();
 

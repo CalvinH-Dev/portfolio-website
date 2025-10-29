@@ -12,6 +12,10 @@ export class Languages {
 	languageService = inject(LanguageService);
 	language = this.languageService.getLanguage();
 
+	/**
+	 * Updates the application language.
+	 * @param language The new language to set.
+	 */
 	onLanguageChange(language: Language) {
 		this.languageService.setLanguage(language);
 	}

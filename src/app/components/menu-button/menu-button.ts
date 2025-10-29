@@ -9,6 +9,9 @@ import { Component, model } from "@angular/core";
 export class MenuButton {
 	menuOpen = model<boolean>();
 
+	/**
+	 * Toggles the menu open state when the button is clicked.
+	 */
 	onClick() {
 		this.menuOpen.update((value) => !value);
 	}

@@ -13,13 +13,30 @@ import { Socials } from "./components/sections/socials/socials";
 	styleUrl: "./app.scss",
 })
 export class App {
+	/**
+	 * The application title as a reactive signal.
+	 */
 	protected readonly title = signal("portfolio");
+
+	/**
+	 * Indicates whether the menu is open.
+	 */
 	menuOpen = false;
+
+	/**
+	 * Router instance for navigation and event subscriptions.
+	 */
 	router = inject(Router);
 
 	constructor() {
 		afterNextRender(() => {
 			const container = document.querySelector("main")!;
+
+			/**
+			 * Scrolls the main container horizontally on mouse wheel events.
+			 * @param event The wheel event.
+			 * @returns false to prevent default behavior.
+			 */
 			function onWheelDesktop(event: WheelEvent) {
 				container.scrollBy({
 					left: event.deltaY * 5,
@@ -27,8 +44,13 @@ export class App {
 				});
 				return false;
 			}
+
 			window.addEventListener("wheel", onWheelDesktop, { passive: false });
 
+			/**
+			 * Scrolls the container back to the left when the router triggers a navigation event.
+			 * @param event The router event.
+			 */
 			this.router.events.subscribe((event) => {
 				if (event.type === 1 && !event.url.includes("#")) {
 					container.scrollTo({ left: 0, behavior: "smooth" });

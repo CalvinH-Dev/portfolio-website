@@ -13,6 +13,9 @@ import { FormGroup } from "../form-group/form-group";
 	styleUrl: "./contact-form.scss",
 })
 export class ContactForm {
+	/**
+	 * Placeholders and error messages for form fields in multiple languages.
+	 */
 	placeholders = {
 		name: {
 			EN: { valid: "Your name", error: "Your name is required" },
@@ -38,10 +41,24 @@ export class ContactForm {
 		},
 	};
 
+	/**
+	 * HttpClient instance for sending HTTP requests.
+	 */
 	http = inject(HttpClient);
+
+	/**
+	 * Language service instance for retrieving the current language.
+	 */
 	languageService = inject(LanguageService);
+
+	/**
+	 * The current language signal.
+	 */
 	language = this.languageService.getLanguage();
 
+	/**
+	 * Contact form data model.
+	 */
 	contactData: ContactInformation = {
 		name: "",
 		email: "",
@@ -49,8 +66,16 @@ export class ContactForm {
 		privacy: false,
 	};
 
+	/**
+	 * Post configuration for sending form data.
+	 */
 	post = {
 		endPoint: "https://hanisch-dev.de/sendMail.php",
+		/**
+		 * Serializes the contact data payload to a JSON string.
+		 * @param payload The contact data to send.
+		 * @returns JSON string of the payload.
+		 */
 		body: (payload: ContactInformation) => JSON.stringify(payload),
 		options: {
 			headers: {
@@ -60,6 +85,10 @@ export class ContactForm {
 		},
 	};
 
+	/**
+	 * Handles form submission.
+	 * @param form The NgForm instance of the contact form.
+	 */
 	onSubmit(form: NgForm) {
 		if (form.submitted && form.form.valid) {
 			this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({

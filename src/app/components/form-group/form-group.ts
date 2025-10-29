@@ -8,5 +8,9 @@ import { FormsModule } from "@angular/forms";
 	styleUrl: "./form-group.scss",
 })
 export class FormGroup {
+	/**
+	 * Determines the alignment of the checkbox label.
+	 * Can be either 'top' or 'bottom'.
+	 */
 	checkAlign = input<"top" | "bottom">("top");
 }
