@@ -50,12 +50,31 @@ const projects: ProjectInterface[] = [
 	styleUrl: "./projects.scss",
 })
 export class Projects {
+	/**
+	 * Language service instance for retrieving the current language.
+	 */
 	languageService = inject(LanguageService);
+
+	/**
+	 * The current language signal.
+	 */
 	language = this.languageService.getLanguage();
 
+	/**
+	 * Index of the currently active project.
+	 */
 	activeIdx = 0;
+
+	/**
+	 * List of project data.
+	 */
 	projects: ProjectInterface[] = projects;
 
+	/**
+	 * Sets the active project by index.
+	 * If the clicked project is already active, it cycles to the next or previous project.
+	 * @param index The index of the project to set as active.
+	 */
 	setActiveProject(index: number) {
 		if (index === this.activeIdx) {
 			if (index === projects.length - 1) {

@@ -13,14 +13,6 @@ import { ColleagueReview } from "app/interfaces/colleague-review";
 import { LanguageService } from "app/services/language";
 
 const colleagues: ColleagueReview[] = [
-	// {
-	// 	name: "Christoph Konst",
-	// 	project: "Join",
-	// 	text: {
-	// 		EN: "Calvin demonstrated strong leadership qualities during our group project and consistently ensured that the team worked in a structured and goal-oriented manner. With his extensive knowledge in relevant areas, he was always a valuable support and able to explain complex topics clearly and understandably. Thanks to his excellent overview of the entire project, he kept the big picture in mind even during demanding phases and made a decisive contribution to the success of our collaboration.",
-	// 		DE: "Calvin hat in unserer Gruppenarbeit starke Führungsqualitäten bewiesen und sorgte stets dafür, dass das Team strukturiert und zielgerichtet arbeiten konnte. Durch sein umfassendes Wissen in den relevanten Bereichen war er jederzeit eine wertvolle Unterstützung und konnte komplexe Themen klar und verständlich erklären. Dank seines guten Überblicks über das Gesamtprojekt behielt er auch in anspruchsvollen Phasen den roten Faden und trug maßgeblich zum Erfolg unserer Zusammenarbeit bei.",
-	// 	},
-	// },
 	{
 		name: "Phillip Schulze",
 		project: "Join",
@@ -54,22 +46,62 @@ const colleagues: ColleagueReview[] = [
 	styleUrl: "./references.scss",
 })
 export class References implements AfterViewInit, OnDestroy {
+	/**
+	 * Language service instance for retrieving the current language.
+	 */
 	languageService = inject(LanguageService);
+
+	/**
+	 * The current language signal.
+	 */
 	language = this.languageService.getLanguage();
 
+	/**
+	 * Index of the currently active slide.
+	 */
 	activeSlideIdx = 0;
+
+	/**
+	 * Intersection observer for tracking visibility of slider cards.
+	 */
 	observer: IntersectionObserver | null = null;
 
+	/**
+	 * Array of colleague reviews.
+	 */
 	colleagues = colleagues;
 
+	/**
+	 * References to the card elements in the slider.
+	 */
 	cards = viewChildren<ElementRef>("card");
+
+	/**
+	 * Reference to the slider container element.
+	 */
 	container = viewChild<ElementRef>("slider");
 
 	private animationId: number | null = null;
-	private scrollDirection = 1; // 1 = runter, -1 = hoch
-	private speed = 0.25; // Pixel pro Frame
+
+	/**
+	 * Scroll direction. 1 = down, -1 = up.
+	 */
+	private scrollDirection = 1;
+
+	/**
+	 * Scroll speed in pixels per frame.
+	 */
+	private speed = 0.25;
+
+	/**
+	 * Current scroll position in pixels.
+	 */
 	private scrollPosition = 0;
 
+	/**
+	 * Initializes the component after view initialization.
+	 * Sets up auto-scrolling and intersection observer.
+	 */
 	ngAfterViewInit() {
 		this.startAutoScroll();
 
@@ -85,6 +117,10 @@ export class References implements AfterViewInit, OnDestroy {
 		this.cards().forEach((el) => this.observer?.observe(el.nativeElement));
 	}
 
+	/**
+	 * Determines the most visible card in the slider and updates the active slide index.
+	 * @param entries Intersection observer entries for slider cards.
+	 */
 	private observeSliderChildrenScroll(entries: IntersectionObserverEntry[]) {
 		let mostVisible: IntersectionObserverEntry | null = null;
 		entries.forEach((entry) => {
@@ -100,10 +136,17 @@ export class References implements AfterViewInit, OnDestroy {
 		}
 	}
 
+	/**
+	 * Cleans up resources when the component is destroyed.
+	 */
 	ngOnDestroy() {
 		if (this.animationId !== null) cancelAnimationFrame(this.animationId);
 	}
 
+	/**
+	 * Handles window resize events.
+	 * Stops auto-scroll for screens smaller than 768px, otherwise starts it.
+	 */
 	@HostListener("window:resize")
 	onResize() {
 		if (window.innerWidth < 768) {
@@ -113,6 +156,10 @@ export class References implements AfterViewInit, OnDestroy {
 		}
 	}
 
+	/**
+	 * Starts the auto-scroll animation.
+	 * Skips if screen width is below 768px or if an animation is already running.
+	 */
 	private startAutoScroll() {
 		if (window.innerWidth < 768 || this.animationId !== null) return;
 
@@ -134,6 +181,9 @@ export class References implements AfterViewInit, OnDestroy {
 		this.animationId = requestAnimationFrame(step);
 	}
 
+	/**
+	 * Stops the auto-scroll animation if it is running.
+	 */
 	private stopAutoScroll() {
 		if (this.animationId !== null) {
 			cancelAnimationFrame(this.animationId);
