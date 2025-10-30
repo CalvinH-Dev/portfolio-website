@@ -1,5 +1,5 @@
 import {
-	AfterViewInit,
+	afterNextRender,
 	Component,
 	ElementRef,
 	HostListener,
@@ -45,7 +45,7 @@ const colleagues: ColleagueReview[] = [
 	templateUrl: "./references.html",
 	styleUrl: "./references.scss",
 })
-export class References implements AfterViewInit, OnDestroy {
+export class References implements OnDestroy {
 	/**
 	 * Language service instance for retrieving the current language.
 	 */
@@ -102,19 +102,21 @@ export class References implements AfterViewInit, OnDestroy {
 	 * Initializes the component after view initialization.
 	 * Sets up auto-scrolling and intersection observer.
 	 */
-	ngAfterViewInit() {
-		this.startAutoScroll();
+	constructor() {
+		afterNextRender(() => {
+			this.startAutoScroll();
 
-		this.observer = new IntersectionObserver(
-			(entries) => {
-				this.observeSliderChildrenScroll(entries);
-			},
-			{
-				root: this.container()?.nativeElement,
-				threshold: [0.5],
-			},
-		);
-		this.cards().forEach((el) => this.observer?.observe(el.nativeElement));
+			this.observer = new IntersectionObserver(
+				(entries) => {
+					this.observeSliderChildrenScroll(entries);
+				},
+				{
+					root: this.container()?.nativeElement,
+					threshold: [0.5],
+				},
+			);
+			this.cards().forEach((el) => this.observer?.observe(el.nativeElement));
+		});
 	}
 
 	/**

@@ -1,4 +1,5 @@
 RewriteEngine On
+RewriteBase /
 RewriteCond %{HTTP_HOST} ^(www\.)?hanisch-dev\.de$ [NC]
 RewriteCond %{REQUEST_URI} !^/root/
 RewriteRule ^(.*)$ /root/$1 [L]

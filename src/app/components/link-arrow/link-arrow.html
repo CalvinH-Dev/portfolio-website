@@ -2,7 +2,7 @@
 	class="arrow"
 	(click)="onProjectRefClicked($event, fragment().toString())"
 	[routerLink]="[]"
-	[fragment]="fragment()"
+	[fragment]="fragment() === '#' ? '' : fragment()"
 	[class.left]="orientation() === 'left'"
 	[class.up]="orientation() === 'up'"
 	[class.align-self-start]="alignSelf() === 'start'"
