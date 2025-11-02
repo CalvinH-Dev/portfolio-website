@@ -85,6 +85,17 @@ export class ContactForm {
 		},
 	};
 
+	/**
+	 * Reference to the toast element used for displaying success messages.
+	 *
+	 * The toast element is animated via CSS and its visibility is controlled
+	 * by updating its `animationPlayState` property. It becomes visible when
+	 * the animation is set to `"running"` and hides automatically after the
+	 * animation completes.
+	 *
+	 * @example
+	 * this.toast()!.nativeElement.style.animationPlayState = "running";
+	 */
 	toast = viewChild<ElementRef>("toast");
 
 	/**
