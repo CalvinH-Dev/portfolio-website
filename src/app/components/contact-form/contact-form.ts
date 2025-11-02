@@ -1,5 +1,5 @@
 import { HttpClient } from "@angular/common/http";
-import { Component, inject } from "@angular/core";
+import { Component, ElementRef, inject, viewChild } from "@angular/core";
 import { FormsModule, NgForm } from "@angular/forms";
 import { RouterLink } from "@angular/router";
 import { ContactInformation } from "app/interfaces/contact-information";
@@ -85,6 +85,8 @@ export class ContactForm {
 		},
 	};
 
+	toast = viewChild<ElementRef>("toast");
+
 	/**
 	 * Handles form submission.
 	 * @param form The NgForm instance of the contact form.
@@ -94,12 +96,10 @@ export class ContactForm {
 			this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
 				next: () => {
 					form.resetForm();
+					this.toast()!.nativeElement.style.animationPlayState = "running";
 				},
 				error: (error) => {
 					console.error(error);
-				},
-				complete: () => {
-					console.info("send post complete");
 				},
 			});
 		}

@@ -77,3 +77,19 @@
 		</button>
 	</div>
 </form>
+<p class="toast" #toast>
+	<span>
+		@if (language() === "EN") {
+			Thank you!
+		} @else {
+			Vielen Dank!
+		}
+	</span>
+	<span>
+		@if (language() === "EN") {
+			Your message has been sent.
+		} @else {
+			Ihre Nachricht wurde übermittelt.
+		}
+	</span>
+</p>
