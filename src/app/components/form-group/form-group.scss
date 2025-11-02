@@ -40,12 +40,31 @@
 }
 
 .error-message {
+	position: absolute;
+	top: calc(100% + 0.25rem);
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 	user-select: none;
 	text-align: center;
+	width: 80%;
 	opacity: 0;
 	color: var(--error-color);
 	font-size: var(--fs-small);
-	transition: opacity 225ms;
+	padding: 0.5rem;
+	transition:
+		opacity 225ms,
+		transform 225ms;
+	background-color: var(--bg-color);
+	border-radius: 5px;
+	z-index: 2;
+	visibility: hidden;
+	box-shadow: 0 0 10px 3px var(--error-color);
+}
+
+.error-message:empty,
+.error-message:has(span:empty) {
+	display: none;
 }
 
 .form-group:has(.ng-valid.ng-touched) .mobile-images .valid {
@@ -56,7 +75,8 @@
 	display: revert;
 }
 
-.form-group:has(.ng-invalid.ng-dirty) .error-message {
+.form-group:has(.ng-invalid.ng-dirty:focus-visible) .error-message {
 	user-select: revert;
+	visibility: visible;
 	opacity: 1;
 }
