@@ -128,6 +128,14 @@ h6 {
 button:is(.primary, .secondary) {
 	padding: var(--padding-block-button) var(--padding-inline-button);
 	border-radius: var(--border-radius-button);
+	transition:
+		scale var(--transition-slow),
+		background-color var(--transition-slow),
+		color var(--transition-slow);
+
+	&:hover:not(:disabled) {
+		scale: 1.05;
+	}
 }
 
 button.primary {
@@ -151,7 +159,6 @@ button.primary {
 	}
 
 	&:hover:not(:disabled) {
-		outline: 2px solid var(--comp-bg-color);
 		background: var(--comp-bg-color);
 		color: var(--text-color-darker);
 	}
