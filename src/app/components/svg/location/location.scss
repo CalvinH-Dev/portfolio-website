@@ -2,6 +2,10 @@
 	display: contents;
 }
 
+svg path:first-of-type {
+	fill: var(--accent-color);
+}
+
 :host-context(.image-list:hover) svg path:last-of-type {
 	stroke-width: 2px;
 }

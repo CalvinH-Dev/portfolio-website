@@ -54,7 +54,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="show">
+	<div class="show" [class.active]="isActive()">
 		<button (mousedown)="onShowMore()">
 			<span>{{ isActive() ? "Show me less" : "Show me more" }}</span>
 			<img src="img/projects/show-icon-project.svg" alt="" />

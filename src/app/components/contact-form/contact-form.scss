@@ -22,7 +22,7 @@ form {
 }
 
 .legal {
-	color: #b5e93b;
+	color: var(--accent-color);
 }
 
 .privacy {
@@ -57,8 +57,8 @@ input[type="checkbox"].ng-invalid::after {
 	position: absolute;
 	inset: 0;
 	background-color: var(--bg-color);
-	border: 2px solid var(--text-color-white);
-	color: var(--text-color-white);
+	border: 2px solid var(--text-color-light);
+	color: var(--text-color-light);
 }
 
 input[type="checkbox"].ng-valid::after {
@@ -82,9 +82,9 @@ input:-webkit-autofill {
 	font-family: Quantico, sans-serif;
 	font-weight: 400;
 	background-color: var(--bg-color);
-	color: var(--text-color-white);
+	color: var(--text-color-light);
 	font-size: var(--fs-input);
-	-webkit-text-fill-color: var(--text-color-white);
+	-webkit-text-fill-color: var(--text-color-light);
 	transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -96,13 +96,13 @@ textarea {
 	font-family: inherit;
 	font-weight: 400;
 	font-size: var(--fs-input);
-	border: 1px solid #b5e93b;
+	border: 1px solid var(--accent-color);
 	border-radius: var(--border-radius-button);
 	padding: 1em;
 
 	&:focus {
 		outline: none;
-		border: 1px solid #b5e93b;
+		border: 1px solid var(--accent-color);
 	}
 
 	&.ng-invalid:is(.ng-dirty) {

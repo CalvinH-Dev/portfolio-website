@@ -10,7 +10,7 @@
 
 .special {
 	align-self: start;
-	color: #d3ed97;
+	color: hsl(from var(--accent-color-2) h s l);
 }
 
 .contact-items {

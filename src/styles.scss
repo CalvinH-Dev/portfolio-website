@@ -19,7 +19,7 @@ body {
 	font-weight: 400;
 	height: 100svh;
 	background-color: var(--bg-color);
-	color: var(--text-color-white);
+	color: var(--text-color-light);
 	font-size: var(--fs-medium);
 
 	@include mixins.desktop {
@@ -90,7 +90,7 @@ h1 {
 }
 
 h2 {
-	--shadow-color: #b5e93b;
+	--shadow-color: var(--accent-color);
 
 	align-self: start;
 	font-size: var(--fs-h2);
@@ -100,7 +100,7 @@ h2 {
 }
 
 h3 {
-	--shadow-color: #b5e93b;
+	--shadow-color: var(--accent-color);
 
 	color: var(--bg-color);
 	font-size: var(--fs-h3);
@@ -128,12 +128,18 @@ button:is(.primary, .secondary) {
 	border-radius: var(--border-radius-button);
 }
 
+// --text-primary: black;
+// --text-secondary: white;
+// --bg-primary: var(--accent-color);
+// --bg-secondary: var(--bg-color);
+
 button.primary {
-	background-color: #b5e93b;
+	border: 1px solid var(--text-primary);
+	background-color: var(--bg-primary);
 	font-family: inherit;
 
 	& :is(span, a) {
-		color: #252525;
+		color: var(--text-primary);
 		font-size: var(--fs-button);
 		font-weight: 400;
 	}
@@ -153,12 +159,12 @@ button.primary {
 }
 
 button.secondary {
-	background-color: transparent;
-	border: 1px solid #b5e93b;
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--text-secondary);
 	font-family: inherit;
 
 	& :is(span, a) {
-		color: #b5e93b;
+		color: var(--text-secondary);
 		font-size: var(--fs-button);
 		font-weight: 400;
 	}
@@ -175,7 +181,7 @@ button.secondary {
 
 	&:hover:not(:disabled) {
 		border-color: var(--accent-color-2);
-		background-color: #b5e93b33;
+		background-color: hsl(from var(--accent-color) h s l / 25%);
 
 		& :is(span, a) {
 			color: #fffdfd;

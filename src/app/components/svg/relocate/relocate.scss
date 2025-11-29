@@ -2,6 +2,10 @@
 	display: contents;
 }
 
+svg rect:last-of-type {
+	fill: var(--accent-color);
+}
+
 :host-context(.image-list:hover) .non-hovered {
 	display: none;
 }

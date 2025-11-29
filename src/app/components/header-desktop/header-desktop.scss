@@ -20,7 +20,9 @@ aside {
 		align-items: center;
 		justify-content: center;
 		background-color: var(--accent-color);
-		box-shadow: 0 1px 10px black;
+		box-shadow: 0 1px 10px hsl(from var(--bg-color) h s 35%);
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
 		z-index: var(--fixed-z-index);
 	}
 }

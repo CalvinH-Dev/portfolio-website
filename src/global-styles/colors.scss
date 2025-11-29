@@ -1,0 +1,19 @@
+:root {
+	--bg-color: hsl(206deg 47% 9%);
+	--accent-color: hsl(from var(--bg-color) h 60% 55%);
+	--accent-color-lighter: hsl(from var(--bg-color) h 65% 65%);
+	--accent-color-darker: hsl(from var(--bg-color) h 55% 45%);
+	--comp-bg-color: hsl(26deg 60% 55%);
+	--comp-text-color: hsl(from var(--comp-bg-color) h 80% 75%);
+	--text-color-light: hsl(from var(--bg-color) h 90% 85%);
+	--text-color-dark: hsl(from var(--bg-color) h 90% 25%);
+	--bg-color-card: hsl(from var(--bg-color) h 65% 20%);
+	--text-color-card: hsl(from var(--bg-color) h 100% 95%);
+	--header-color: linear-gradient(to bottom, var(--accent-color), var(--accent-color-darker));
+	--menu-color: linear-gradient(to bottom, var(--accent-color), var(--accent-color-darker));
+	--bg-primary: var(--accent-color);
+	--text-primary: var(--text-color-dark);
+	--bg-secondary: var(--bg-color);
+	--text-secondary: var(--comp-text-color);
+	--error-color: #fd2e12;
+}
