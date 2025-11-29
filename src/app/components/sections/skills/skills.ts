@@ -5,14 +5,62 @@ import { Skill } from "app/interfaces/skill";
 import { LanguageService } from "app/services/language";
 
 const skillsList: Skill[] = [
-	{ image: { src: "img/skills/angular.webp", alt: "Angular" }, title: "Angular" },
-	{ image: { src: "img/skills/api.webp", alt: "API" }, title: "API" },
-	{ image: { src: "img/skills/css.webp", alt: "CSS" }, title: "CSS" },
-	{ image: { src: "img/skills/git.webp", alt: "Git" }, title: "GIT" },
-	{ image: { src: "img/skills/html.webp", alt: "HTML" }, title: "HTML" },
-	{ image: { src: "img/skills/javascript.webp", alt: "Javascript" }, title: "Javascript" },
-	{ image: { src: "img/skills/typescript.webp", alt: "Typescript" }, title: "Typescript" },
-	{ image: { src: "img/skills/question-mark.webp", alt: "Question Mark" }, title: "?" },
+	{
+		image: { src: "img/skills/svgs/skill-icons--html.svg", alt: "HTML" },
+		title: "html",
+	},
+	{
+		image: { src: "img/skills/svgs/skill-icons--css.svg", alt: "CSS" },
+		title: "CSS",
+	},
+	{
+		image: { src: "img/skills/svgs/skill-icons--javascript.svg", alt: "Javascript" },
+		title: "Javascript",
+	},
+	{
+		image: { src: "img/skills/svgs/skill-icons--typescript.svg", alt: "Typescript" },
+		title: "Typescript",
+	},
+	{
+		image: { src: "img/skills/svgs/skill-icons--vite-dark.svg", alt: "Vite" },
+		title: "Vite",
+	},
+	{
+		image: { src: "img/skills/svgs/skill-icons--git.svg", alt: "Git" },
+		title: "GIT",
+	},
+	{
+		image: { src: "img/skills/svgs/skill-icons--angular-dark.svg", alt: "Angular" },
+		title: "Angular",
+	},
+	{
+		image: { src: "img/skills/svgs/skill-icons--firebase.svg", alt: "Firebase" },
+		title: "Firebase",
+	},
+	{
+		image: { src: "img/skills/svgs/skill-icons--python-dark.svg", alt: "Python" },
+		title: "Python",
+	},
+	{
+		image: { src: "img/skills/svgs/skill-icons--django.svg", alt: "Django" },
+		title: "Django",
+	},
+	{
+		image: { src: "img/skills/svgs/skill-icons--postman.svg", alt: "Postman" },
+		title: "Postman",
+	},
+	{
+		image: { src: "img/skills/svgs/skill-icons--sqlite.svg", alt: "Sqlite" },
+		title: "SQLite",
+	},
+	{
+		image: { src: "img/skills/svgs/skill-icons--mongodb.svg", alt: "Mongo DB" },
+		title: "Mongo DB",
+	},
+	{
+		image: { src: "img/skills/svgs/skill-icons--supabase-dark.svg", alt: "Supabase" },
+		title: "Supabase",
+	},
 ];
 
 @Component({

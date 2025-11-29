@@ -24,15 +24,17 @@ h2 {
 }
 
 .img-grid {
+	--column-width: 10ch;
+
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(3, 45px);
+	grid-template-columns: repeat(3, var(--column-width));
 	align-items: center;
 	justify-content: space-between;
 	row-gap: 2rem;
 
 	@include mixins.desktop {
-		grid-template-columns: repeat(auto-fill, 45px);
+		grid-template-columns: repeat(auto-fill, var(--column-width));
 		grid-template-rows: 90px;
 		gap: 2.5rem 3.5rem;
 	}
@@ -58,12 +60,18 @@ h2 {
 	height: 40px;
 	aspect-ratio: 1;
 	overflow: hidden;
+	border-radius: 12px;
+	box-shadow: 0 0 12px var(--comp-bg-color);
 }
 
 img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+}
+
+.title {
+	text-transform: capitalize;
 }
 
 .middle {
