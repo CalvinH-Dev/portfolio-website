@@ -1,0 +1,15 @@
+.comp-shadow {
+	box-shadow: 0 0 8px 1px var(--comp-bg-color);
+}
+
+.comp-shadow-x {
+	box-shadow: 1px 0 8px 1px var(--comp-bg-color);
+}
+
+.comp-shadow-y {
+	box-shadow: 0 1px 8px 1px var(--comp-bg-color);
+}
+
+.dark-shadow {
+	box-shadow: 0 0 8px 1px var(--accent-color);
+}

@@ -19,7 +19,6 @@ section {
 
 h2 {
 	@include mixins.desktop {
-		writing-mode: sideways-lr;
 		align-self: end;
 	}
 }

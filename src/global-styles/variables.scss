@@ -1,10 +1,11 @@
 @use "colors";
+@use "transitions";
 
 html {
 	--fs-small: clamp(0.875rem, 0.875rem + 0.3125vw, 1.125rem);
 	--fs-medium: clamp(1rem, 0.969rem + 0.156vw, 1.125rem);
 	--fs-large: clamp(24px, 24px, 24px);
-	--fs-h1: clamp(2.2rem, 1.39rem + 4.05vw, 6.25rem);
+	--fs-h1: clamp(2.2rem, 1.74rem + 2.3vw, 4.5rem);
 	--fs-h2: clamp(1.8rem, 1.485rem + 1.575vw, 3.375rem);
 	--fs-h3: clamp(2.3rem, 2.06rem + 1.2vw, 3.5rem);
 	--fs-h4: clamp(1.8rem, 1.56rem + 1.2vw, 3rem);

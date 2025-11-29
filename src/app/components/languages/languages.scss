@@ -10,24 +10,24 @@
 .divider {
 	width: 1px;
 	height: 1lh;
-	border: 1px solid var(--text-color-gray);
+	border: 1px solid var(--text-color-darker);
 }
 
 button {
 	font-family: inherit;
 	font-size: var(--fs-menu-a);
-	color: var(--text-color-gray);
+	color: var(--text-color-darker);
 
 	@include mixins.desktop {
-		color: white;
+		color: var(--text-color-light);
 	}
 }
 
 button:hover,
 button.active {
-	color: var(--accent-color);
+	color: var(--comp-text-color);
 
-	@include mixins.multi-shadow(var(--text-color-gray));
+	@include mixins.multi-shadow(var(--text-color-darker));
 
 	@include mixins.desktop {
 		text-shadow: none;

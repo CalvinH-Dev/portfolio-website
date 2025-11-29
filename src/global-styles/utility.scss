@@ -1,0 +1,15 @@
+@use "mixins";
+
+.comp-text {
+	color: var(--comp-text-color);
+}
+
+.section-headline {
+	color: var(--comp-bg-color);
+	font-weight: normal;
+	text-shadow: none;
+
+	@include mixins.desktop {
+		writing-mode: sideways-lr;
+	}
+}

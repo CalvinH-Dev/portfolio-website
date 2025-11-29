@@ -11,20 +11,19 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	background: var(--menu-color);
-	top: calc(var(--header-height) - 1px);
-	translate: 0 -55vh;
+	background: linear-gradient(to bottom, var(--accent-color) -50%, var(--comp-bg-color));
+	top: 0;
+	translate: 0 -100%;
 	left: 0;
 	width: 100%;
-	transition: translate 225ms;
+	transition: translate var(--transition-eternity);
 	z-index: 50;
 	border-bottom-left-radius: 30px;
 	border-bottom-right-radius: 30px;
-	box-shadow: 0 1px 10px black;
 }
 
 .menu.active {
-	translate: 0 0;
+	translate: 0 calc(var(--header-height) - 1px);
 	z-index: 50;
 }
 
@@ -32,7 +31,7 @@ a,
 button {
 	font-family: inherit;
 	font-size: var(--fs-menu-a);
-	color: var(--text-color-gray);
+	color: var(--text-color-darker);
 }
 
 a:hover,
@@ -41,7 +40,7 @@ button:hover,
 button.active {
 	color: var(--accent-color);
 
-	@include mixins.multi-shadow(var(--text-color-gray));
+	@include mixins.multi-shadow(var(--text-color-darker));
 }
 
 .languages {
@@ -54,5 +53,5 @@ button.active {
 .divider {
 	width: 1px;
 	height: 66%;
-	border: 1px solid var(--text-color-gray);
+	border: 1px solid var(--text-color-darker);
 }

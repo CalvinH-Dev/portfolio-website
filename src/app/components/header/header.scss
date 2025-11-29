@@ -11,20 +11,24 @@ header {
 	background: var(--header-color);
 	padding-block: 1rem;
 	z-index: var(--fixed-z-index);
-	box-shadow: 0 1px 10px black;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	transition: border-radius var(--transition-eternity);
 
 	@include mixins.desktop {
 		display: none;
 	}
 }
 
-.nav-mobile a {
+header .nav-mobile a {
 	height: 100%;
 }
 
 header:has(.active) {
-	background: var(--accent-color);
+	background: linear-gradient(to bottom, var(--accent-color), var(--comp-bg-color) 300%);
 	box-shadow: none;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
 }
 
 .img-mobile {

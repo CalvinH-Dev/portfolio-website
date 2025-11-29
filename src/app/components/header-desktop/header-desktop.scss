@@ -20,7 +20,6 @@ aside {
 		align-items: center;
 		justify-content: center;
 		background-color: var(--accent-color);
-		box-shadow: 0 1px 10px hsl(from var(--bg-color) h s 35%);
 		border-top-right-radius: 20px;
 		border-bottom-right-radius: 20px;
 		z-index: var(--fixed-z-index);
@@ -30,15 +29,15 @@ aside {
 .nav-desktop a {
 	font-family: inherit;
 	font-size: var(--fs-menu-a);
-	color: var(--text-color-gray);
+	color: var(--text-color-darker);
 	writing-mode: sideways-lr;
 	display: inline-block;
 
 	&:hover,
 	&.active {
-		color: var(--accent-color);
+		color: var(--comp-text-color);
 
-		@include mixins.multi-shadow(var(--text-color-gray));
+		@include mixins.multi-shadow(black);
 	}
 }
 
@@ -48,6 +47,10 @@ aside {
 		width: auto;
 		aspect-ratio: revert;
 		object-fit: cover;
+
+		&:hover {
+			filter: drop-shadow(2px 2px 1px var(--comp-text-color));
+		}
 	}
 }
 

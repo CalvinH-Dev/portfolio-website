@@ -3,7 +3,7 @@
 }
 
 svg rect:last-of-type {
-	fill: var(--accent-color);
+	fill: var(--comp-bg-color);
 }
 
 :host-context(.image-list:hover) .non-hovered {

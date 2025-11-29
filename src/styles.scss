@@ -1,6 +1,8 @@
 @use "global-styles/fonts";
 @use "global-styles/reset";
 @use "global-styles/variables";
+@use "global-styles/shadows";
+@use "global-styles/utility";
 @use "global-styles/mixins";
 
 html {
@@ -128,18 +130,13 @@ button:is(.primary, .secondary) {
 	border-radius: var(--border-radius-button);
 }
 
-// --text-primary: black;
-// --text-secondary: white;
-// --bg-primary: var(--accent-color);
-// --bg-secondary: var(--bg-color);
-
 button.primary {
-	border: 1px solid var(--text-primary);
+	color: var(--text-primary);
 	background-color: var(--bg-primary);
+	outline: none;
 	font-family: inherit;
 
 	& :is(span, a) {
-		color: var(--text-primary);
 		font-size: var(--fs-button);
 		font-weight: 400;
 	}
@@ -154,17 +151,19 @@ button.primary {
 	}
 
 	&:hover:not(:disabled) {
-		background: var(--menu-color);
+		outline: 2px solid var(--comp-bg-color);
+		background: var(--comp-bg-color);
+		color: var(--text-color-darker);
 	}
 }
 
 button.secondary {
+	color: var(--text-secondary);
 	background-color: var(--bg-secondary);
-	border: 1px solid var(--text-secondary);
+	outline: none;
 	font-family: inherit;
 
 	& :is(span, a) {
-		color: var(--text-secondary);
 		font-size: var(--fs-button);
 		font-weight: 400;
 	}
@@ -180,12 +179,9 @@ button.secondary {
 	}
 
 	&:hover:not(:disabled) {
-		border-color: var(--accent-color-2);
-		background-color: hsl(from var(--accent-color) h s l / 25%);
-
-		& :is(span, a) {
-			color: #fffdfd;
-		}
+		outline: 2px solid var(--bg-color);
+		background-color: var(--bg-color);
+		color: var(--text-color-light);
 	}
 }
 
