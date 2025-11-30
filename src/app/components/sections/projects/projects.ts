@@ -12,12 +12,12 @@ const projects: ProjectInterface[] = [
 			EN: "Play as a hungry shark and battle through the ocean. Avoid or attack jellyfish and fish to grow stronger, then defeat the giant whale boss.",
 		},
 		tech: {
-			DE: "Entwickelt mit Vanilla JavaScript unter Nutzung von Klassen, Vererbung und einer Game Loop mit `requestAnimationFrame`.",
-			EN: "Built with Vanilla JavaScript using classes, inheritance, and a game loop via `requestAnimationFrame`.",
+			DE: 'Entwickelt mit Vanilla JavaScript unter Nutzung von Klassen, Vererbung und einer Game Loop mit "requestAnimationFrame".',
+			EN: 'Built with Vanilla JavaScript using classes, inheritance, and a game loop via "requestAnimationFrame".',
 		},
 		learning: {
-			DE: "Ich lernte, wie man eine Game Loop mit `requestAnimationFrame` erstellt und Animationen per Klassen steuert.",
-			EN: "I learned to build a game loop with `requestAnimationFrame` and control animations using classes.",
+			DE: 'Ich lernte, wie man eine Game Loop mit "requestAnimationFrame" erstellt und Animationen per Klassen steuert.',
+			EN: 'I learned to build a game loop with "requestAnimationFrame" and control animations using classes.',
 		},
 		imageSrc: "img/projects/compressed_sharkie.webp",
 		githubSrc: "https://github.com/CalvinH-Dev/da-oop-game-1",
@@ -26,12 +26,12 @@ const projects: ProjectInterface[] = [
 	{
 		name: "Pokédex API",
 		about: {
-			DE: "Die Pokédex-API liefert Pokémon-Daten über REST-Endpunkte wie `/api/v2/pokemon/{id}`. Antworten im JSON-Format enthalten Namen, Typen, Fähigkeiten und Basiswerte.",
-			EN: "The Pokédex API provides Pokémon data via REST endpoints like `/api/v2/pokemon/{id}`. JSON responses include name, types, abilities, and base stats.",
+			DE: 'Die Pokédex-API liefert Pokémon-Daten über REST-Endpunkte wie "/api/v2/pokemon/{id}". Antworten im JSON-Format enthalten Namen, Typen, Fähigkeiten und Basiswerte.',
+			EN: 'The Pokédex API provides Pokémon data via REST endpoints like "/api/v2/pokemon/{id}". JSON responses include name, types, abilities, and base stats.',
 		},
 		tech: {
-			DE: "Mit Vanilla JavaScript, `fetch` und `async/await` werden Daten asynchron geladen. Ein Lade-Spinner erscheint, bis die ersten Daten bereit sind.",
-			EN: "Using Vanilla JavaScript, `fetch`, and `async/await`, data loads asynchronously. A spinner shows until initial data is ready.",
+			DE: 'Mit Vanilla JavaScript, "fetch" und "async/await" werden Daten asynchron geladen. Ein Lade-Spinner erscheint, bis die ersten Daten bereit sind.',
+			EN: 'Using Vanilla JavaScript, "fetch", and "async/await", data loads asynchronously. A spinner shows until initial data is ready.',
 		},
 		learning: {
 			DE: "Ich lernte, JSON-Daten einer API abzurufen, eine Suche einzubauen und Pokémon-Infos darzustellen.",

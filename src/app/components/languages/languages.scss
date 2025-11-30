@@ -28,12 +28,13 @@ button:hover,
 button.active {
 	scale: 1.1;
 	color: var(--comp-bg-color);
-	text-decoration: underline 2px var(--accent-color);
-	text-underline-offset: 2px;
+	text-decoration: underline 1px var(--accent-color);
+	text-underline-offset: 4px;
 
 	@include mixins.multi-shadow(var(--text-color-darker));
 
 	@include mixins.desktop {
+		text-decoration: underline 2px var(--accent-color);
 		text-shadow: none;
 	}
 }
