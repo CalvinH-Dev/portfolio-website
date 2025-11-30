@@ -2,10 +2,16 @@
 	display: contents;
 }
 
-svg path:first-of-type {
-	fill: var(--comp-bg-color);
+svg {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
 }
 
-:host-context(.image-list:hover) svg path:last-of-type {
-	stroke-width: 2px;
-}
+// svg path:first-of-type {
+// 	fill: var(--comp-bg-color);
+// }
+
+// :host-context(.image-list:hover) svg path:last-of-type {
+// 	stroke-width: 2px;
+// }

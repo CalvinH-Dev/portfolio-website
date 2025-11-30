@@ -1,9 +1,15 @@
 import { Component, input } from "@angular/core";
 import { RouterLink } from "@angular/router";
+import { V1 } from "./svgs/v1/v1";
+import { V2 } from "./svgs/v2/v2";
+import { V3 } from "./svgs/v3/v3";
+import { V4 } from "./svgs/v4/v4";
+
+type LinkArrowVersionNumber = 1 | 2 | 3 | 4;
 
 @Component({
 	selector: "app-link-arrow",
-	imports: [RouterLink],
+	imports: [RouterLink, V1, V2, V3, V4],
 	templateUrl: "./link-arrow.html",
 	styleUrl: "./link-arrow.scss",
 	host: { "[class.mobile]": 'show() === "mobile"', "[class.desktop]": 'show() === "desktop"' },
@@ -37,6 +43,7 @@ export class LinkArrow {
 	 * @param event The mouse event triggered by clicking the arrow.
 	 * @param id The target element ID to scroll to. Use "#" or "root" to scroll to the start.
 	 */
+	version = input<LinkArrowVersionNumber>(1);
 	onProjectRefClicked(event: MouseEvent, id: string) {
 		event.preventDefault();
 

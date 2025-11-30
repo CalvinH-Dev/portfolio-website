@@ -35,18 +35,27 @@ img {
 	height: auto;
 }
 
+.svg-container {
+	width: min(100%, 150px);
+}
+
 .image-list {
 	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: 60px auto;
+	grid-template-columns: min(100%, 300px);
+	grid-template-rows: auto auto;
 	flex-direction: column;
-	place-items: center center;
+	place-items: end center;
 	justify-content: center;
 	row-gap: 1rem;
 	overflow: visible;
 
-	&:hover span {
-		color: var(--accent-color);
+	@include mixins.desktop {
+		grid-template-columns: auto;
+		grid-template-rows: 250px auto;
+	}
+
+	span {
+		font-size: var(--fs-medium);
 	}
 }
 
@@ -80,7 +89,7 @@ h4 {
 .image-list.desktop {
 	display: none;
 
-	@include mixins.desktop {
+	@include mixins.desktop-no-tablet {
 		display: grid;
 	}
 }
@@ -92,7 +101,7 @@ h4 {
 		display: flex;
 		flex-direction: column;
 		row-gap: 2rem;
-		width: 50vw;
+		width: min(80%, 1200px);
 	}
 }
 

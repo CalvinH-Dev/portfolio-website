@@ -1,6 +1,6 @@
 <div class="last">
 	<div class="last-top">
-		<span class="special" [class.inactive]="!showText()">
+		<span class="comp-text" [class.inactive]="!showText()">
 			@if (language() === "EN") {
 				Let us work together.
 			} @else {
@@ -32,10 +32,10 @@
 			</div>
 		</div>
 	</div>
-	<app-link-arrow orientation="left" fragment="#" />
+	<app-link-arrow orientation="left" fragment="#" [version]="4" />
 	<div class="last-bottom">
 		<div class="hoverable">
-			<span
+			<span class="text-underline"
 				><a routerLink="/legal">
 					@if (language() === "EN") {
 						Legal Notice
@@ -46,7 +46,7 @@
 			>
 		</div>
 		<div class="hoverable">
-			<span
+			<span class="text-underline"
 				><a routerLink="/privacy" (click)="onClick($event)">
 					@if (language() === "EN") {
 						Privacy Policy
@@ -57,7 +57,9 @@
 			>
 		</div>
 		<div class="hoverable">
-			<span><a routerLink="/" (click)="onClick($event)"> &copy; Calvin Hanisch 2025</a></span>
+			<span class="text-underline"
+				><a routerLink="/" (click)="onClick($event)"> &copy; Calvin Hanisch 2025</a></span
+			>
 		</div>
 	</div>
 </div>

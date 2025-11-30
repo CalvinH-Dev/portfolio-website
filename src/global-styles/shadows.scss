@@ -1,15 +1,35 @@
 .comp-shadow {
-	box-shadow: 0 0 8px 1px var(--comp-bg-color);
+	box-shadow: 0 0 1px 1px var(--comp-bg-color);
 }
 
 .comp-shadow-x {
-	box-shadow: 1px 0 8px 1px var(--comp-bg-color);
+	box-shadow: 1px 0 0 2px var(--comp-bg-color);
 }
 
 .comp-shadow-y {
-	box-shadow: 0 1px 8px 1px var(--comp-bg-color);
+	box-shadow: 0 1px 0 2px var(--comp-bg-color);
 }
 
 .dark-shadow {
 	box-shadow: 0 0 8px 1px var(--accent-color);
+}
+
+.text-shadow-dark {
+	text-shadow: 2px 2px var(--bg-color);
+}
+
+.text-shadow-light {
+	text-shadow: 1px 1px var(--text-color-light);
+}
+
+.text-shadow-normal {
+	text-shadow: 2px 2px var(--accent-color);
+}
+
+.text-shadow-comp {
+	text-shadow: 2px 2px var(--comp-bg-color);
+}
+
+.text-shadow-comp-blurred {
+	text-shadow: 2px 2px 5px var(--comp-bg-color);
 }

@@ -36,7 +36,8 @@ h2 {
 	@include mixins.desktop {
 		grid-template-columns: repeat(auto-fill, var(--column-width));
 		grid-template-rows: 90px;
-		gap: 2.5rem 3.5rem;
+		grid-auto-rows: 90px;
+		gap: 1.5rem 2.5rem;
 	}
 }
 
@@ -61,7 +62,6 @@ h2 {
 	aspect-ratio: 1;
 	overflow: hidden;
 	border-radius: 12px;
-	box-shadow: 0 0 12px var(--comp-bg-color);
 }
 
 img {
@@ -98,6 +98,6 @@ button.primary {
 		display: flex;
 		column-gap: 2vw;
 		align-items: end;
-		width: 50%;
+		width: min(80%, 1200px);
 	}
 }

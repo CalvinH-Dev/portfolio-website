@@ -105,18 +105,17 @@
 h3 {
 	line-height: 1;
 	align-self: revert;
-	// color: var(--bg-color-card);
+	color: var(--comp-bg-color);
 }
 
 h5 {
-	color: inherit;
 	line-height: 1;
 }
 
 .name {
 	display: flex;
 	align-items: center;
-	column-gap: 0.5rem;
+	column-gap: 1.5rem;
 }
 
 .item {

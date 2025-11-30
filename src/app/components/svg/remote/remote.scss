@@ -2,14 +2,20 @@
 	display: contents;
 }
 
-svg path:nth-of-type(1) {
-	stroke: var(--comp-bg-color);
+svg {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
 }
 
-svg path:nth-of-type(2) {
-	fill: var(--comp-bg-color);
-}
+// svg path:nth-of-type(1) {
+// 	stroke: var(--comp-bg-color);
+// }
 
-:host-context(.image-list:hover) svg path:last-of-type {
-	stroke-width: 2px;
-}
+// svg path:nth-of-type(2) {
+// 	fill: var(--comp-bg-color);
+// }
+
+// :host-context(.image-list:hover) svg path:last-of-type {
+// 	stroke-width: 2px;
+// }

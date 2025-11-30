@@ -1,8 +1,8 @@
 @use "global-styles/fonts";
 @use "global-styles/reset";
 @use "global-styles/variables";
-@use "global-styles/shadows";
 @use "global-styles/utility";
+@use "global-styles/shadows";
 @use "global-styles/mixins";
 
 html {
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-	font-family: Quantico, sans-serif;
+	font-family: "Sofia Sans Condensed", sans-serif;
 	font-weight: 400;
 	height: 100svh;
 	background-color: var(--bg-color);
@@ -197,8 +197,14 @@ button.secondary {
 }
 
 .hoverable {
+	text-decoration: underline var(--accent-color);
+
+	&:hover {
+		text-decoration: underline var(--comp-bg-color);
+	}
+
 	&:hover svg path {
-		fill: var(--accent-color-2);
+		fill: var(--comp-bg-color);
 	}
 
 	&:active svg path {
@@ -206,33 +212,19 @@ button.secondary {
 	}
 
 	&:hover :is(a, span) {
-		color: var(--accent-color-2);
+		color: var(--accent-color);
 	}
 
 	&:active :is(a, span) {
 		color: var(--accent-color);
+		text-decoration: underline var(--accent-color);
 	}
 }
 
-.hoverable span {
-	position: relative;
-
-	&::after {
-		content: "";
-		position: absolute;
-		display: none;
-		left: 0;
-		right: 0;
-		height: 1px;
-		background: var(--accent-color);
-		bottom: 0;
-	}
-}
-
-.hoverable:active span::after {
-	display: initial;
+.hoverable:active {
+	text-decoration: none;
 }
 
 .socials .img-container:hover svg path {
-	fill: var(--accent-color);
+	fill: var(--comp-bg-color);
 }

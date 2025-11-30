@@ -31,10 +31,6 @@
 	@include mixins.desktop {
 		--arrow-width: clamp(4rem, 0.298rem + 7.702vw, 8rem);
 	}
-
-	&:hover {
-		filter: drop-shadow(0 0 10px var(--accent-color));
-	}
 }
 
 .left {
@@ -51,9 +47,4 @@
 
 .align-self-center {
 	align-self: center;
-}
-
-img {
-	height: auto;
-	object-fit: cover;
 }

@@ -11,8 +11,8 @@ header {
 	background: var(--header-color);
 	padding-block: 1rem;
 	z-index: var(--fixed-z-index);
-	border-bottom-right-radius: 20px;
-	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: var(--header-border-radius);
+	border-bottom-left-radius: var(--header-border-radius);
 	transition: border-radius var(--transition-eternity);
 
 	@include mixins.desktop {

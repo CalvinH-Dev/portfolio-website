@@ -35,6 +35,11 @@ section {
 .img-container {
 	align-content: center;
 	height: 30px;
+	transition: scale var(--transition-slow);
+
+	&:has(:hover) {
+		scale: 1.1;
+	}
 }
 
 img {

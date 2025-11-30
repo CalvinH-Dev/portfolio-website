@@ -17,6 +17,7 @@ button {
 	font-family: inherit;
 	font-size: var(--fs-menu-a);
 	color: var(--text-color-darker);
+	transition: scale var(--transition-slow);
 
 	@include mixins.desktop {
 		color: var(--text-color-light);
@@ -25,7 +26,10 @@ button {
 
 button:hover,
 button.active {
-	color: var(--comp-text-color);
+	scale: 1.1;
+	color: var(--comp-bg-color);
+	text-decoration: underline 2px var(--accent-color);
+	text-underline-offset: 2px;
 
 	@include mixins.multi-shadow(var(--text-color-darker));
 

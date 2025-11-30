@@ -1,7 +1,21 @@
 @use "mixins";
 
 .comp-text {
+	color: var(--comp-bg-color);
+}
+
+.comp-text-light {
 	color: var(--comp-text-color);
+}
+
+.text-underline {
+	text-decoration: underline var(--accent-color) 1px;
+	text-underline-offset: 2px;
+}
+
+.text-underline-comp {
+	text-decoration: underline var(--comp-bg-color) 1px;
+	text-underline-offset: 2px;
 }
 
 .section-headline {
@@ -11,5 +25,28 @@
 
 	@include mixins.desktop {
 		writing-mode: sideways-lr;
+	}
+}
+
+.link-arrow-base {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	transition:
+		filter var(--transition-slow) ease-in-out,
+		scale var(--transition-slow) ease-in-out;
+
+	&:hover {
+		scale: 1.1;
+		filter: drop-shadow(0 0 5px var(--accent-color));
+	}
+
+	path {
+		fill: var(--comp-bg-color);
+		transition: fill var(--transition-slow) ease-in-out;
+
+		&:hover {
+			fill: var(--comp-text-color);
+		}
 	}
 }

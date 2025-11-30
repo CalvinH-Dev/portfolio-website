@@ -18,8 +18,8 @@
 	width: 100%;
 	transition: translate var(--transition-eternity);
 	z-index: 50;
-	border-bottom-left-radius: 30px;
-	border-bottom-right-radius: 30px;
+	border-bottom-left-radius: var(--header-border-radius);
+	border-bottom-right-radius: var(--header-border-radius);
 }
 
 .menu.active {

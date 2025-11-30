@@ -1,12 +1,12 @@
 <div class="wrapper" [class.active]="isActive()">
 	<div class="project" #project>
 		<div class="name">
-			<h3>{{ index() + 1 }}</h3>
-			<h5>{{ projectInfo().name }}</h5>
+			<h3 class="text-shadow-light">{{ index() + 1 }}</h3>
+			<h5 class="comp-text-light">{{ projectInfo().name }}</h5>
 		</div>
 		<div class="content">
 			<div class="item">
-				<h6>
+				<h6 class="text-underline-comp">
 					@if (language() === "EN") {
 						About the project
 					} @else {
@@ -18,7 +18,7 @@
 			<div class="collapsable-grid" [class.active]="isActive()">
 				<div class="grid">
 					<div class="item">
-						<h6>
+						<h6 class="text-underline-comp">
 							@if (language() === "EN") {
 								Technologies i have used
 							} @else {
@@ -28,7 +28,7 @@
 						<p>{{ projectInfo().tech[language()] }}</p>
 					</div>
 					<div class="item">
-						<h6>
+						<h6 class="text-underline-comp">
 							@if (language() === "EN") {
 								What i have learned
 							} @else {

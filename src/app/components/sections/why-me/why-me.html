@@ -1,6 +1,6 @@
 <section id="why-me">
 	<div class="first">
-		<h2>
+		<h2 class="section-headline">
 			@if (language() === "EN") {
 				Why me
 			} @else {
@@ -32,7 +32,9 @@
 				</h4>
 				<div class="images">
 					<div class="image-list desktop">
-						<app-location />
+						<div class="svg-container">
+							<app-location />
+						</div>
 						<span>
 							@if (language() === "EN") {
 								located in Leipzig
@@ -42,7 +44,9 @@
 						</span>
 					</div>
 					<div class="image-list">
-						<app-relocate />
+						<div class="svg-container">
+							<app-relocate />
+						</div>
 						<span>
 							@if (language() === "EN") {
 								open to relocate
@@ -52,7 +56,9 @@
 						</span>
 					</div>
 					<div class="image-list">
-						<app-remote />
+						<div class="svg-container">
+							<app-remote />
+						</div>
 						<span>
 							@if (language() === "EN") {
 								open to work remote
@@ -78,5 +84,5 @@
 			</div>
 		</div>
 	</div>
-	<app-link-arrow fragment="skills" show="desktop" />
+	<app-link-arrow fragment="skills" show="desktop" [version]="2" />
 </section>

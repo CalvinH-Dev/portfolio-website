@@ -2,18 +2,24 @@
 	display: contents;
 }
 
-svg rect:last-of-type {
-	fill: var(--comp-bg-color);
+svg {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
 }
 
-:host-context(.image-list:hover) .non-hovered {
-	display: none;
-}
+// svg rect:last-of-type {
+// 	fill: var(--comp-bg-color);
+// }
 
-.hovered {
-	display: none;
-}
+// :host-context(.image-list:hover) .non-hovered {
+// 	display: none;
+// }
 
-:host-context(.image-list:hover) .hovered {
-	display: revert;
-}
+// .hovered {
+// 	display: none;
+// }
+
+// :host-context(.image-list:hover) .hovered {
+// 	display: revert;
+// }
