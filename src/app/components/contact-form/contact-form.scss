@@ -82,28 +82,35 @@ input:-webkit-autofill {
 	font-family: Quantico, sans-serif;
 	font-weight: 400;
 	background-color: var(--bg-color);
-	color: var(--text-color-light);
+	color: inherit;
 	font-size: var(--fs-input);
-	-webkit-text-fill-color: var(--text-color-light);
-	transition: background-color 5000s ease-in-out 0s;
+	-webkit-text-fill-color: var(--accent-color-lighter);
 }
 
 input:not([type="checkbox"]),
 textarea {
 	background-color: transparent;
 	width: 100%;
-	color: #fffdfd;
+	color: var(--accent-color-lighter);
 	font-family: inherit;
 	font-weight: 400;
 	font-size: var(--fs-input);
-	border: 1px solid transparent;
+	border: 2px solid transparent;
 	border-radius: var(--border-radius-button);
-	box-shadow: 0 2px 0 inset var(--accent-color);
+	box-shadow: 0 3px 0 inset var(--accent-color);
 	padding: 1em;
+	transition:
+		border var(--transition-slow),
+		box-shadow var(--transition-slow);
 
 	&:focus {
 		outline: none;
-		border: 1px solid var(--accent-color);
+		box-shadow: none;
+		border: 2px solid var(--accent-color);
+	}
+
+	&.ng-valid:is(.ng-touched) {
+		box-shadow: 0 3px 0 inset green;
 	}
 
 	&.ng-invalid:is(.ng-dirty) {
