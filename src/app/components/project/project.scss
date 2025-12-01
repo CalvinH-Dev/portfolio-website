@@ -209,23 +209,18 @@ h5 {
 
 .show button span {
 	font-family: inherit;
-	color: var(--bg-color);
+	color: var(--comp-bg-color);
 	text-decoration: underline;
 }
 
-.show.active button span {
-	color: var(--accent-color);
-}
-
 .show button img {
-	height: 1lh;
+	height: 1.5lh;
 	width: auto;
 	transition: rotate 225ms;
-	rotate: -180deg;
 }
 
 .active .show button img {
-	rotate: -0deg;
+	rotate: -180deg;
 }
 
 @include mixins.tablet {

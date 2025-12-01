@@ -17,4 +17,6 @@
 	--bg-secondary: var(--bg-color);
 	--text-secondary: var(--comp-text-color);
 	--error-color: #fd2e12;
+	--color-white: hsl(from var(--bg-color) h 90% 95%);
+	--color-footer: hsl(from var(--bg-color) h s 13%);
 }

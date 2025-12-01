@@ -23,12 +23,20 @@ h2 {
 	}
 }
 
+#Layer_1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	object-fit: cover;
+}
+
 .img-grid {
 	--column-width: 10ch;
 
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(3, var(--column-width));
+	grid-template-columns: repeat(auto-fill, 65px);
 	align-items: center;
 	justify-content: space-between;
 	row-gap: 2rem;
@@ -58,16 +66,25 @@ h2 {
 }
 
 .img-container {
+	--offset: 3px;
+	--offset-negative: calc(-1 * var(--offset));
+	--blur: 6px;
+
+	position: relative;
 	height: 40px;
 	aspect-ratio: 1;
 	overflow: hidden;
-	border-radius: 12px;
+	border-radius: 15px;
+	box-shadow:
+		var(--offset-negative) var(--offset-negative) var(--blur) var(--comp-text-color),
+		var(--offset) var(--offset) var(--blur) var(--accent-color-lighter);
 }
 
 img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+	filter: saturate(50%);
 }
 
 .title {

@@ -28,11 +28,19 @@
 .contact-item {
 	display: flex;
 	align-items: end;
-	column-gap: 0.5rem;
+	column-gap: 0.25rem;
+	height: 1lh;
 
 	& span {
 		text-wrap: nowrap;
 	}
+}
+
+.flex {
+	display: flex;
+	align-items: end;
+	column-gap: 0.25rem;
+	height: 1lh;
 }
 
 .last {

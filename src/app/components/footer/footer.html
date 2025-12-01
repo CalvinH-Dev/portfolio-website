@@ -1,21 +1,23 @@
-<footer>
-	<div class="img-container">
-		<img src="img/logos/logo_dark.webp" alt="" />
-	</div>
-	<span>&copy; Calvin Hanisch 2025</span>
-	<div class="last">
-		<a class="hoverable-comp" routerLink="legal">
-			@if (language() === "EN") {
-				Legal Notice
-			} @else {
-				Impressum
-			}</a
-		><a class="hoverable-comp" routerLink="privacy">
-			@if (language() === "EN") {
-				Privacy Policy
-			} @else {
-				Datenschutz
-			}
-		</a>
-	</div>
-</footer>
+<div class="container">
+	<footer>
+		<div class="copy">
+			<app-copyright />
+			<span> Calvin Hanisch 2025</span>
+		</div>
+		<div class="last">
+			<a class="hoverable-comp" routerLink="legal">
+				@if (language() === "EN") {
+					Legal Notice
+				} @else {
+					Impressum
+				}</a
+			><a class="hoverable-comp" routerLink="privacy">
+				@if (language() === "EN") {
+					Privacy Policy
+				} @else {
+					Datenschutz
+				}
+			</a>
+		</div>
+	</footer>
+</div>
