@@ -19,11 +19,12 @@
 }
 
 .arrow {
-	--arrow-width: 3.25rem;
+	--arrow-width: 10vw;
 
 	display: inline-flex;
 	align-self: end;
 	width: var(--arrow-width);
+	aspect-ratio: 1;
 	align-content: center;
 	z-index: 10;
 	flex-shrink: 0;

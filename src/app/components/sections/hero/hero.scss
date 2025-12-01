@@ -17,7 +17,7 @@ section {
 		column-gap: 10vw;
 		position: relative;
 		flex-basis: calc(100vw - var(--aside-width));
-		padding-left: 0;
+		padding-inline: 0;
 	}
 }
 

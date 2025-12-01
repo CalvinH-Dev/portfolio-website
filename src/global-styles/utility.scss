@@ -181,7 +181,7 @@ button.secondary {
 	}
 
 	path {
-		fill: var(--comp-bg-color);
+		stroke: var(--comp-bg-color);
 		transition: fill var(--transition-slow) ease-in-out;
 
 		&:hover {

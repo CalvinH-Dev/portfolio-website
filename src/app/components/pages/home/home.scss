@@ -9,6 +9,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-block: 1rem;
 
 	@include mixins.desktop {
 		display: none;

@@ -75,8 +75,7 @@ section {
 		scroll-snap-align: start;
 		flex: 0 0 100vw;
 		padding-block: var(--padding-block-section-desktop);
-		padding-right: var(--padding-inline-section);
-		padding-left: var(--section-desktop-padding-left);
+		padding-inline: calc(var(--aside-width) + 1rem);
 	}
 }
 
