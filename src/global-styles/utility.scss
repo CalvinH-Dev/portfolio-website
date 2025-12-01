@@ -72,10 +72,20 @@ button.secondary {
 }
 
 .hoverable {
+	color: var(--text-color-light);
 	text-decoration: underline var(--accent-color);
+
+	svg {
+		fill: var(--text-color-light);
+		transition: translate var(--transition-slow);
+	}
 
 	&:hover {
 		text-decoration: underline var(--comp-bg-color);
+	}
+
+	&:hover svg {
+		translate: 0 -2px;
 	}
 
 	&:hover svg path {

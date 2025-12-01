@@ -1,7 +1,5 @@
-.hover path {
-	fill: var(--accent-color);
-}
-
-svg {
-	align-self: end;
+:host {
+	display: inline-block;
+	height: 100%;
+	aspect-ratio: 1;
 }
