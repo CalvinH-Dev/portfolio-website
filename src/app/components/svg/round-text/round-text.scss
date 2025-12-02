@@ -1,0 +1,14 @@
+:host {
+	display: contents;
+}
+
+svg {
+	position: absolute;
+	height: 115%;
+	width: 115%;
+}
+
+text {
+	rotate: var(--rotate, 0deg);
+	transform-origin: center;
+}

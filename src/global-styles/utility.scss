@@ -71,6 +71,10 @@ button.secondary {
 	cursor: pointer;
 }
 
+.menu.open li:hover a svg {
+	fill: var(--comp-bg-color);
+}
+
 .hoverable {
 	color: var(--text-color-light);
 	text-decoration: underline var(--accent-color);

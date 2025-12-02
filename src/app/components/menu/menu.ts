@@ -3,11 +3,17 @@ import { Component, inject, model } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { Language } from "app/interfaces/languages";
 import { LanguageService } from "app/services/language";
-import { Languages } from "../languages/languages";
+import { Contact } from "../svg/contact/contact";
+import { Hero } from "../svg/hero/hero";
+import { Projects } from "../svg/projects/projects";
+import { References } from "../svg/references/references";
+import { RoundText } from "../svg/round-text/round-text";
+import { Skills } from "../svg/skills/skills";
+import { WhyMe } from "../svg/why-me/why-me";
 
 @Component({
 	selector: "app-menu",
-	imports: [Languages, RouterLink],
+	imports: [RouterLink, Projects, Contact, WhyMe, Hero, Skills, References, RoundText],
 	templateUrl: "./menu.html",
 	styleUrl: "./menu.scss",
 })
@@ -46,5 +52,33 @@ export class Menu {
 	 */
 	onLanguageChange(language: Language) {
 		this.languageService.setLanguage(language);
+	}
+
+	toggleMenu() {
+		this.menuOpen.update((value) => !value);
+	}
+
+	onProjectRefClicked(event: MouseEvent, id: string) {
+		event.preventDefault();
+		event.stopPropagation();
+
+		this.closeMenu();
+
+		const scrollContainer = document.querySelector("main") as HTMLElement;
+		if (!scrollContainer) return;
+
+		if (id === "#" || id === "root") {
+			scrollContainer.scrollTo({ left: 0, behavior: "smooth" });
+			return;
+		}
+
+		const target = document.getElementById(id);
+		if (target && scrollContainer.contains(target)) {
+			const targetPosition = target.offsetLeft;
+			scrollContainer.scrollTo({
+				left: targetPosition,
+				behavior: "smooth",
+			});
+		}
 	}
 }
