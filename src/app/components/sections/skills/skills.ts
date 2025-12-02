@@ -1,6 +1,7 @@
 import { Component, inject } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { LinkArrow } from "app/components/link-arrow/link-arrow";
+import { AnimateOnScroll } from "app/directives/animation-on-scroll";
 import { Skill } from "app/interfaces/skill";
 import { LanguageService } from "app/services/language";
 
@@ -65,7 +66,7 @@ const skillsList: Skill[] = [
 
 @Component({
 	selector: "app-skills",
-	imports: [LinkArrow, RouterLink],
+	imports: [LinkArrow, RouterLink, AnimateOnScroll],
 	templateUrl: "./skills.html",
 	styleUrl: "./skills.scss",
 })

@@ -1,5 +1,6 @@
 import { Component, input } from "@angular/core";
 import { RouterLink } from "@angular/router";
+import { AnimateOnScroll } from "app/directives/animation-on-scroll";
 import { V1 } from "./svgs/v1/v1";
 import { V2 } from "./svgs/v2/v2";
 import { V3 } from "./svgs/v3/v3";
@@ -9,7 +10,7 @@ type LinkArrowVersionNumber = 1 | 2 | 3 | 4;
 
 @Component({
 	selector: "app-link-arrow",
-	imports: [RouterLink, V1, V2, V3, V4],
+	imports: [RouterLink, V1, V2, V3, V4, AnimateOnScroll],
 	templateUrl: "./link-arrow.html",
 	styleUrl: "./link-arrow.scss",
 	host: { "[class.mobile]": 'show() === "mobile"', "[class.desktop]": 'show() === "desktop"' },

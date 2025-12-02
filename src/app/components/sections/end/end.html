@@ -1,13 +1,13 @@
 <div class="last">
 	<div class="last-top">
-		<span class="comp-text" [class.inactive]="!showText()">
+		<span class="comp-text" [class.inactive]="!showText()" appAnimationOnScroll>
 			@if (language() === "EN") {
 				Let us work together.
 			} @else {
 				Lassen Sie uns gemeinsam etwas erschaffen.
 			}
 		</span>
-		<p class="text" [class.inactive]="!showText()">
+		<p class="text" [class.inactive]="!showText()" appAnimationOnScroll>
 			@if (language() === "EN") {
 				I welcome any contact and am particularly interested in roles within a front-end development
 				team. With strong communication skills and experience working in larger teams with Git, I am
@@ -20,7 +20,7 @@
 				Begeisterung für ständiges Lernen einen wertvollen Beitrag leisten kann.
 			}
 		</p>
-		<div class="contact-items">
+		<div class="contact-items" appAnimationOnScroll [style.--delay]="'175ms'">
 			<div class="contact-item hoverable">
 				<app-email-big />
 
@@ -34,8 +34,8 @@
 			</div>
 		</div>
 	</div>
-	<app-link-arrow orientation="left" fragment="#" [version]="1" />
-	<div class="last-bottom">
+	<app-link-arrow fragment="#" [version]="2" />
+	<div class="last-bottom" appAnimationOnScroll [style.--delay]="'350ms'">
 		<div class="hoverable">
 			<span class="text-underline"
 				><a routerLink="/legal">

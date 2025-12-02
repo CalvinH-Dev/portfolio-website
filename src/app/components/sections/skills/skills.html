@@ -23,15 +23,21 @@
 				@for (skill of skills; track $index) {
 					@let img = skill.image;
 					@let title = skill.title;
-					<div class="skill-container">
-						<div class="img-container"><img [src]="img.src" [alt]="img.alt" /></div>
+					<div
+						class="skill-container"
+						[style.--delay]="`calc(100ms * ${$index})`"
+						appAnimationOnScroll
+					>
+						<div class="img-container">
+							<img [src]="img.src" [alt]="img.alt" />
+						</div>
 						<span class="title">{{ title }}</span>
 					</div>
 				}
 			</div>
 			<p>
 				@if (language() === "EN") {
-					I am open to learning new technologies and quickly adapt to changing requirements. My
+					I am open to learning new technologies and quickly adapt to changing requirempents. My
 					focus is on writing clean, maintainable code and creating optimal user interfaces.
 				} @else {
 					Ich bin offen für neue Technologien und lerne schnell, um mich flexibel an neue

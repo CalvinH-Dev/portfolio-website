@@ -193,3 +193,20 @@ button.secondary {
 		}
 	}
 }
+
+.reveal-element {
+	opacity: 0;
+	transform: translateY(30px);
+}
+
+.reveal-element.in-view {
+	animation: reveal 2.5s ease forwards;
+	animation-delay: var(--delay, 0ms);
+}
+
+@keyframes reveal {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
