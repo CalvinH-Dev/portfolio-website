@@ -98,6 +98,7 @@ li {
 	list-style: none;
 	background-color: var(--bg-color);
 	transition:
+		background var(--transition-base) ease-in-out,
 		border var(--transition-base),
 		height var(--transition-base) ease-in-out,
 		width var(--transition-base) ease-in-out,
@@ -211,6 +212,7 @@ li:nth-of-type(6) {
 
 .menu.open li:hover {
 	border: 1px solid var(--comp-bg-color);
+	background: var(--comp-bg-color);
 	scale: 1.1;
 }
 
@@ -220,12 +222,6 @@ li:nth-of-type(6) {
 
 .fade-out {
 	animation: fade-out var(--animation-duration) ease-in-out forwards;
-}
-
-@keyframes menu-open-animate-item {
-	to {
-		translate: calc(-50% + var(--x)) calc(-50% + var(--y));
-	}
 }
 
 @keyframes fade-in {
