@@ -2,6 +2,7 @@ import { ViewportScroller } from "@angular/common";
 import { Component, inject, model } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { Language } from "app/interfaces/languages";
+import { DeviceService } from "app/services/device";
 import { LanguageService } from "app/services/language";
 import { Contact } from "../svg/contact/contact";
 import { Hero } from "../svg/hero/hero";
@@ -27,6 +28,7 @@ export class Menu {
 	 * Language service instance for retrieving and updating the current language.
 	 */
 	languageService = inject(LanguageService);
+	deviceService = inject(DeviceService);
 
 	/**
 	 * The current language signal.
@@ -59,10 +61,11 @@ export class Menu {
 	}
 
 	onProjectRefClicked(event: MouseEvent, id: string) {
+		this.closeMenu();
+		if (!this.deviceService.isDesktop()) return;
+
 		event.preventDefault();
 		event.stopPropagation();
-
-		this.closeMenu();
 
 		const scrollContainer = document.querySelector("main") as HTMLElement;
 		if (!scrollContainer) return;

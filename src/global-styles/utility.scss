@@ -71,6 +71,24 @@ button.secondary {
 	cursor: pointer;
 }
 
+body:has(.menu.open) main {
+	filter: grayscale(25%) brightness(50%);
+}
+
+.menu li .__round-text {
+	transition: scale var(--transition-eternity) ease-out;
+
+	scale: 0;
+	overflow: hidden;
+}
+
+.menu.open li svg {
+	transition-delay: calc(
+		var(--transition-delay-base) * (var(--count-item) - 1) + var(--transition-base)
+	);
+	scale: 1;
+}
+
 .menu.open li:hover a svg {
 	fill: var(--comp-bg-color);
 }

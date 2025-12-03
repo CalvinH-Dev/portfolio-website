@@ -48,6 +48,8 @@ main::-webkit-scrollbar-thumb:hover {
 }
 
 main {
+	transition: filter var(--transition-eternity);
+
 	@include mixins.desktop {
 		height: 100%;
 		scroll-snap-type: x proximity;
