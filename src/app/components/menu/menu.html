@@ -21,66 +21,23 @@
 		<span>MENU</span>
 	</button>
 	<ul class="list">
-		<li>
-			<app-svg-hero />
-			<a class="router" routerLink="/" (click)="onProjectRefClicked($event, '#')">
-				<app-svg-round-text text="START" rotate="37deg" />
-			</a>
-		</li>
-		<li>
-			<app-svg-why-me />
-			<a
-				class="router"
-				routerLink="/"
-				fragment="why-me"
-				(click)="onProjectRefClicked($event, 'why-me')"
-			>
-				<app-svg-round-text text="WHY ME" rotate="20deg" />
-			</a>
-		</li>
-		<li>
-			<app-svg-skills />
-			<a
-				class="router"
-				routerLink="/"
-				fragment="skills"
-				(click)="onProjectRefClicked($event, 'skills')"
-			>
-				<app-svg-round-text text="SKILLS" rotate="37deg" />
-			</a>
-		</li>
-		<li>
-			<app-svg-projects />
-			<a
-				class="router"
-				routerLink="/"
-				fragment="projects"
-				(click)="onProjectRefClicked($event, 'projects')"
-			>
-				<app-svg-round-text text="PROJECTS" rotate="15deg" />
-			</a>
-		</li>
-		<li>
-			<app-svg-references />
-			<a
-				class="router"
-				routerLink="/"
-				fragment="references"
-				(click)="onProjectRefClicked($event, 'references')"
-			>
-				<app-svg-round-text text="REFERENCES" rotate="-13deg" />
-			</a>
-		</li>
-		<li>
-			<app-svg-contact />
-			<a
-				class="router"
-				routerLink="/"
-				fragment="contact"
-				(click)="onProjectRefClicked($event, 'contact')"
-			>
-				<app-svg-round-text text="CONTACT" rotate="15deg" />
-			</a>
-		</li>
+		@for (item of menuItems; track $index) {
+			<app-menu-link
+				[fragment]="item.fragment"
+				[text]="item.text"
+				[rotate]="item.rotate"
+				(closeMenu)="$event && closeMenu()"
+				[class.open]="menuOpen()"
+				[style.--index]="$index"
+				><ng-container [ngTemplateOutlet]="item.template()" svg-icon></ng-container
+			></app-menu-link>
+		}
+
+		<ng-template #start><app-svg-hero /></ng-template>
+		<ng-template #whyme><app-svg-why-me /></ng-template>
+		<ng-template #skills><app-svg-skills /></ng-template>
+		<ng-template #projects><app-svg-projects /></ng-template>
+		<ng-template #references><app-svg-references /></ng-template>
+		<ng-template #contact><app-svg-contact /></ng-template>
 	</ul>
 </div>

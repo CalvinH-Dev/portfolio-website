@@ -71,8 +71,8 @@ button.secondary {
 	cursor: pointer;
 }
 
-body:has(.menu.open) main {
-	filter: grayscale(25%) brightness(50%);
+body:has(.menu.open) :is(main, footer) {
+	filter: saturate(75%) brightness(50%);
 }
 
 .menu li .__round-text {

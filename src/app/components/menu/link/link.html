@@ -1,0 +1,11 @@
+<li>
+	<ng-content select="[svg-icon]" />
+	<a
+		class="router"
+		routerLink="/"
+		[fragment]="fragment()"
+		(click)="onProjectRefClicked($event, fragment())"
+	>
+		<app-svg-round-text [text]="text() | uppercase" [rotate]="rotate()" />
+	</a>
+</li>

@@ -1,0 +1,84 @@
+@use "../../../../global-styles/mixins";
+
+:host {
+	display: contents;
+}
+
+li {
+	--shadow-offset: 2px;
+	--shadow-blur: 3px;
+	--gradient-color: hsl(from var(--bg-color) h s 20%);
+
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	height: 0;
+	width: 0;
+	top: 40%;
+	left: 50%;
+	translate: -50% -100%;
+	list-style: none;
+	border: 1px solid var(--accent-color-lighter);
+	border-radius: 50%;
+	box-shadow:
+		var(--shadow-offset) var(--shadow-offset) var(--shadow-blur) var(--gradient-color),
+		calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur)
+			var(--bg-color);
+	background: linear-gradient(45deg, var(--bg-color), var(--gradient-color));
+	filter: url("#goo");
+	transition:
+		padding var(--transition-base) ease-in-out,
+		opacity var(--transition-base) ease-in-out,
+		background var(--transition-base) ease-in-out,
+		border var(--transition-base),
+		height var(--transition-base) ease-in-out,
+		width var(--transition-base) ease-in-out,
+		translate var(--transition-base) ease-in-out,
+		filter var(--transition-base) ease-in-out;
+	transition-delay: calc(var(--transition-delay-base) * calc(var(--count-item) - var(--index)));
+}
+
+li > :not(a) {
+	z-index: 2;
+	transition: scale var(--transition-base);
+}
+
+:host.open li {
+	--angle: calc((var(--full-angle) / var(--count-item)) * var(--index));
+	--start-angle: 187deg;
+	--full-angle: 200deg;
+	--radius: 33vw;
+	--x: calc(cos(var(--angle) + var(--start-angle)) * var(--radius));
+	--y: calc(sin(var(--angle) + var(--start-angle)) * var(--radius));
+
+	opacity: 1;
+	width: 55px;
+	height: 55px;
+	padding: 15%;
+	translate: calc(-50% + var(--x)) calc(-50% + var(--y));
+	transition:
+		box-shadow var(--transition-eternity),
+		height var(--transition-base) ease-in-out,
+		width var(--transition-base) ease-in-out,
+		translate var(--transition-base) ease-in-out;
+	transition-delay: calc(var(--transition-delay-base) * var(--index));
+
+	@include mixins.desktop {
+		--start-angle: 187deg;
+		--full-angle: 200deg;
+		--radius: 150px;
+
+		width: 70px;
+		height: 70px;
+		padding: 20%;
+	}
+}
+
+:host.open li:hover {
+	border: 1px solid var(--comp-bg-color);
+	background: var(--comp-bg-color);
+	scale: 1.1;
+}

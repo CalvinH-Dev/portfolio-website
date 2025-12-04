@@ -1,5 +1,5 @@
-import { ViewportScroller } from "@angular/common";
-import { Component, inject, model } from "@angular/core";
+import { CommonModule, ViewportScroller } from "@angular/common";
+import { Component, inject, model, TemplateRef, viewChild } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { Language } from "app/interfaces/languages";
 import { DeviceService } from "app/services/device";
@@ -11,24 +11,81 @@ import { References } from "../svg/references/references";
 import { RoundText } from "../svg/round-text/round-text";
 import { Skills } from "../svg/skills/skills";
 import { WhyMe } from "../svg/why-me/why-me";
+import { MenuLink } from "./link/link";
 
 @Component({
 	selector: "app-menu",
-	imports: [RouterLink, Projects, Contact, WhyMe, Hero, Skills, References, RoundText],
+	imports: [
+		CommonModule,
+		RouterLink,
+		Projects,
+		Contact,
+		WhyMe,
+		Hero,
+		Skills,
+		References,
+		RoundText,
+		MenuLink,
+	],
 	templateUrl: "./menu.html",
 	styleUrl: "./menu.scss",
 })
 export class Menu {
+	startTemplate = viewChild("start", { read: TemplateRef });
+	whyMeTemplate = viewChild("whyme", { read: TemplateRef });
+	skillsTemplate = viewChild("skills", { read: TemplateRef });
+	projectsTemplate = viewChild("projects", { read: TemplateRef });
+	referencesTemplate = viewChild("references", { read: TemplateRef });
+	contactTemplate = viewChild("contact", { read: TemplateRef });
+
+	menuItems = [
+		{
+			fragment: "#",
+			text: "start",
+			rotate: "37deg",
+			template: this.startTemplate,
+		},
+		{
+			fragment: "why-me",
+			text: "why me",
+			rotate: "20deg",
+			template: this.whyMeTemplate,
+		},
+		{
+			fragment: "skills",
+			text: "skills",
+			rotate: "37deg",
+			template: this.skillsTemplate,
+		},
+		{
+			fragment: "projects",
+			text: "projects",
+			rotate: "15deg",
+			template: this.projectsTemplate,
+		},
+		{
+			fragment: "references",
+			text: "references",
+			rotate: "-13deg",
+			template: this.referencesTemplate,
+		},
+		{
+			fragment: "contact",
+			text: "contact",
+			rotate: "15deg",
+			template: this.contactTemplate,
+		},
+	];
 	/**
 	 * Tracks whether the menu is open.
 	 */
 	menuOpen = model<boolean>();
+	deviceService = inject(DeviceService);
 
 	/**
 	 * Language service instance for retrieving and updating the current language.
 	 */
 	languageService = inject(LanguageService);
-	deviceService = inject(DeviceService);
 
 	/**
 	 * The current language signal.
