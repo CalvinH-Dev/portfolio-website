@@ -14,7 +14,8 @@
 		"stylelint:lint": "stylelint '**/*.{css,scss,less}'",
 		"stylelint:fix": "stylelint '**/*.{css,scss,less}' --fix",
 		"eslint:lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
-		"postbuild": "gzipper compress ./dist/portfolio --brotli --gzip"
+		"postbuild": "gzipper compress ./dist/portfolio --brotli --gzip",
+		"analyze-bundle": "ng build --configuration=analyze-bundle && source-map-explorer dist/**/*.js --no-border-checks"
 	},
 	"private": true,
 	"dependencies": {
@@ -49,6 +50,7 @@
 		"karma-jasmine-html-reporter": "~2.1.0",
 		"postcss-html": "^1.8.0",
 		"prettier": "3.6.2",
+		"source-map-explorer": "^2.5.3",
 		"stylelint": "^16.23.1",
 		"stylelint-config-standard": "^39.0.0",
 		"stylelint-config-standard-scss": "^15.0.1",
