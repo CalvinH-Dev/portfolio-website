@@ -5,6 +5,7 @@ import {
 	HostListener,
 	inject,
 	OnDestroy,
+	signal,
 	viewChild,
 	viewChildren,
 } from "@angular/core";
@@ -59,7 +60,7 @@ export class References implements OnDestroy {
 	/**
 	 * Index of the currently active slide.
 	 */
-	activeSlideIdx = 0;
+	activeSlideIdx = signal(0);
 
 	/**
 	 * Intersection observer for tracking visibility of slider cards.
@@ -134,7 +135,7 @@ export class References implements OnDestroy {
 		});
 		if (mostVisible) {
 			const index = this.cards().findIndex((el) => el.nativeElement === mostVisible!.target);
-			this.activeSlideIdx = index;
+			this.activeSlideIdx.update(() => index);
 		}
 	}
 

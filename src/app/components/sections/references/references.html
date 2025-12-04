@@ -30,7 +30,7 @@
 		</div>
 		<div class="slider-state">
 			@for (colleague of colleagues; track $index) {
-				<div class="state" [class.active]="activeSlideIdx === $index"></div>
+				<div class="state" [class.active]="activeSlideIdx() === $index"></div>
 			}
 		</div>
 	</div>
