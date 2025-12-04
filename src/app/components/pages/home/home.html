@@ -2,9 +2,14 @@
 <app-why-me />
 <app-skills />
 <app-projects />
-<app-references />
+@defer {
+	<app-references />
+}
 
-<app-contact />
+@defer {
+	<app-contact />
+}
+
 <section class="back-to-top">
 	<div class="img-container">
 		<app-link-arrow show="mobile" orientation="up" />
