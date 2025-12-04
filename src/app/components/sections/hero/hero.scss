@@ -5,6 +5,7 @@
 }
 
 section {
+	position: relative;
 	padding-block: calc(var(--header-height) + var(--padding-block-section-mobile));
 	display: flex;
 	flex-direction: column;
@@ -64,6 +65,7 @@ h1 {
 }
 
 .img-container {
+	position: relative;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -91,7 +93,6 @@ img {
 	@include mixins.desktop {
 		user-select: none;
 		width: 100%;
-		position: relative;
 	}
 }
 

@@ -1,6 +1,5 @@
 import { CommonModule, ViewportScroller } from "@angular/common";
 import { Component, inject, model, TemplateRef, viewChild } from "@angular/core";
-import { RouterLink } from "@angular/router";
 import { Language } from "app/interfaces/languages";
 import { DeviceService } from "app/services/device";
 import { LanguageService } from "app/services/language";
@@ -8,25 +7,13 @@ import { Contact } from "../svg/contact/contact";
 import { Hero } from "../svg/hero/hero";
 import { Projects } from "../svg/projects/projects";
 import { References } from "../svg/references/references";
-import { RoundText } from "../svg/round-text/round-text";
 import { Skills } from "../svg/skills/skills";
 import { WhyMe } from "../svg/why-me/why-me";
 import { MenuLink } from "./link/link";
 
 @Component({
 	selector: "app-menu",
-	imports: [
-		CommonModule,
-		RouterLink,
-		Projects,
-		Contact,
-		WhyMe,
-		Hero,
-		Skills,
-		References,
-		RoundText,
-		MenuLink,
-	],
+	imports: [CommonModule, Projects, Contact, WhyMe, Hero, Skills, References, MenuLink],
 	templateUrl: "./menu.html",
 	styleUrl: "./menu.scss",
 })

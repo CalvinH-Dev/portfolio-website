@@ -1,10 +1,11 @@
+import { NgOptimizedImage } from "@angular/common";
 import { Component, inject, input, output } from "@angular/core";
 import { ProjectInterface } from "app/interfaces/project";
 import { LanguageService } from "app/services/language";
 
 @Component({
 	selector: "app-project",
-	imports: [],
+	imports: [NgOptimizedImage],
 	templateUrl: "./project.html",
 	styleUrl: "./project.scss",
 })
@@ -43,6 +44,8 @@ export class Project {
 		tech: { EN: "", DE: "" },
 		learning: { EN: "", DE: "" },
 		imageSrc: "",
+		width: "",
+		height: "",
 		githubSrc: "",
 		pageSrc: "",
 	});

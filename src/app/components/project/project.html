@@ -39,7 +39,13 @@
 					</div>
 					<div class="container-img-buttons">
 						<div class="img-container">
-							<img loading="lazy" [src]="projectInfo().imageSrc" alt="" />
+							<img
+								loading="lazy"
+								[ngSrc]="projectInfo().imageSrc"
+								alt=""
+								[width]="projectInfo().width"
+								[height]="projectInfo().height"
+							/>
 						</div>
 						<div class="buttons">
 							<button class="secondary">
