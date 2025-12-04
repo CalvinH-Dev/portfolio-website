@@ -1,7 +1,8 @@
-<app-menu [(menuOpen)]="menuOpen" />
-<!-- <app-header [(menuOpen)]="menuOpen" /> -->
+@defer {
+	<app-menu [(menuOpen)]="menuOpen" />
+}
+
 <main>
-	<!-- <app-header-desktop /> -->
 	<router-outlet />
 	<aside></aside>
 </main>
