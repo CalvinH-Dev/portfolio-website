@@ -1,10 +1,11 @@
-@defer {
-	<app-menu [(menuOpen)]="menuOpen" />
-}
+<app-menu [(menuOpen)]="menuOpen" />
 
 <main>
 	<router-outlet />
 	<aside></aside>
 </main>
 <app-socials />
-<app-footer />
+
+@defer {
+	<app-footer />
+}
