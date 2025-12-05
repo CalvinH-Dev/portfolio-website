@@ -1,4 +1,4 @@
-import { afterNextRender, Component, inject } from "@angular/core";
+import { afterNextRender, ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { WhyMe } from "app/components/sections/why-me/why-me";
 import { firstValueFrom } from "rxjs";
@@ -14,6 +14,7 @@ import { Skills } from "../../sections/skills/skills";
 	imports: [WhyMe, LinkArrow, Contact, References, Hero, Projects, Skills],
 	templateUrl: "./home.html",
 	styleUrl: "./home.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Home {
 	/** ActivatedRoute instance injected via Angular's DI. */

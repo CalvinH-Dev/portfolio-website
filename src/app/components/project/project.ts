@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from "@angular/common";
-import { Component, inject, input, output } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject, input, output } from "@angular/core";
 import { ProjectInterface } from "app/interfaces/project";
 import { LanguageService } from "app/services/language";
 
@@ -8,6 +8,7 @@ import { LanguageService } from "app/services/language";
 	imports: [NgOptimizedImage],
 	templateUrl: "./project.html",
 	styleUrl: "./project.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Project {
 	/**

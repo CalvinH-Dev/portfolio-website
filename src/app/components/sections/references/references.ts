@@ -1,5 +1,6 @@
 import {
 	afterNextRender,
+	ChangeDetectionStrategy,
 	Component,
 	ElementRef,
 	HostListener,
@@ -45,6 +46,7 @@ const colleagues: ColleagueReview[] = [
 	imports: [LinkArrow],
 	templateUrl: "./references.html",
 	styleUrl: "./references.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class References implements OnDestroy {
 	/**

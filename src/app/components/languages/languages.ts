@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { Language } from "app/interfaces/languages";
 import { LanguageService } from "app/services/language";
 
@@ -7,6 +7,7 @@ import { LanguageService } from "app/services/language";
 	imports: [],
 	templateUrl: "./languages.html",
 	styleUrl: "./languages.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Languages {
 	languageService = inject(LanguageService);

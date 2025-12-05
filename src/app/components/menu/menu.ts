@@ -1,5 +1,12 @@
 import { CommonModule, ViewportScroller } from "@angular/common";
-import { Component, inject, model, TemplateRef, viewChild } from "@angular/core";
+import {
+	ChangeDetectionStrategy,
+	Component,
+	inject,
+	model,
+	TemplateRef,
+	viewChild,
+} from "@angular/core";
 import { Language } from "app/interfaces/languages";
 import { DeviceService } from "app/services/device";
 import { LanguageService } from "app/services/language";
@@ -16,6 +23,7 @@ import { MenuLink } from "./link/link";
 	imports: [CommonModule, Projects, Contact, WhyMe, Hero, Skills, References, MenuLink],
 	templateUrl: "./menu.html",
 	styleUrl: "./menu.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Menu {
 	startTemplate = viewChild("start", { read: TemplateRef });

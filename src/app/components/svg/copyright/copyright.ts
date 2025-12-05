@@ -1,9 +1,10 @@
-import { Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 
 @Component({
-	selector: "app-copyright",
+	selector: "app-svg-copyright",
 	imports: [],
 	templateUrl: "./copyright.html",
 	styleUrl: "./copyright.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Copyright {}

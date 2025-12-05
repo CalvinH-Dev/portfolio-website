@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { LanguageService } from "app/services/language";
 
@@ -7,6 +7,7 @@ import { LanguageService } from "app/services/language";
 	imports: [RouterLink],
 	templateUrl: "./header-desktop.html",
 	styleUrl: "./header-desktop.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderDesktop {
 	/**

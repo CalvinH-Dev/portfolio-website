@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from "@angular/common";
-import { Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { LinkArrow } from "app/components/link-arrow/link-arrow";
 import { AnimateOnScroll } from "app/directives/animation-on-scroll";
 
@@ -8,5 +8,6 @@ import { AnimateOnScroll } from "app/directives/animation-on-scroll";
 	imports: [LinkArrow, AnimateOnScroll, NgOptimizedImage],
 	templateUrl: "./hero.html",
 	styleUrl: "./hero.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Hero {}

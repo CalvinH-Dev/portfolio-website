@@ -1,10 +1,11 @@
-import { Component, model } from "@angular/core";
+import { ChangeDetectionStrategy, Component, model } from "@angular/core";
 
 @Component({
 	selector: "app-menu-button",
 	imports: [],
 	templateUrl: "./menu-button.html",
 	styleUrl: "./menu-button.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MenuButton {
 	menuOpen = model<boolean>();

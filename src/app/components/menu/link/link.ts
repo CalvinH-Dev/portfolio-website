@@ -1,5 +1,5 @@
 import { UpperCasePipe } from "@angular/common";
-import { Component, inject, input, output } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject, input, output } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { RoundText } from "app/components/svg/round-text/round-text";
 import { DeviceService } from "app/services/device";
@@ -9,6 +9,7 @@ import { DeviceService } from "app/services/device";
 	imports: [UpperCasePipe, RoundText, RouterLink],
 	templateUrl: "./link.html",
 	styleUrl: "./link.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MenuLink {
 	fragment = input<string>("");

@@ -1,16 +1,15 @@
-import { afterNextRender, Component, inject, signal } from "@angular/core";
+import { afterNextRender, ChangeDetectionStrategy, Component, inject, signal } from "@angular/core";
 import { Router, RouterOutlet } from "@angular/router";
 import { Footer } from "./components/footer/footer";
-import { HeaderDesktop } from "./components/header-desktop/header-desktop";
-import { Header } from "./components/header/header";
 import { Menu } from "./components/menu/menu";
 import { Socials } from "./components/sections/socials/socials";
 
 @Component({
 	selector: "app-root",
-	imports: [RouterOutlet, Header, Menu, Footer, Socials, HeaderDesktop],
+	imports: [RouterOutlet, Menu, Footer, Socials],
 	templateUrl: "./app.html",
 	styleUrl: "./app.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App {
 	/**

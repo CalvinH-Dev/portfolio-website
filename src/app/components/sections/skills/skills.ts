@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { LinkArrow } from "app/components/link-arrow/link-arrow";
 import { AnimateOnScroll } from "app/directives/animation-on-scroll";
@@ -69,6 +69,7 @@ const skillsList: Skill[] = [
 	imports: [LinkArrow, RouterLink, AnimateOnScroll],
 	templateUrl: "./skills.html",
 	styleUrl: "./skills.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Skills {
 	languageService = inject(LanguageService);

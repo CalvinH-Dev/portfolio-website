@@ -1,4 +1,4 @@
-import { Component, inject, model } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject, model } from "@angular/core";
 import { RouterLink, RouterModule } from "@angular/router";
 import { MenuButton } from "app/components/menu-button/menu-button";
 import { LanguageService } from "app/services/language";
@@ -8,6 +8,7 @@ import { LanguageService } from "app/services/language";
 	imports: [MenuButton, RouterModule, RouterLink],
 	templateUrl: "./header.html",
 	styleUrl: "./header.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Header {
 	/**

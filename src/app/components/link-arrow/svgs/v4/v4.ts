@@ -1,9 +1,10 @@
-import { Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 
 @Component({
 	selector: "app-link-arrow-v4",
 	imports: [],
 	templateUrl: "./v4.html",
 	styleUrl: "./v4.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class V4 {}

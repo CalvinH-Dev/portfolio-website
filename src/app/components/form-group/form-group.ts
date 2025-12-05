@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { ChangeDetectionStrategy, Component, input } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 @Component({
@@ -6,6 +6,7 @@ import { FormsModule } from "@angular/forms";
 	imports: [FormsModule],
 	templateUrl: "./form-group.html",
 	styleUrl: "./form-group.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormGroup {
 	/**

@@ -1,18 +1,18 @@
-import { Component, inject, input } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject, input } from "@angular/core";
 import { Router, RouterLink } from "@angular/router";
 import { Copyright } from "app/components/svg/copyright/copyright";
 import { EmailBig } from "app/components/svg/email-big/email-big";
 import { AnimateOnScroll } from "app/directives/animation-on-scroll";
 import { LanguageService } from "app/services/language";
 import { LinkArrow } from "../../link-arrow/link-arrow";
-import { Mail } from "../../svg/mail/mail";
 import { Phone } from "../../svg/phone/phone";
 
 @Component({
 	selector: "app-end",
-	imports: [Phone, Mail, LinkArrow, RouterLink, Copyright, EmailBig, AnimateOnScroll],
+	imports: [Phone, LinkArrow, RouterLink, EmailBig, AnimateOnScroll, Copyright],
 	templateUrl: "./end.html",
 	styleUrl: "./end.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class End {
 	/**

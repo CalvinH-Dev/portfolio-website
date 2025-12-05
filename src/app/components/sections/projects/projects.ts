@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { LinkArrow } from "app/components/link-arrow/link-arrow";
 import { Project } from "app/components/project/project";
 import { ProjectInterface } from "app/interfaces/project";
@@ -72,6 +72,7 @@ const projects: ProjectInterface[] = [
 	imports: [Project, LinkArrow],
 	templateUrl: "./projects.html",
 	styleUrl: "./projects.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Projects {
 	/**

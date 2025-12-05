@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { ChangeDetectionStrategy, Component, input } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { AnimateOnScroll } from "app/directives/animation-on-scroll";
 import { V1 } from "./svgs/v1/v1";
@@ -14,6 +14,7 @@ type LinkArrowVersionNumber = 1 | 2 | 3 | 4;
 	templateUrl: "./link-arrow.html",
 	styleUrl: "./link-arrow.scss",
 	host: { "[class.mobile]": 'show() === "mobile"', "[class.desktop]": 'show() === "desktop"' },
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LinkArrow {
 	/**

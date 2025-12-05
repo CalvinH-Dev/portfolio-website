@@ -1,5 +1,5 @@
 import { HttpClient } from "@angular/common/http";
-import { Component, ElementRef, inject, viewChild } from "@angular/core";
+import { ChangeDetectionStrategy, Component, ElementRef, inject, viewChild } from "@angular/core";
 import { FormsModule, NgForm } from "@angular/forms";
 import { RouterLink } from "@angular/router";
 import { AnimateOnScroll } from "app/directives/animation-on-scroll";
@@ -12,6 +12,7 @@ import { FormGroup } from "../form-group/form-group";
 	imports: [FormsModule, RouterLink, FormGroup, AnimateOnScroll],
 	templateUrl: "./contact-form.html",
 	styleUrl: "./contact-form.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactForm {
 	/**
