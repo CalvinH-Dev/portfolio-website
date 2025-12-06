@@ -1,10 +1,13 @@
 import { Routes } from "@angular/router";
-import { Home } from "./components/pages/home/home";
-import { Legal } from "./components/pages/legal/legal";
-import { Privacy } from "./components/pages/privacy/privacy";
 
 export const routes: Routes = [
-	{ path: "", component: Home },
-	{ path: "privacy", component: Privacy },
-	{ path: "legal", component: Legal },
+	{ path: "", loadComponent: () => import("./components/pages/home/home").then((m) => m.Home) },
+	{
+		path: "privacy",
+		loadComponent: () => import("./components/pages/privacy/privacy").then((m) => m.Privacy),
+	},
+	{
+		path: "legal",
+		loadComponent: () => import("./components/pages/legal/legal").then((m) => m.Legal),
+	},
 ];
