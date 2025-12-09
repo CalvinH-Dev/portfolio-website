@@ -20,7 +20,6 @@ section {
 	justify-content: center;
 	align-items: center;
 	column-gap: 2rem;
-	background-color: var(--bg-color);
 	padding-block: 0.5rem;
 
 	@include mixins.desktop {
