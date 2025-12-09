@@ -49,13 +49,13 @@ img {
 	object-fit: cover;
 }
 
-.languages {
-	display: none;
+// .languages {
+// 	display: none;
 
-	@include mixins.desktop {
-		display: initial;
-	}
-}
+// 	@include mixins.desktop {
+// 		display: initial;
+// 	}
+// }
 
 .socials {
 	display: flex;

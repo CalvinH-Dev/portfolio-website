@@ -1,5 +1,33 @@
 @use "../../../global-styles/mixins";
 
+:host {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	padding: 0.5rem;
+	background-color: var(--accent-color);
+	border-bottom-right-radius: var(--header-border-radius);
+	mask-image: url("/masks/stroke_3.svg"), url("/masks/stroke_1.svg");
+	mask-repeat: no-repeat;
+	mask-size: 200% 300%;
+	mask-position: center;
+
+	@include mixins.desktop {
+		position: revert;
+		top: revert;
+		right: revert;
+		z-index: revert;
+		padding: revert;
+		background-color: revert;
+		border-bottom-right-radius: revert;
+		mask-image: revert;
+		mask-repeat: revert;
+		mask-size: revert;
+		mask-position: revert;
+	}
+}
+
 .languages {
 	display: flex;
 	justify-content: center;
@@ -28,7 +56,7 @@ button:hover,
 button.active {
 	scale: 1.1;
 	color: var(--comp-bg-color);
-	text-decoration: underline 1px var(--accent-color);
+	// text-decoration: underline 1px var(--accent-color);
 	text-underline-offset: 4px;
 
 	@include mixins.multi-shadow(var(--text-color-darker));

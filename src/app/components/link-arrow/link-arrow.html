@@ -4,8 +4,6 @@
 	(click)="onProjectRefClicked($event, fragment().toString())"
 	[routerLink]="[]"
 	[fragment]="fragment() === '#' ? '' : fragment()"
-	[class.left]="orientation() === 'left'"
-	[class.up]="orientation() === 'up'"
 	[class.align-self-start]="alignSelf() === 'start'"
 	[class.align-self-center]="alignSelf() === 'center'"
 >
