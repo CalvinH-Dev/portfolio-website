@@ -214,16 +214,41 @@ body:has(.menu.open) :is(main, footer) {
 
 .reveal-element {
 	opacity: 0;
-	transform: translateY(30px);
+	transform: translateY(25px);
+
+	@include mixins.desktop {
+		transform: translateX(25px);
+	}
 }
 
 .reveal-element.in-view {
-	animation: reveal 2.5s ease forwards;
+	animation: reveal-mobile 2.5s ease forwards;
 	animation-delay: var(--delay, 0ms);
+
+	@include mixins.desktop {
+		animation-name: reveal-desktop;
+	}
 }
 
-@keyframes reveal {
-	to {
+@keyframes reveal-desktop {
+	0% {
+		opacity: 0;
+		transform: translateX(25px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes reveal-mobile {
+	0% {
+		opacity: 0;
+		transform: translateY(25px);
+	}
+
+	100% {
 		opacity: 1;
 		transform: translateY(0);
 	}
