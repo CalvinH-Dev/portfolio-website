@@ -2,6 +2,7 @@ import { afterNextRender, ChangeDetectionStrategy, Component, inject } from "@an
 import { ActivatedRoute } from "@angular/router";
 import { WhyMe } from "app/components/sections/why-me/why-me";
 import { ProjectsSwiper } from "app/components/swiper/projects-swiper/projects-swiper";
+import { LottieCheckbox } from "app/lotties/lottie-checkbox/lottie-checkbox";
 import { firstValueFrom } from "rxjs";
 import { LinkArrow } from "../../link-arrow/link-arrow";
 import { Contact } from "../../sections/contact/contact";
@@ -12,7 +13,17 @@ import { Skills } from "../../sections/skills/skills";
 
 @Component({
 	selector: "app-home",
-	imports: [WhyMe, LinkArrow, Contact, References, Hero, Projects, Skills, ProjectsSwiper],
+	imports: [
+		WhyMe,
+		LinkArrow,
+		Contact,
+		References,
+		Hero,
+		Projects,
+		Skills,
+		ProjectsSwiper,
+		LottieCheckbox,
+	],
 	templateUrl: "./home.html",
 	styleUrl: "./home.scss",
 	changeDetection: ChangeDetectionStrategy.OnPush,
