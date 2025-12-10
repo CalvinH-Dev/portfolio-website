@@ -1,18 +1,62 @@
 @use "../../../../global-styles/mixins";
 
 section {
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	row-gap: 2rem;
+
+	@include mixins.desktop {
+		width: 95vw;
+		column-gap: min(120px, 5vw);
+		height: 100vh;
+		flex-direction: revert;
+		padding-left: 0;
+	}
+}
+
+h2 {
+	padding-inline: var(--padding-inline-section);
+	width: 100%;
+	text-align: center;
+
+	@include mixins.desktop {
+		width: revert;
+		padding-inline: revert;
+	}
 }
 
 swiper-container {
-	border: 1px solid var(--comp-text-color);
+	--shadow-offset: 1px;
+	--shadow-offset-reverse: -1px;
+	--shadow-blur: 10px;
+	--shadow-base: var(--comp-bg-color);
+
+	width: 100%;
+	position: relative;
+	border: 1px solid var(--comp-bg-color);
+	background-color: var(--comp-bg-color);
+	box-shadow:
+		var(--shadow-offset) var(--shadow-offset) var(--shadow-blur)
+			hsl(from var(--comp-bg-color) h s 5%),
+		var(--shadow-offset-reverse) var(--shadow-offset-reverse) var(--shadow-blur)
+			hsl(from var(--comp-bg-color) h s 35%);
 	border-radius: 10px;
 	overflow: hidden;
+
+	@include mixins.tablet {
+		height: 80%;
+	}
 }
 
 swiper-slide {
 	height: 100%;
+}
+
+.arrow-desktop {
+	display: none;
+
+	@include mixins.desktop {
+		display: revert;
+	}
 }

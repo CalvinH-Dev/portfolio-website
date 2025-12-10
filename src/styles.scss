@@ -6,7 +6,7 @@
 @use "global-styles/mixins";
 
 html {
-	scroll-padding-top: var(--header-height);
+	scroll-padding-top: 10px;
 
 	@include mixins.desktop {
 		scroll-padding-left: var(--aside-width);

@@ -1,4 +1,5 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { afterNextRender, Component, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { LinkArrow } from "app/components/link-arrow/link-arrow";
 import { ProjectInterface } from "app/interfaces/project";
 import { register } from "swiper/element/bundle";
 import { ProjectSlide } from "./project-slide/project-slide";
@@ -70,11 +71,33 @@ const projects: ProjectInterface[] = [
 
 @Component({
 	selector: "app-projects-swiper",
-	imports: [ProjectSlide],
+	imports: [ProjectSlide, LinkArrow],
 	templateUrl: "./projects-swiper.html",
 	styleUrl: "./projects-swiper.scss",
 	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class ProjectsSwiper {
 	projects = projects;
+
+	constructor() {
+		afterNextRender(() => {
+			const swiperEl = document.querySelector("swiper-container")!;
+
+			const swiperParams = {
+				slidesPerView: 1,
+				breakpoints: {
+					640: {
+						slidesPerView: 2,
+					},
+					1400: {
+						slidesPerView: 3,
+					},
+				},
+			};
+
+			Object.assign(swiperEl, swiperParams);
+
+			swiperEl.initialize();
+		});
+	}
 }

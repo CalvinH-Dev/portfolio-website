@@ -1,20 +1,26 @@
+@use "../../../../../global-styles/mixins";
+
 .slide {
 	height: 70svh;
 	width: 100%;
-	padding: 1rem;
+	padding: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
 	padding-bottom: 2.5rem;
 	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: auto 25% 1fr auto;
-	row-gap: 0.5lh;
+	row-gap: clamp(0.5lh, 1.56vw, 3lh);
 	align-items: center;
 	justify-content: center;
-	box-shadow: 1px 1px 8px 1px inset var(--bg-color);
 	background-color: var(--bg-color-card);
+
+	@include mixins.desktop {
+		height: 100%;
+		flex: 1;
+	}
 }
 
 .headline {
-	text-align: center;
+	text-align: start;
 	width: 100%;
 	color: var(--color-white);
 }
@@ -42,6 +48,18 @@ img {
 	flex-direction: column;
 	row-gap: 1lh;
 	color: var(--color-white);
+
+	@include mixins.desktop {
+		align-self: start;
+	}
+}
+
+.text-desktop {
+	display: none;
+
+	@include mixins.desktop-no-tablet {
+		display: revert;
+	}
 }
 
 .buttons {

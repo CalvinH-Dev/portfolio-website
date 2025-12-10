@@ -13,13 +13,13 @@
 }
 
 @mixin desktop-no-tablet {
-	@media (width >= 1024px) and (height >= 700px) {
+	@media (width >= 1400px) and (height >= 700px) {
 		@content;
 	}
 }
 
 @mixin tablet {
-	@media (width >= 768px) and (width <= 1024px) and (height >= 700px) {
+	@media (width >= 768px) and (width <= 1400px) and (height >= 700px) {
 		@content;
 	}
 }

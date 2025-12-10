@@ -1,11 +1,21 @@
 @use "mixins";
 
 swiper-container::part(bullet) {
+	--scale: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
+
+	border: 1px solid var(--bg-color);
 	background: var(--comp-text-color);
+	width: var(--scale);
+	height: var(--scale);
 }
 
 swiper-container::part(bullet-active) {
+	--scale: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
+
+	border: 1px solid var(--bg-color);
 	background: var(--comp-text-color);
+	width: var(--scale);
+	height: var(--scale);
 }
 
 button:is(.primary, .secondary) {
