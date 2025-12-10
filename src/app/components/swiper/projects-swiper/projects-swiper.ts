@@ -8,26 +8,6 @@ register();
 
 const projects: ProjectInterface[] = [
 	{
-		name: "Sharkie",
-		about: {
-			DE: "Schlüpfe in die Rolle eines hungrigen Hais und kämpfe dich durch den Ozean. Weiche Quallen und Fischen aus oder greife sie an, um stärker zu werden. Besiege den riesigen Wal als Endboss.",
-			EN: "Play as a hungry shark and battle through the ocean. Avoid or attack jellyfish and fish to grow stronger, then defeat the giant whale boss.",
-		},
-		tech: {
-			DE: 'Entwickelt mit Vanilla JavaScript unter Nutzung von Klassen, Vererbung und einer Game Loop mit "requestAnimationFrame".',
-			EN: 'Built with Vanilla JavaScript using classes, inheritance, and a game loop via "requestAnimationFrame".',
-		},
-		learning: {
-			DE: 'Ich lernte, wie man eine Game Loop mit "requestAnimationFrame" erstellt und Animationen per Klassen steuert.',
-			EN: 'I learned to build a game loop with "requestAnimationFrame" and control animations using classes.',
-		},
-		imageSrc: "/compressed_sharkie.webp",
-		width: "1597",
-		height: "894",
-		githubSrc: "https://github.com/CalvinH-Dev/da-oop-game-1",
-		pageSrc: "https://sharkie.hanisch-dev.de",
-	},
-	{
 		name: "Pokédex API",
 		about: {
 			DE: 'Die Pokédex-API liefert Pokémon-Daten über REST-Endpunkte wie "/api/v2/pokemon/{id}". Antworten im JSON-Format enthalten Namen, Typen, Fähigkeiten und Basiswerte.',
@@ -66,6 +46,26 @@ const projects: ProjectInterface[] = [
 		height: "1057",
 		githubSrc: "https://github.com/CalvinH-Dev/join",
 		pageSrc: "https://join.hanisch-dev.de",
+	},
+	{
+		name: "Sharkie",
+		about: {
+			DE: "Schlüpfe in die Rolle eines hungrigen Hais und kämpfe dich durch den Ozean. Weiche Quallen und Fischen aus oder greife sie an, um stärker zu werden. Besiege den riesigen Wal als Endboss.",
+			EN: "Play as a hungry shark and battle through the ocean. Avoid or attack jellyfish and fish to grow stronger, then defeat the giant whale boss.",
+		},
+		tech: {
+			DE: 'Entwickelt mit Vanilla JavaScript unter Nutzung von Klassen, Vererbung und einer Game Loop mit "requestAnimationFrame".',
+			EN: 'Built with Vanilla JavaScript using classes, inheritance, and a game loop via "requestAnimationFrame".',
+		},
+		learning: {
+			DE: 'Ich lernte, wie man eine Game Loop mit "requestAnimationFrame" erstellt und Animationen per Klassen steuert.',
+			EN: 'I learned to build a game loop with "requestAnimationFrame" and control animations using classes.',
+		},
+		imageSrc: "/compressed_sharkie.webp",
+		width: "1597",
+		height: "894",
+		githubSrc: "https://github.com/CalvinH-Dev/da-oop-game-1",
+		pageSrc: "https://sharkie.hanisch-dev.de",
 	},
 ];
 
