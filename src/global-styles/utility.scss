@@ -1,5 +1,13 @@
 @use "mixins";
 
+swiper-container::part(bullet) {
+	background: var(--comp-text-color);
+}
+
+swiper-container::part(bullet-active) {
+	background: var(--comp-text-color);
+}
+
 button:is(.primary, .secondary) {
 	padding: var(--padding-block-button) var(--padding-inline-button);
 	border-radius: var(--border-radius-button);
