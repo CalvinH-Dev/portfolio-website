@@ -27,6 +27,10 @@ const projects: ProjectInterface[] = [
 		height: "705",
 		githubSrc: "https://github.com/CalvinH-Dev/pokemon-app",
 		pageSrc: "https://pokedex.hanisch-dev.de",
+		alt: {
+			DE: "Bild der Pokedex API",
+			EN: "Picture of Pokedex API",
+		},
 	},
 	{
 		name: "Join",
@@ -47,6 +51,10 @@ const projects: ProjectInterface[] = [
 		height: "1057",
 		githubSrc: "https://github.com/CalvinH-Dev/join",
 		pageSrc: "https://join.hanisch-dev.de",
+		alt: {
+			DE: "Bild der Join App",
+			EN: "Picture of Join App",
+		},
 	},
 	{
 		name: "Sharkie",
@@ -67,6 +75,10 @@ const projects: ProjectInterface[] = [
 		height: "894",
 		githubSrc: "https://github.com/CalvinH-Dev/da-oop-game-1",
 		pageSrc: "https://sharkie.hanisch-dev.de",
+		alt: {
+			DE: "Bild des Sharkie Spiels",
+			EN: "Picture of Sharkie Game",
+		},
 	},
 ];
 

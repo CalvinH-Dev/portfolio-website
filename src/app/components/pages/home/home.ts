@@ -7,23 +7,12 @@ import { firstValueFrom } from "rxjs";
 import { LinkArrow } from "../../link-arrow/link-arrow";
 import { Contact } from "../../sections/contact/contact";
 import { Hero } from "../../sections/hero/hero";
-import { Projects } from "../../sections/projects/projects";
 import { References } from "../../sections/references/references";
 import { Skills } from "../../sections/skills/skills";
 
 @Component({
 	selector: "app-home",
-	imports: [
-		WhyMe,
-		LinkArrow,
-		Contact,
-		References,
-		Hero,
-		Projects,
-		Skills,
-		ProjectsSwiper,
-		LottieCheckbox,
-	],
+	imports: [WhyMe, LinkArrow, Contact, References, Hero, Skills, ProjectsSwiper, LottieCheckbox],
 	templateUrl: "./home.html",
 	styleUrl: "./home.scss",
 	changeDetection: ChangeDetectionStrategy.OnPush,

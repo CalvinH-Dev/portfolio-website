@@ -8,6 +8,7 @@ export interface ProjectInterface {
 	height: string;
 	githubSrc: string;
 	pageSrc: string;
+	alt: TranslatableText;
 }
 
 interface TranslatableText {
