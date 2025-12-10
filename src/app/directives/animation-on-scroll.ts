@@ -29,7 +29,7 @@ export class AnimateOnScroll implements OnInit, OnDestroy {
 						}
 					});
 				},
-				{ threshold: 0.2, rootMargin: "0px 10%" },
+				{ rootMargin: "0px 10%" },
 			);
 		}
 

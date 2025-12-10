@@ -46,6 +46,7 @@ export class LinkArrow {
 	 * @param id The target element ID to scroll to. Use "#" or "root" to scroll to the start.
 	 */
 	version = input<LinkArrowVersionNumber>(1);
+
 	onProjectRefClicked(event: MouseEvent, id: string) {
 		event.preventDefault();
 

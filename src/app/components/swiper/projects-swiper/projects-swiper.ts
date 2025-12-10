@@ -1,5 +1,6 @@
 import { afterNextRender, Component, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { LinkArrow } from "app/components/link-arrow/link-arrow";
+import { AnimateOnScroll } from "app/directives/animation-on-scroll";
 import { ProjectInterface } from "app/interfaces/project";
 import { register } from "swiper/element/bundle";
 import { ProjectSlide } from "./project-slide/project-slide";
@@ -71,7 +72,7 @@ const projects: ProjectInterface[] = [
 
 @Component({
 	selector: "app-projects-swiper",
-	imports: [ProjectSlide, LinkArrow],
+	imports: [ProjectSlide, LinkArrow, AnimateOnScroll],
 	templateUrl: "./projects-swiper.html",
 	styleUrl: "./projects-swiper.scss",
 	schemas: [CUSTOM_ELEMENTS_SCHEMA],
