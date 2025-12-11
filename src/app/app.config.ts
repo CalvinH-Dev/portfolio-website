@@ -8,6 +8,7 @@ import { provideRouter, withInMemoryScrolling, withViewTransitions } from "@angu
 import { provideImageKitLoader } from "@angular/common";
 import { provideHttpClient, withFetch } from "@angular/common/http";
 import { provideClientHydration, withIncrementalHydration } from "@angular/platform-browser";
+
 import { provideLottieOptions } from "ngx-lottie";
 import { routes } from "./app.routes";
 
@@ -27,7 +28,7 @@ export const appConfig: ApplicationConfig = {
 		provideHttpClient(withFetch()),
 		provideImageKitLoader("https://ik.imagekit.io/dhpagryvx/Portfolio/"),
 		provideLottieOptions({
-			player: () => import("lottie-web"),
+			player: () => import("lottie-web/build/player/lottie_light"),
 		}),
 	],
 };
