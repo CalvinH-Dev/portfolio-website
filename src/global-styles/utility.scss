@@ -37,7 +37,6 @@ button:is(.primary, .secondary) {
 button.primary {
 	color: var(--text-primary);
 	background-color: var(--bg-primary);
-
 	outline: none;
 	font-family: inherit;
 
@@ -83,7 +82,6 @@ button.secondary {
 	}
 
 	&:hover:not(:disabled) {
-		outline: 2px solid var(--bg-color);
 		background-color: var(--bg-color);
 		color: var(--text-color-light);
 	}
@@ -95,13 +93,6 @@ button.secondary {
 
 body:has(.menu.open) :is(main, footer) {
 	filter: saturate(75%) brightness(50%);
-}
-
-.menu li .__round-text {
-	transition: scale var(--transition-eternity) ease-out;
-
-	scale: 0;
-	overflow: hidden;
 }
 
 .menu.open li svg {

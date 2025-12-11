@@ -54,7 +54,6 @@ button {
 	transition:
 		background-color var(--transition-base),
 		scale var(--animation-duration);
-	// clip-path: inset(-10% -10% 40% -10%);
 
 	span {
 		font-size: var(--fs-large);
