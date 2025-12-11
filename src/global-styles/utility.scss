@@ -21,6 +21,9 @@ swiper-container::part(bullet-active) {
 button:is(.primary, .secondary) {
 	padding: var(--padding-block-button) var(--padding-inline-button);
 	border-radius: var(--border-radius-button);
+	box-shadow:
+		1px 1px 3px inset var(--accent-color-lighter),
+		1px 1px 3px var(--comp-text-color);
 	transition:
 		scale var(--transition-slow),
 		background-color var(--transition-slow),
@@ -34,6 +37,7 @@ button:is(.primary, .secondary) {
 button.primary {
 	color: var(--text-primary);
 	background-color: var(--bg-primary);
+
 	outline: none;
 	font-family: inherit;
 
