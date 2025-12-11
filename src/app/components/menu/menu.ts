@@ -58,12 +58,12 @@ export class Menu {
 			rotate: "15deg",
 			template: this.projectsTemplate,
 		},
-		{
-			fragment: "references",
-			text: "references",
-			rotate: "-13deg",
-			template: this.referencesTemplate,
-		},
+		// {
+		// 	fragment: "references",
+		// 	text: "references",
+		// 	rotate: "-13deg",
+		// 	template: this.referencesTemplate,
+		// },
 		{
 			fragment: "contact",
 			text: "contact",

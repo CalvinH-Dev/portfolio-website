@@ -48,11 +48,11 @@ li > :not(a) {
 
 :host.open li {
 	--angle: calc((var(--full-angle) / var(--count-item)) * var(--index));
-	--start-angle: 187deg;
-	--full-angle: 200deg;
-	--radius: 33vw;
+	--start-angle: 199deg;
+	--full-angle: 180deg;
+	--radius: 28vw;
 	--x: calc(cos(var(--angle) + var(--start-angle)) * var(--radius));
-	--y: calc(sin(var(--angle) + var(--start-angle)) * var(--radius));
+	--y: calc(sin(var(--angle) + var(--start-angle)) * var(--radius) + 20px);
 
 	opacity: 1;
 	width: 55px;
@@ -67,9 +67,9 @@ li > :not(a) {
 	transition-delay: calc(var(--transition-delay-base) * var(--index));
 
 	@include mixins.desktop {
-		--start-angle: 187deg;
+		--start-angle: 190deg;
 		--full-angle: 200deg;
-		--radius: 150px;
+		--radius: 120px;
 
 		width: 70px;
 		height: 70px;

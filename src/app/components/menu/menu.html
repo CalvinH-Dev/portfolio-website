@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none">
 	<defs>
 		<filter id="goo">
-			<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+			<feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
 			<feColorMatrix
 				in="blur"
 				mode="matrix"
@@ -16,7 +16,7 @@
 	</defs>
 </svg>
 
-<div class="menu" [class.open]="menuOpen()">
+<div class="menu" [class.open]="menuOpen()" [style.--count-item]="menuItems.length">
 	<button class="background" (click)="toggleMenu()">
 		<span>MENU</span>
 	</button>

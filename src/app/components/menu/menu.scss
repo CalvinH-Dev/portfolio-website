@@ -2,13 +2,13 @@
 
 :host {
 	position: fixed;
-	bottom: -2rem;
+	bottom: 1rem;
 	right: 50%;
 	z-index: 100;
 	translate: 50% 0%;
 
 	@include mixins.desktop {
-		bottom: 0;
+		bottom: 2rem;
 	}
 }
 
@@ -17,11 +17,10 @@ button {
 }
 
 .menu {
-	--transition-delay-base: var(--transition-normal);
+	--transition-delay-base: var(--transition-fast);
 	--transition-base: var(--transition-eternity);
-	--count-item: 6;
 
-	height: 100px;
+	height: 50px;
 	aspect-ratio: 1;
 	border-radius: 50%;
 	display: grid;
@@ -30,7 +29,7 @@ button {
 	filter: url("#goo");
 
 	@include mixins.desktop {
-		height: 100px;
+		height: 75px;
 	}
 }
 
@@ -41,10 +40,10 @@ button {
 
 	display: grid;
 	grid-template-columns: 100%;
-	grid-template-rows: 50% 50%;
+	grid-template-rows: 100%;
 	place-items: center;
 	align-self: center;
-	padding: 1.5rem;
+	padding: 1rem;
 	height: 100%;
 	width: 100%;
 	background-color: var(--comp-bg-color);
@@ -55,8 +54,7 @@ button {
 	transition:
 		background-color var(--transition-base),
 		scale var(--animation-duration);
-	// mask-image: url("/masks/stroke_3.svg"), url("/masks/stroke_1.svg");
-	clip-path: inset(-10% -10% 50% -10%);
+	// clip-path: inset(-10% -10% 40% -10%);
 
 	span {
 		font-size: var(--fs-large);
