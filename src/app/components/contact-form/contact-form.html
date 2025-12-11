@@ -55,13 +55,16 @@
 	</app-form-group>
 	<div class="send-message">
 		<div class="checkbox-text">
-			<input
-				type="checkbox"
-				name="privacy"
-				required
-				#privacy="ngModel"
-				[(ngModel)]="contactData.privacy"
-			/>
+			<div class="checkbox-container">
+				<input
+					type="checkbox"
+					name="privacy"
+					required
+					#privacy="ngModel"
+					[(ngModel)]="contactData.privacy"
+				/>
+				<app-lottie-checkbox class="lottie" (checked)="updateCheckbox($event)"/>
+			</div>
 			<span class="legal">
 				@if (language() === "EN") {
 					I've read the <a class="privacy" routerLink="privacy">privacy policy</a> and agree to the

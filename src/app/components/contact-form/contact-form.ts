@@ -4,12 +4,13 @@ import { FormsModule, NgForm } from "@angular/forms";
 import { RouterLink } from "@angular/router";
 import { AnimateOnScroll } from "app/directives/animation-on-scroll";
 import { ContactInformation } from "app/interfaces/contact-information";
+import { LottieCheckbox } from "app/lotties/lottie-checkbox/lottie-checkbox";
 import { LanguageService } from "app/services/language";
 import { FormGroup } from "../form-group/form-group";
 
 @Component({
 	selector: "app-contact-form",
-	imports: [FormsModule, RouterLink, FormGroup, AnimateOnScroll],
+	imports: [FormsModule, RouterLink, FormGroup, AnimateOnScroll, LottieCheckbox],
 	templateUrl: "./contact-form.html",
 	styleUrl: "./contact-form.scss",
 	changeDetection: ChangeDetectionStrategy.OnPush,
@@ -116,5 +117,9 @@ export class ContactForm {
 				},
 			});
 		}
+	}
+
+	updateCheckbox(isChecked: boolean) {
+		this.contactData.privacy = isChecked;
 	}
 }

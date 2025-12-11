@@ -1,0 +1,7 @@
+app-lottie-checkbox path {
+	stroke: var(--color-white);
+}
+
+*:has(> input.ng-valid) > app-lottie-checkbox path {
+	stroke: var(--comp-bg-color);
+}

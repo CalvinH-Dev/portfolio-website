@@ -1,9 +1,10 @@
 @use "global-styles/fonts";
 @use "global-styles/reset";
+@use "global-styles/mixins";
 @use "global-styles/variables";
 @use "global-styles/utility";
 @use "global-styles/shadows";
-@use "global-styles/mixins";
+@use "global-styles/lotties";
 
 html {
 	scroll-padding-top: 10px;

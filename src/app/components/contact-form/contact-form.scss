@@ -34,47 +34,30 @@ form {
 	text-decoration: underline;
 }
 
-input[type="checkbox"] {
-	flex-shrink: 0;
-	position: relative;
-	width: 25px;
+.checkbox-container {
+	position: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 100%;
+	flex-basis: min(20%, 75px);
+	aspect-ratio: 1;
 	margin-top: 5px;
+}
+
+input[type="checkbox"] {
+	display: none;
+	flex-shrink: 0;
+	width: 100%;
+	height: 100%;
 	background: none;
 	background-color: transparent;
 	aspect-ratio: 1;
 	appearance: none;
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
 
 	@include mixins.desktop {
 		margin-top: revert;
 	}
-}
-
-input[type="checkbox"].ng-invalid::after {
-	content: "";
-	font-weight: 600;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	inset: 0;
-	background-color: var(--bg-color);
-	border: 2px solid var(--text-color-light);
-	border-radius: 4px;
-	color: var(--text-color-light);
-}
-
-input[type="checkbox"].ng-valid::after {
-	content: "✓";
-	font-weight: 600;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	inset: 0;
-	background-color: var(--bg-color);
-	border: 2px solid var(--comp-bg-color);
-	border-radius: 4px;
-	color: var(--comp-bg-color);
 }
 
 textarea {
@@ -201,4 +184,11 @@ button {
 	& span {
 		text-align: center;
 	}
+}
+
+.lottie {
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
+	height: 100%;
+	width: 100%;
 }
