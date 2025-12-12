@@ -99,7 +99,7 @@ export class ProjectsSwiper {
 			const swiperParams = {
 				slidesPerView: 1,
 				breakpoints: {
-					640: {
+					1025: {
 						slidesPerView: 2,
 					},
 					1400: {
