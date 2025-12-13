@@ -4,17 +4,6 @@
 	display: contents;
 }
 
-aside {
-	display: none;
-
-	@include mixins.desktop {
-		display: revert;
-		height: 100%;
-		flex: 0 0 var(--aside-width);
-		background: var(--menu-color);
-	}
-}
-
 main {
 	@include mixins.desktop {
 		position: relative;

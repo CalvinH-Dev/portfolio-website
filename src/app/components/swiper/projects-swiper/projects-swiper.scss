@@ -1,5 +1,9 @@
 @use "../../../../global-styles/mixins";
 
+:host {
+	display: contents;
+}
+
 section {
 	width: 100vw;
 	display: flex;
@@ -7,11 +11,9 @@ section {
 	row-gap: 2rem;
 
 	@include mixins.desktop {
-		width: 95vw;
 		column-gap: min(120px, 5vw);
 		height: 100vh;
 		flex-direction: revert;
-		padding-left: 0;
 	}
 }
 

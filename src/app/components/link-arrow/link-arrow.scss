@@ -30,7 +30,7 @@
 	flex-shrink: 0;
 
 	@include mixins.desktop {
-		--arrow-width: clamp(4rem, 0.298rem + 7.702vw, 8rem);
+		--arrow-width: clamp(3rem, 0.5rem + 6.25vw, 7rem);
 
 		max-height: 100%;
 	}

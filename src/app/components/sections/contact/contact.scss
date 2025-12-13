@@ -9,16 +9,32 @@ section {
 	flex-direction: column;
 	align-items: center;
 	row-gap: 2rem;
-	padding-inline: 24px;
 
 	@include mixins.desktop {
 		position: relative;
 		flex-direction: row;
 		align-items: start;
 		justify-content: space-between;
-		flex-basis: calc(100vw - 2 * var(--aside-width));
-		padding-right: 1rem;
+		flex-basis: calc(100vw - var(--padding-inline-section-desktop));
+		padding-right: calc(2rem + var(--aside-width));
+		padding-left: 0;
+		padding-bottom: 24px;
+		margin-left: var(--padding-inline-section-desktop);
 		column-gap: 2vw;
+	}
+}
+
+aside {
+	display: none;
+
+	@include mixins.desktop {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: revert;
+		height: 100vh;
+		width: var(--aside-width);
+		background: var(--menu-color);
 	}
 }
 

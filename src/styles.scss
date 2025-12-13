@@ -10,7 +10,7 @@ html {
 	scroll-padding-top: 10px;
 
 	@include mixins.desktop {
-		scroll-padding-left: var(--aside-width);
+		// scroll-padding-left: calc(var(--aside-width) - 1rem);
 		scroll-padding-top: revert;
 		scroll-snap-type: x mandatory;
 		overflow-y: clip;
@@ -79,7 +79,7 @@ section {
 		scroll-snap-align: start;
 		flex: 0 0 100vw;
 		padding-block: var(--padding-block-section-desktop);
-		padding-inline: calc(var(--aside-width) + 1rem);
+		padding-inline: var(--padding-inline-section-desktop);
 	}
 }
 

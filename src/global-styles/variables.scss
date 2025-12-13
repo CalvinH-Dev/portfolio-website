@@ -15,9 +15,10 @@ html {
 	--fs-input: clamp(1.125rem, 1.075rem + 0.25vw, 1.625rem);
 	--fs-menu-a: clamp(1.525rem, 0.573vw + 1.151rem, 2.375rem);
 	--padding-inline-section: clamp(1.5rem, 0rem + 7.5vw, 7.5rem);
+	--padding-inline-section-desktop: max(24px, calc(50% - (1920px / 2)));
 	--padding-block-header: clamp(24px, 24px, 24px);
 	--padding-block-section-mobile: clamp(24px, 24px, 24px);
-	--padding-block-section-desktop: min(120px, 10vh);
+	--padding-block-section-desktop: max(120px, 15vh);
 	--header-height: max(75px, 8vh);
 	--desktop-height: calc(100vh - 1rem);
 	--aside-width: clamp(5rem, 0.373rem + 9.627vw, 10rem);
