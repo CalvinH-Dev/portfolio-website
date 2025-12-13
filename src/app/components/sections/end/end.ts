@@ -5,11 +5,10 @@ import { EmailBig } from "app/components/svg/email-big/email-big";
 import { AnimateOnScroll } from "app/directives/animation-on-scroll";
 import { LanguageService } from "app/services/language";
 import { LinkArrow } from "../../link-arrow/link-arrow";
-import { Phone } from "../../svg/phone/phone";
 
 @Component({
 	selector: "app-end",
-	imports: [Phone, LinkArrow, RouterLink, EmailBig, AnimateOnScroll, Copyright],
+	imports: [LinkArrow, RouterLink, EmailBig, AnimateOnScroll, Copyright],
 	templateUrl: "./end.html",
 	styleUrl: "./end.scss",
 	changeDetection: ChangeDetectionStrategy.OnPush,

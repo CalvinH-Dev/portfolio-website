@@ -35,7 +35,7 @@ export class Menu {
 
 	menuItems = [
 		{
-			fragment: "#",
+			fragment: "root",
 			text: "start",
 			rotate: "37deg",
 			template: this.startTemplate,
@@ -110,30 +110,5 @@ export class Menu {
 
 	toggleMenu() {
 		this.menuOpen.update((value) => !value);
-	}
-
-	onProjectRefClicked(event: MouseEvent, id: string) {
-		this.closeMenu();
-		if (!this.deviceService.isDesktop()) return;
-
-		event.preventDefault();
-		event.stopPropagation();
-
-		const scrollContainer = document.querySelector("main") as HTMLElement;
-		if (!scrollContainer) return;
-
-		if (id === "#" || id === "root") {
-			scrollContainer.scrollTo({ left: 0, behavior: "smooth" });
-			return;
-		}
-
-		const target = document.getElementById(id);
-		if (target && scrollContainer.contains(target)) {
-			const targetPosition = target.offsetLeft;
-			scrollContainer.scrollTo({
-				left: targetPosition,
-				behavior: "smooth",
-			});
-		}
 	}
 }

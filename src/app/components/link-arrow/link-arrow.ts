@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, input } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject, input } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { AnimateOnScroll } from "app/directives/animation-on-scroll";
+import { ScrollNavigationService } from "app/services/scroll-navigation";
 import { V1 } from "./svgs/v1/v1";
 import { V2 } from "./svgs/v2/v2";
 import { V3 } from "./svgs/v3/v3";
@@ -47,24 +48,5 @@ export class LinkArrow {
 	 */
 	version = input<LinkArrowVersionNumber>(1);
 
-	onProjectRefClicked(event: MouseEvent, id: string) {
-		event.preventDefault();
-
-		const scrollContainer = document.querySelector("main") as HTMLElement;
-		if (!scrollContainer) return;
-
-		if (id === "#" || id === "root") {
-			scrollContainer.scrollTo({ left: 0, behavior: "smooth" });
-			return;
-		}
-
-		const target = document.getElementById(id);
-		if (target && scrollContainer.contains(target)) {
-			const targetPosition = target.offsetLeft;
-			scrollContainer.scrollTo({
-				left: targetPosition,
-				behavior: "smooth",
-			});
-		}
-	}
+	scrollNav = inject(ScrollNavigationService);
 }

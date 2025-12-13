@@ -4,7 +4,7 @@
 		class="router"
 		routerLink="/"
 		[fragment]="fragment()"
-		(click)="onProjectRefClicked($event, fragment())"
+		(click)="onLinkClicked($event, fragment().toString())"
 	>
 		<app-svg-round-text [text]="text() | uppercase" [rotate]="rotate()" />
 	</a>

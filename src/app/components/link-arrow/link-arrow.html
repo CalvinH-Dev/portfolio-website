@@ -1,9 +1,9 @@
 <a
 	appAnimationOnScroll
 	class="arrow"
-	(click)="onProjectRefClicked($event, fragment().toString())"
+	(click)="scrollNav.scrollToSection($event, fragment().toString())"
 	[routerLink]="[]"
-	[fragment]="fragment() === '#' ? '' : fragment()"
+	[fragment]="fragment()"
 	[class.align-self-start]="alignSelf() === 'start'"
 	[class.align-self-center]="alignSelf() === 'center'"
 >
