@@ -38,6 +38,7 @@
 					},
 					"configurations": {
 						"production": {
+							"optimization": true,
 							"budgets": [
 								{
 									"type": "initial",
@@ -60,7 +61,8 @@
 						"analyze-bundle": {
 							"sourceMap": true,
 							"outputHashing": "none",
-							"namedChunks": true
+							"namedChunks": true,
+							"optimization": true
 						}
 					},
 					"defaultConfiguration": "production"
