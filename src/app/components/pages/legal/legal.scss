@@ -81,7 +81,7 @@ section.last {
 		position: relative;
 		flex-direction: row;
 		align-items: start;
-		justify-content: space-between;
+		justify-content: end;
 		flex-basis: calc(100vw - var(--padding-inline-section-desktop));
 		padding-right: calc(2rem + var(--aside-width));
 		padding-left: 0;

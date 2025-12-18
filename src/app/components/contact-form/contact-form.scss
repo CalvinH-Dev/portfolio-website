@@ -173,15 +173,18 @@ button {
 	transform: translateX(-50%);
 	padding: 0.5rem 1rem;
 	margin: auto;
-	background-color: var(--accent-color);
-	color: var(--text-color-dark);
-	font-size: var(--fs-small);
+	background-color: var(--color-footer);
+	border-radius: 4px;
+	box-shadow:
+		1px 1px 3px inset var(--accent-color-lighter),
+		1px 1px 3px var(--comp-text-color);
+	color: var(--accent-color-lighter);
+	font-size: var(--fs-normal);
 	translate: 0 5px;
 	display: inline-flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border-radius: 10px;
 	z-index: 100;
 	animation: show-toast 2500ms linear paused;
 
