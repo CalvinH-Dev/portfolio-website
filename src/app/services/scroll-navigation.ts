@@ -16,7 +16,6 @@ export class ScrollNavigationService {
 
 		if (id === "#" || id === "root") {
 			scrollContainer.scrollTo({ left: 0, behavior: "smooth" });
-			this.router.navigate(["/"], { replaceUrl: true });
 			return;
 		}
 

@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, inject, viewChild } fro
 import { FormsModule, NgForm } from "@angular/forms";
 import { RouterLink } from "@angular/router";
 import { AnimateOnScroll } from "app/directives/animation-on-scroll";
+import { ScrollOnFocusDirective } from "app/directives/scroll-on-focus";
 import { ContactInformation } from "app/interfaces/contact-information";
 import { LottieCheckbox } from "app/lotties/lottie-checkbox/lottie-checkbox";
 import { LanguageService } from "app/services/language";
@@ -10,7 +11,14 @@ import { FormGroup } from "../form-group/form-group";
 
 @Component({
 	selector: "app-contact-form",
-	imports: [FormsModule, RouterLink, FormGroup, AnimateOnScroll, LottieCheckbox],
+	imports: [
+		FormsModule,
+		RouterLink,
+		FormGroup,
+		AnimateOnScroll,
+		LottieCheckbox,
+		ScrollOnFocusDirective,
+	],
 	templateUrl: "./contact-form.html",
 	styleUrl: "./contact-form.scss",
 	changeDetection: ChangeDetectionStrategy.OnPush,

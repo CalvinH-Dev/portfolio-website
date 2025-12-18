@@ -1,6 +1,7 @@
 <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" appAnimationOnScroll>
 	<app-form-group>
 		<input
+			appScrollOnFocus
 			ngProjectAs="input-element"
 			type="text"
 			name="name"
@@ -12,12 +13,14 @@
 			"
 			[(ngModel)]="contactData.name"
 			#name="ngModel"
+			autocomplete="off"
 			required
 		/>
 	</app-form-group>
 
 	<app-form-group>
 		<input
+			appScrollOnFocus
 			ngProjectAs="input-element"
 			ngModel
 			pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
@@ -31,6 +34,7 @@
 			"
 			[(ngModel)]="contactData.email"
 			#email="ngModel"
+			autocomplete="off"
 			required
 		/>
 		<span ngProjectAs="error-message">{{
@@ -39,6 +43,7 @@
 	</app-form-group>
 	<app-form-group [checkAlign]="'bottom'">
 		<textarea
+			appScrollOnFocus
 			ngProjectAs="input-element"
 			name="message"
 			rows="8"
@@ -50,6 +55,10 @@
 			"
 			[(ngModel)]="contactData.message"
 			#message="ngModel"
+			autocomplete="off"
+			autocorrect="off"
+			autocapitalize="off"
+			spellcheck="false"
 			required
 		></textarea>
 	</app-form-group>
@@ -60,6 +69,7 @@
 					type="checkbox"
 					name="privacy"
 					required
+					autocomplete="off"
 					#privacy="ngModel"
 					[(ngModel)]="contactData.privacy"
 				/>

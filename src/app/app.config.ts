@@ -1,9 +1,16 @@
 import {
 	ApplicationConfig,
+	inject,
 	provideBrowserGlobalErrorListeners,
 	provideZonelessChangeDetection,
 } from "@angular/core";
-import { provideRouter, withInMemoryScrolling, withViewTransitions } from "@angular/router";
+import {
+	IsActiveMatchOptions,
+	provideRouter,
+	Router,
+	withInMemoryScrolling,
+	withViewTransitions,
+} from "@angular/router";
 
 import { provideImageKitLoader } from "@angular/common";
 import { provideHttpClient, withFetch } from "@angular/common/http";
@@ -22,7 +29,23 @@ export const appConfig: ApplicationConfig = {
 				scrollPositionRestoration: "enabled",
 				anchorScrolling: "enabled",
 			}),
-			withViewTransitions(),
+			withViewTransitions({
+				onViewTransitionCreated: ({ transition }) => {
+					const router = inject(Router);
+					const targetUrl = router.currentNavigation()!.finalUrl!;
+
+					const config: IsActiveMatchOptions = {
+						paths: "exact",
+						matrixParams: "exact",
+						fragment: "ignored",
+						queryParams: "ignored",
+					};
+
+					if (router.isActive(targetUrl, config)) {
+						transition.skipTransition();
+					}
+				},
+			}),
 		),
 		provideClientHydration(withIncrementalHydration()),
 		provideHttpClient(withFetch()),
