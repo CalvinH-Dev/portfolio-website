@@ -17,6 +17,7 @@
 				"build": {
 					"builder": "@angular/build:application",
 					"options": {
+						"allowedCommonJsDependencies": ["lottie-web/build/player/lottie_light"],
 						"baseHref": "/",
 						"sourceMap": false,
 						"browser": "src/main.ts",
