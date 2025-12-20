@@ -4,10 +4,8 @@ export interface ProjectInterface {
 	tech: TranslatableText;
 	learning: TranslatableText;
 	imageSrc: string;
-	width: string;
-	height: string;
-	githubSrc: string;
-	pageSrc: string;
+	githubSrc?: string;
+	pageSrc?: string;
 	alt: TranslatableText;
 }
 

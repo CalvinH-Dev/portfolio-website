@@ -34,7 +34,7 @@
 	overflow: hidden;
 	position: relative;
 	width: 100%;
-	height: 20svh;
+	height: 15svh;
 	mask-image:
 		linear-gradient(to right, black, white 3%, white 97%, black),
 		linear-gradient(to bottom, black, white 3%, white 97%, black);
@@ -69,4 +69,14 @@ img {
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
+}
+
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+
+	a {
+		pointer-events: none;
+		color: inherit;
+	}
 }

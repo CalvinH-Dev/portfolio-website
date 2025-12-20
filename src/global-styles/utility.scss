@@ -18,6 +18,11 @@ swiper-container::part(bullet-active) {
 	height: var(--scale);
 }
 
+app-lottie-activity path {
+	stroke: var(--comp-text-color);
+	stroke-width: 1;
+}
+
 button:is(.primary, .secondary) {
 	padding: var(--padding-block-button) var(--padding-inline-button);
 	border-radius: var(--border-radius-button);
