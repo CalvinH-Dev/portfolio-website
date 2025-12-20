@@ -4,9 +4,8 @@
 		<img
 			[ngSrc]="project().imageSrc"
 			[alt]="project().alt[language()]"
-			height="auto"
-			[width]="project().width"
-			[sizes]="'(max-width: 768px) 120px, 400px'"
+			fill
+			[sizes]="'(min-width: 768px) 30vw, 90vw'"
 		/>
 	</div>
 	<div class="text">

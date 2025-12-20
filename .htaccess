@@ -1,12 +1,68 @@
+# Browser Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # HTML - kurzes Caching (1 Stunde)
+  ExpiresByType text/html "access plus 1 hour"
+  
+  # CSS und JavaScript mit Hash - langes Caching (1 Jahr)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  
+  # Fonts - langes Caching (1 Jahr)
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  
+  # Bilder - langes Caching (1 Jahr)
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>
+
+# Cache-Control Headers
+<IfModule mod_headers.c>
+  # JS/CSS mit Hash-Namen - immutable
+  <FilesMatch "\.(js|css)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  
+  # Fonts
+  <FilesMatch "\.(woff|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  
+  # Bilder
+  <FilesMatch "\.(jpg|jpeg|png|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
+  
+  # HTML - kurzes Caching
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Gzip Kompression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# Angular Routing
 RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} -s [OR]
-
 RewriteCond %{REQUEST_FILENAME} -l [OR]
-
 RewriteCond %{REQUEST_FILENAME} -d
-
 RewriteRule ^.*$ - [NC,L]
-
 
 RewriteRule ^(.*) /index.html [NC,L]
