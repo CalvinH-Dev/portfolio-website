@@ -1,5 +1,12 @@
 import { HttpClient } from "@angular/common/http";
-import { ChangeDetectionStrategy, Component, ElementRef, inject, viewChild } from "@angular/core";
+import {
+	afterNextRender,
+	ChangeDetectionStrategy,
+	Component,
+	ElementRef,
+	inject,
+	viewChild,
+} from "@angular/core";
 import { FormsModule, NgForm } from "@angular/forms";
 import { RouterLink } from "@angular/router";
 import { AnimateOnScroll } from "app/directives/animation-on-scroll";
@@ -7,6 +14,7 @@ import { ScrollOnFocusDirective } from "app/directives/scroll-on-focus";
 import { ContactInformation } from "app/interfaces/contact-information";
 import { LottieCheckbox } from "app/lotties/lottie-checkbox/lottie-checkbox";
 import { LanguageService } from "app/services/language";
+import { Tokens } from "app/services/tokens";
 import { FormGroup } from "../form-group/form-group";
 
 @Component({
@@ -75,6 +83,7 @@ export class ContactForm {
 		email: "",
 		message: "",
 		privacy: false,
+		csrf: "",
 	};
 
 	/**
@@ -90,9 +99,10 @@ export class ContactForm {
 		body: (payload: ContactInformation) => JSON.stringify(payload),
 		options: {
 			headers: {
-				"Content-Type": "text/plain",
+				"Content-Type": "application/json",
 			},
-			responseType: "text",
+			responseType: "text" as const,
+			withCredentials: true,
 		},
 	};
 
@@ -109,21 +119,31 @@ export class ContactForm {
 	 */
 	toast = viewChild<ElementRef>("toast");
 
+	private tokenService = inject(Tokens);
+
+	constructor() {
+		afterNextRender(async () => {
+			this.contactData.csrf = await this.tokenService.getCsrfToken();
+		});
+	}
+
 	/**
 	 * Handles form submission.
 	 * @param form The NgForm instance of the contact form.
 	 */
 	onSubmit(form: NgForm) {
 		if (form.submitted && form.form.valid) {
-			this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
-				next: () => {
-					form.resetForm();
-					this.toast()!.nativeElement.style.animationPlayState = "running";
-				},
-				error: (error) => {
-					console.error(error);
-				},
-			});
+			this.http
+				.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+				.subscribe({
+					next: () => {
+						form.resetForm();
+						this.toast()!.nativeElement.style.animationPlayState = "running";
+					},
+					error: (error) => {
+						console.error(error);
+					},
+				});
 		}
 	}
 

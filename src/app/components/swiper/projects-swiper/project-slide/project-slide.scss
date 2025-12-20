@@ -1,7 +1,11 @@
 @use "../../../../../global-styles/mixins";
 
+:host {
+	display: contents;
+}
+
 .slide {
-	height: 70svh;
+	height: 100%;
 	width: 100%;
 	padding: clamp(1rem, 0.8rem + 1vw, 2rem);
 	padding-bottom: 2.5rem;

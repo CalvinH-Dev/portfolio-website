@@ -34,10 +34,12 @@ swiper-container {
 	--shadow-blur: 10px;
 	--shadow-base: var(--comp-bg-color);
 
+	display: grid;
+	grid-template-rows: 100%;
 	width: 100%;
 	position: relative;
 	border: 1px solid var(--comp-bg-color);
-	background-color: var(--comp-bg-color);
+	background-color: var(--bg-color-card);
 	box-shadow:
 		var(--shadow-offset) var(--shadow-offset) var(--shadow-blur)
 			hsl(from var(--comp-bg-color) h s 5%),

@@ -3,4 +3,5 @@ export interface ContactInformation {
 	email: string;
 	message: string;
 	privacy: boolean;
+	csrf: string;
 }
