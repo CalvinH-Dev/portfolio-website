@@ -1,6 +1,13 @@
 <section>
 	<div class="img-container">
-		<img ngSrc="hero.webp" alt="Bild von Calvin Hanisch" priority width="567" height="768" />
+		<img
+			ngSrc="hero.webp"
+			alt="Bild von Calvin Hanisch"
+			priority
+			width="660"
+			[sizes]="'(max-width: 768px) 190px, 660px'"
+			height="auto"
+		/>
 	</div>
 	<div class="text">
 		<span class="comp-text" appAnimationOnScroll>Leipzig</span>

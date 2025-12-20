@@ -16,7 +16,7 @@ $allowedOrigins = [
     'https://www.hanisch-dev.de'
 ];
 
-$recipientEmail = 'calvin.hanisch@gmail.com';
+$recipientEmail = 'info@hanisch-dev.de';
 $fromEmail      = 'noreply@hanisch-dev.de';
 
 /* =========================
