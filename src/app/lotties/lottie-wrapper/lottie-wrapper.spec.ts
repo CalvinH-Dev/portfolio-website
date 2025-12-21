@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { LottieActivity } from "./lottie-activity";
+import { LottieWrapper } from "./lottie-wrapper";
 
-describe("LottieActivity", () => {
-	let component: LottieActivity;
-	let fixture: ComponentFixture<LottieActivity>;
+describe("LottieWrapper", () => {
+	let component: LottieWrapper;
+	let fixture: ComponentFixture<LottieWrapper>;
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [LottieActivity],
+			imports: [LottieWrapper],
 		}).compileComponents();
 
-		fixture = TestBed.createComponent(LottieActivity);
+		fixture = TestBed.createComponent(LottieWrapper);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

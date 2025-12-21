@@ -2,7 +2,13 @@
 	<h4 class="headline">{{ project().name }}</h4>
 	<div class="img-container">
 		@if (project().imageSrc === "lottie") {
-			<app-lottie-activity />
+			<app-lottie-wrapper
+				[options]="{
+					path: '/lotties/activity.json',
+					autoplay: true,
+					loop: true,
+				}"
+			/>
 		} @else {
 			<img
 				[ngSrc]="project().imageSrc"

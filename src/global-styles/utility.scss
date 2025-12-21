@@ -18,9 +18,15 @@ swiper-container::part(bullet-active) {
 	height: var(--scale);
 }
 
-app-lottie-activity path {
+app-lottie-wrapper path {
 	stroke: var(--comp-text-color);
 	stroke-width: 1;
+}
+
+.swiper-slide-active,
+.swiper-slide-prev,
+.swiper-slide-next {
+	will-change: transform;
 }
 
 button:is(.primary, .secondary) {

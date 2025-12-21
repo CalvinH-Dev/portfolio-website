@@ -1,0 +1,10 @@
+<div
+	class="lottie-wrapper"
+	appIntersectionObserver
+	(visibleCallback)="onVisible()"
+	(hiddenCallback)="onHidden()"
+>
+	@if (visible) {
+		<app-base-lottie [options]="options()" />
+	}
+</div>
