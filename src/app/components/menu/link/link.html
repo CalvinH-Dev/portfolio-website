@@ -3,7 +3,7 @@
 	<a
 		class="router"
 		routerLink="/"
-		[fragment]="fragment()"
+		[fragment]="fragment() !== 'root' ? fragment() : undefined"
 		(click)="onLinkClicked($event, fragment().toString())"
 	>
 		<app-svg-round-text [text]="text() | uppercase" [rotate]="rotate()" />
