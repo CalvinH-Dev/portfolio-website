@@ -35,16 +35,15 @@ form {
 }
 
 .checkbox-container {
-	position: grid;
+	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: 100%;
-	flex-basis: min(20%, 50px);
+	min-width: min(15%, 30px);
 	aspect-ratio: 1;
 	margin-top: 5px;
 }
 
 input[type="checkbox"] {
-	display: none;
 	flex-shrink: 0;
 	width: 100%;
 	height: 100%;
@@ -194,6 +193,7 @@ button {
 }
 
 .lottie {
+	z-index: -1;
 	grid-column: 1 / -1;
 	grid-row: 1 / -1;
 	height: 100%;

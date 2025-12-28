@@ -73,7 +73,7 @@
 					#privacy="ngModel"
 					[(ngModel)]="contactData.privacy"
 				/>
-				<app-lottie-checkbox class="lottie" (checked)="updateCheckbox($event)" />
+				<app-lottie-checkbox class="lottie" [(checked)]="contactData.privacy" />
 			</div>
 			<span class="legal">
 				@if (language() === "EN") {

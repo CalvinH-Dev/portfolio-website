@@ -137,17 +137,20 @@ export class ContactForm {
 				.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
 				.subscribe({
 					next: () => {
-						form.resetForm();
+						form.resetForm({
+							name: "",
+							email: "",
+							message: "",
+							privacy: false,
+							csrf: this.contactData.csrf,
+						});
 						this.toast()!.nativeElement.style.animationPlayState = "running";
+						console.log(this.contactData);
 					},
 					error: (error) => {
 						console.error(error);
 					},
 				});
 		}
-	}
-
-	updateCheckbox(isChecked: boolean) {
-		this.contactData.privacy = isChecked;
 	}
 }

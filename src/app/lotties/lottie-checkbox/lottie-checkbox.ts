@@ -3,8 +3,9 @@ import {
 	Component,
 	ElementRef,
 	inject,
+	model,
 	NgZone,
-	output,
+	OnChanges,
 	viewChild,
 } from "@angular/core";
 import { AnimationDirection, AnimationItem } from "lottie-web";
@@ -17,7 +18,7 @@ import { AnimationOptions, LottieComponent } from "ngx-lottie";
 	styleUrl: "./lottie-checkbox.scss",
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LottieCheckbox {
+export class LottieCheckbox implements OnChanges {
 	options: AnimationOptions = {
 		path: "/lotties/checkBox.json",
 		autoplay: false,
@@ -28,7 +29,7 @@ export class LottieCheckbox {
 	private ngZone = inject(NgZone);
 
 	lottie = viewChild<ElementRef>("lottie");
-	checked = output<boolean>();
+	checked = model<boolean>();
 
 	animationCreated(animationItem: AnimationItem): void {
 		this.animationItem = animationItem;
@@ -37,10 +38,10 @@ export class LottieCheckbox {
 
 	animationComplete(): void {
 		if (!this.animationItem) return;
-
 		const invertedDirection = (this.animationItem.playDirection * -1) as AnimationDirection;
 		this.animationItem.setDirection(invertedDirection);
 	}
+
 	stop(): void {
 		this.ngZone.runOutsideAngular(() => {
 			this.animationItem?.stop();
@@ -48,16 +49,20 @@ export class LottieCheckbox {
 	}
 
 	play(): void {
-		const currentDirection = this.animationItem!.playDirection;
-
 		this.ngZone.runOutsideAngular(() => {
-			if (currentDirection === 1) {
-				this.animationItem!.play();
-				this.checked.emit(true);
-			} else {
-				this.animationItem!.play();
-				this.checked.emit(false);
-			}
+			this.animationItem!.play();
 		});
+	}
+
+	ngOnChanges() {
+		console.log("hier");
+		if (!this.animationItem) return;
+
+		const valueChanged =
+			(this.animationItem!.playDirection === 1 && this.checked()) ||
+			(this.animationItem!.playDirection === -1 && !this.checked());
+		if (valueChanged) {
+			this.play();
+		}
 	}
 }

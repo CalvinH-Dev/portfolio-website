@@ -87,7 +87,7 @@ if (preg_match('/[\r\n]/', $email)) {
     exit('Invalid email');
 }
 
-if (strlen($message) < 10 || strlen($message) > 2000) {
+if (strlen($message) < 1 || strlen($message) > 2000) {
     http_response_code(400);
     exit('Invalid message length');
 }
