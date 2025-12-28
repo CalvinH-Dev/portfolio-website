@@ -12,9 +12,9 @@ import {
 	withViewTransitions,
 } from "@angular/router";
 
-import { provideImageKitLoader } from "@angular/common";
 import { provideHttpClient, withFetch } from "@angular/common/http";
 
+import { IMAGE_CONFIG, IMAGE_LOADER, ImageLoaderConfig } from "@angular/common";
 import { provideLottieOptions } from "ngx-lottie";
 import { routes } from "./app.routes";
 
@@ -47,7 +47,22 @@ export const appConfig: ApplicationConfig = {
 			}),
 		),
 		provideHttpClient(withFetch()),
-		provideImageKitLoader("https://ik.imagekit.io/dhpagryvx/Portfolio/"),
+		{
+			provide: IMAGE_CONFIG,
+			useValue: {
+				breakpoints: [180, 360, 480, 640, 960, 1280],
+			},
+		},
+		{
+			provide: IMAGE_LOADER,
+			useValue: (config: ImageLoaderConfig) => {
+				if (config.width) {
+					return `/img/loader/${config.width}/${config.width}_${config.src}`;
+				} else {
+					return `/img/loader/original/${config.src}`;
+				}
+			},
+		},
 		provideLottieOptions({
 			player: () => import("lottie-web/build/player/lottie_light"),
 		}),

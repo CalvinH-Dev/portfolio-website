@@ -36,7 +36,7 @@
   </FilesMatch>
   
   # Bilder
-  <FilesMatch "\.(jpg|jpeg|png|webp|svg|ico)$">
+  <FilesMatch "\.(jpg|jpeg|png|webp|svg|ico|avif)$">
     Header set Cache-Control "public, max-age=31536000"
   </FilesMatch>
   

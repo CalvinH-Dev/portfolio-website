@@ -22,7 +22,7 @@ const projects: ProjectInterface[] = [
 			DE: "Ich lernte, Benutzer-Authentifizierung zu implementieren, CRUD-Operationen für Tasks zu gestalten und Daten in Echtzeit mit Firebase zu synchronisieren.",
 			EN: "I learned to implement user authentication, handle CRUD operations for tasks, and sync data in real-time with Firebase.",
 		},
-		imageSrc: "/compressed_join.webp",
+		imageSrc: "join.avif",
 		githubSrc: "https://github.com/CalvinH-Dev/join",
 		pageSrc: "https://join.hanisch-dev.de",
 		alt: {
@@ -44,7 +44,7 @@ const projects: ProjectInterface[] = [
 			DE: "Ich lernte, JSON-Daten einer API abzurufen, eine Suche einzubauen und Pokémon-Infos darzustellen.",
 			EN: "I learned to fetch API JSON data, add a search, and display Pokémon details.",
 		},
-		imageSrc: "/compressed_pokedex.webp",
+		imageSrc: "pokedex.avif",
 		githubSrc: "https://github.com/CalvinH-Dev/pokemon-app",
 		pageSrc: "https://pokedex.hanisch-dev.de",
 		alt: {
