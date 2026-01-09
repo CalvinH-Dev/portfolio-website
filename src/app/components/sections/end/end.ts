@@ -30,7 +30,7 @@ export class End {
 	router = inject(Router);
 
 	/**
-	 * Input href attribute for the link. Defaults to "#".
+	 * Input href attribute for the link. Defaults to "root".
 	 */
 	href = input<string>("root");
 
