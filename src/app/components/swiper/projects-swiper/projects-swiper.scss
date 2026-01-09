@@ -4,19 +4,6 @@
 	display: contents;
 }
 
-section {
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	row-gap: 2rem;
-
-	@include mixins.desktop {
-		column-gap: min(120px, 5vw);
-		height: 100vh;
-		flex-direction: revert;
-	}
-}
-
 h2 {
 	padding-inline: var(--padding-inline-section);
 	width: 100%;

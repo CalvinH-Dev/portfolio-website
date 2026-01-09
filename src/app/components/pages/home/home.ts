@@ -1,7 +1,7 @@
 import { afterNextRender, ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
+import { Projects } from "app/components/sections/projects/projects";
 import { WhyMe } from "app/components/sections/why-me/why-me";
-import { ProjectsSwiper } from "app/components/swiper/projects-swiper/projects-swiper";
 import { firstValueFrom } from "rxjs";
 import { LinkArrow } from "../../link-arrow/link-arrow";
 import { Contact } from "../../sections/contact/contact";
@@ -10,7 +10,7 @@ import { Skills } from "../../sections/skills/skills";
 
 @Component({
 	selector: "app-home",
-	imports: [WhyMe, LinkArrow, Contact, Hero, Skills, ProjectsSwiper],
+	imports: [WhyMe, LinkArrow, Contact, Hero, Skills, Projects],
 	templateUrl: "./home.html",
 	styleUrl: "./home.scss",
 	changeDetection: ChangeDetectionStrategy.OnPush,

@@ -1,23 +1,50 @@
-<a
-	appAnimationOnScroll
-	class="arrow"
-	(click)="scrollNav.scrollToSection($event, fragment().toString())"
-	[routerLink]="[]"
-	[class.align-self-start]="alignSelf() === 'start'"
-	[class.align-self-center]="alignSelf() === 'center'"
->
-	@switch (version()) {
-		@case (1) {
-			<app-link-arrow-v1 />
+@if (fragment() !== "root" && fragment() !== "#") {
+	<a
+		appAnimationOnScroll
+		class="arrow"
+		(click)="scrollNav.scrollToSection($event, fragment().toString())"
+		[routerLink]="[]"
+		[fragment]="fragment()"
+		[class.align-self-start]="alignSelf() === 'start'"
+		[class.align-self-center]="alignSelf() === 'center'"
+	>
+		@switch (version()) {
+			@case (1) {
+				<app-link-arrow-v1 />
+			}
+			@case (2) {
+				<app-link-arrow-v2 />
+			}
+			@case (3) {
+				<app-link-arrow-v3 />
+			}
+			@case (4) {
+				<app-link-arrow-v4 />
+			}
 		}
-		@case (2) {
-			<app-link-arrow-v2 />
+	</a>
+} @else {
+	<a
+		appAnimationOnScroll
+		class="arrow"
+		(click)="scrollNav.scrollToSection($event, fragment().toString())"
+		[routerLink]="[]"
+		[class.align-self-start]="alignSelf() === 'start'"
+		[class.align-self-center]="alignSelf() === 'center'"
+	>
+		@switch (version()) {
+			@case (1) {
+				<app-link-arrow-v1 />
+			}
+			@case (2) {
+				<app-link-arrow-v2 />
+			}
+			@case (3) {
+				<app-link-arrow-v3 />
+			}
+			@case (4) {
+				<app-link-arrow-v4 />
+			}
 		}
-		@case (3) {
-			<app-link-arrow-v3 />
-		}
-		@case (4) {
-			<app-link-arrow-v4 />
-		}
-	}
-</a>
+	</a>
+}

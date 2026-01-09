@@ -55,7 +55,6 @@ export class LottieCheckbox implements OnChanges {
 	}
 
 	ngOnChanges() {
-		console.log("hier");
 		if (!this.animationItem) return;
 
 		const valueChanged =

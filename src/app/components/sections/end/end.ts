@@ -32,7 +32,7 @@ export class End {
 	/**
 	 * Input href attribute for the link. Defaults to "#".
 	 */
-	href = input<string>("#");
+	href = input<string>("root");
 
 	/**
 	 * Determines whether the text is displayed. Defaults to true.

@@ -10,15 +10,12 @@ export class ScrollNavigationService {
 	scrollToSection(event: MouseEvent, id: string): void {
 		event.preventDefault();
 		event.stopPropagation();
-
 		const scrollContainer = document.querySelector("main") as HTMLElement;
 		if (!scrollContainer) return;
-
 		if (id === "#" || id === "root") {
 			scrollContainer.scrollTo({ left: 0, behavior: "smooth" });
 			return;
 		}
-
 		const target = document.getElementById(id);
 		if (target && scrollContainer.contains(target)) {
 			const targetPosition = target.offsetLeft;

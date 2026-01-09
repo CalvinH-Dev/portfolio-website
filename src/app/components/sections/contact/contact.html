@@ -1,14 +1,16 @@
 <section id="contact">
-	<h2 class="section-headline">
-		@if (language() === "EN") {
-			Contact me
-		} @else {
-			Kontakt
-		}
-	</h2>
-	<div class="middle">
-		<app-end />
-		<app-contact-form />
-	</div>
-	<aside></aside>
+	@defer {
+		<h2 class="section-headline">
+			@if (language() === "EN") {
+				Contact me
+			} @else {
+				Kontakt
+			}
+		</h2>
+		<div class="middle">
+			<app-end />
+			<app-contact-form />
+		</div>
+		<aside></aside>
+	}
 </section>
