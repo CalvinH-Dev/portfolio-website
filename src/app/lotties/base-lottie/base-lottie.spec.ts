@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { BaseLottie } from './base-lottie';
+import { BaseLottie } from "./base-lottie";
 
-describe('BaseLottie', () => {
-  let component: BaseLottie;
-  let fixture: ComponentFixture<BaseLottie>;
+describe("BaseLottie", () => {
+	let component: BaseLottie;
+	let fixture: ComponentFixture<BaseLottie>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [BaseLottie]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [BaseLottie],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(BaseLottie);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(BaseLottie);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it("should create", () => {
+		expect(component).toBeTruthy();
+	});
 });
