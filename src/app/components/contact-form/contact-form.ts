@@ -73,7 +73,7 @@ export class ContactForm {
 	/**
 	 * The current language signal.
 	 */
-	language = this.languageService.getLanguage();
+	language = this.languageService.language;
 
 	/**
 	 * Contact form data model.

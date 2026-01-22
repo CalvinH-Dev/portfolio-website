@@ -12,5 +12,5 @@ import { Copyright } from "../svg/copyright/copyright";
 })
 export class Footer {
 	languageService = inject(LanguageService);
-	language = this.languageService.getLanguage();
+	language = this.languageService.language;
 }

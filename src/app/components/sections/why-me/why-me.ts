@@ -15,5 +15,5 @@ import { LanguageService } from "app/services/language";
 })
 export class WhyMe {
 	languageService = inject(LanguageService);
-	language = this.languageService.getLanguage();
+	language = this.languageService.language;
 }

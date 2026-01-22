@@ -12,5 +12,5 @@ import { LanguageService } from "app/services/language";
 })
 export class Legal {
 	languageService = inject(LanguageService);
-	language = this.languageService.getLanguage();
+	language = this.languageService.language;
 }

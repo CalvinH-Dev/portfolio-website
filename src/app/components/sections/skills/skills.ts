@@ -73,6 +73,6 @@ const skillsList: Skill[] = [
 })
 export class Skills {
 	languageService = inject(LanguageService);
-	language = this.languageService.getLanguage();
+	language = this.languageService.language;
 	skills: Skill[] = skillsList;
 }

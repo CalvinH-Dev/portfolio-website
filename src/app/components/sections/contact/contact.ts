@@ -1,16 +1,17 @@
 import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { ContactForm } from "app/components/contact-form/contact-form";
+import { SectionsPlaceholder } from "app/components/sections-placeholder/sections-placeholder";
 import { End } from "app/components/sections/end/end";
 import { LanguageService } from "app/services/language";
 
 @Component({
 	selector: "app-contact",
-	imports: [ContactForm, End],
+	imports: [ContactForm, End, SectionsPlaceholder],
 	templateUrl: "./contact.html",
 	styleUrl: "./contact.scss",
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Contact {
 	languageService = inject(LanguageService);
-	language = this.languageService.getLanguage();
+	language = this.languageService.language;
 }

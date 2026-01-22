@@ -57,7 +57,7 @@ export class References implements OnDestroy {
 	/**
 	 * The current language signal.
 	 */
-	language = this.languageService.getLanguage();
+	language = this.languageService.language;
 
 	/**
 	 * Index of the currently active slide.

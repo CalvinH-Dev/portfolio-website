@@ -12,7 +12,7 @@ import { End } from "../../sections/end/end";
 })
 export class Privacy {
 	languageService = inject(LanguageService);
-	language = this.languageService.getLanguage();
+	language = this.languageService.language;
 
 	alignArrow: "center" | "start" | "end" = "center";
 }

@@ -1,0 +1,11 @@
+@use "../../../global-styles/mixins";
+
+:host {
+	display: block;
+	height: 100svh;
+	width: 100%;
+
+	@include mixins.desktop {
+		display: none;
+	}
+}

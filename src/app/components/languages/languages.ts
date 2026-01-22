@@ -11,7 +11,7 @@ import { LanguageService } from "app/services/language";
 })
 export class Languages {
 	languageService = inject(LanguageService);
-	language = this.languageService.getLanguage();
+	language = this.languageService.language;
 
 	/**
 	 * Updates the application language.

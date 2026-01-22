@@ -14,5 +14,5 @@ export class ProjectSlide {
 	project = input.required<ProjectInterface>();
 
 	languageService = inject(LanguageService);
-	language = this.languageService.getLanguage();
+	language = this.languageService.language;
 }

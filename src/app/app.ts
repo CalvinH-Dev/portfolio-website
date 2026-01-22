@@ -3,6 +3,7 @@ import { Router, RouterOutlet } from "@angular/router";
 import { Footer } from "./components/footer/footer";
 import { Menu } from "./components/menu/menu";
 import { Socials } from "./components/sections/socials/socials";
+import { LanguageService } from "./services/language";
 
 @Component({
 	selector: "app-root",
@@ -26,9 +27,11 @@ export class App {
 	 * Router instance for navigation and event subscriptions.
 	 */
 	router = inject(Router);
+	languageService = inject(LanguageService);
 
 	constructor() {
 		afterNextRender(() => {
+			this.languageService.initLanguage();
 			const container = document.querySelector("main")!;
 
 			/**

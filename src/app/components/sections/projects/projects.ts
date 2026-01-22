@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { SectionsPlaceholder } from "app/components/sections-placeholder/sections-placeholder";
 import { ProjectsSwiper } from "app/components/swiper/projects-swiper/projects-swiper";
 import { AnimateOnScroll } from "app/directives/animation-on-scroll";
 import { ProjectInterface } from "app/interfaces/project";
@@ -95,7 +96,7 @@ const projects: ProjectInterface[] = [
 
 @Component({
 	selector: "app-projects",
-	imports: [ProjectsSwiper, AnimateOnScroll],
+	imports: [ProjectsSwiper, AnimateOnScroll, SectionsPlaceholder],
 	templateUrl: "./projects.html",
 	styleUrl: "./projects.scss",
 })

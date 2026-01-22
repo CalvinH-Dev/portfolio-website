@@ -18,7 +18,7 @@ export class HeaderDesktop {
 	/**
 	 * The current language signal.
 	 */
-	language = this.languageService.getLanguage();
+	language = this.languageService.language;
 
 	/**
 	 * Scrolls smoothly to a section in the main container when a link is clicked.

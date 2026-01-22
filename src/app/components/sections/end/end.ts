@@ -22,7 +22,7 @@ export class End {
 	/**
 	 * The current language signal.
 	 */
-	language = this.languageService.getLanguage();
+	language = this.languageService.language;
 
 	/**
 	 * Router instance for navigation and URL inspection.
