@@ -1,0 +1,15 @@
+    <link
+  rel="preload"
+  href="/media/sofia-sans-condensed-v6-latin-regular-ACDFYOBC.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+
+<link
+  rel="preload"
+  href="/media/sofia-sans-condensed-v6-latin-600-QVVHUKLV.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
