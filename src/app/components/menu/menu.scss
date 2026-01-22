@@ -16,6 +16,12 @@ button {
 	font-family: inherit;
 }
 
+@supports not (-webkit-touch-callout: none) {
+	.menu {
+		filter: url("#goo");
+	}
+}
+
 .menu {
 	--transition-delay-base: var(--transition-fast);
 	--transition-base: var(--transition-eternity);
@@ -26,7 +32,6 @@ button {
 	display: grid;
 	grid-template-rows: 100%;
 	grid-template-columns: 100%;
-	filter: url("#goo");
 
 	@include mixins.desktop {
 		height: 75px;

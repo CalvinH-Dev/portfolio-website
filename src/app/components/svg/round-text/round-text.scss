@@ -5,9 +5,7 @@
 svg {
 	position: absolute;
 	inset: 0;
-}
-
-text {
+	height: 100%;
+	width: 100%;
 	rotate: var(--rotate, 0deg);
-	transform-origin: center;
 }

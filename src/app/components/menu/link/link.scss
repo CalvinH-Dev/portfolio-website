@@ -4,6 +4,12 @@
 	display: contents;
 }
 
+@supports not (-webkit-touch-callout: none) {
+	li {
+		filter: url("#goo");
+	}
+}
+
 li {
 	--shadow-offset: 2px;
 	--shadow-blur: 3px;
@@ -28,7 +34,6 @@ li {
 		calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur)
 			var(--bg-color);
 	background: linear-gradient(45deg, var(--bg-color), var(--gradient-color));
-	filter: url("#goo");
 	transition:
 		padding var(--transition-base) ease-in-out,
 		opacity var(--transition-base) ease-in-out,
