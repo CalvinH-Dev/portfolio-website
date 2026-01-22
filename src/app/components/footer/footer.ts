@@ -13,4 +13,8 @@ import { Copyright } from "../svg/copyright/copyright";
 export class Footer {
 	languageService = inject(LanguageService);
 	language = this.languageService.language;
+
+	getCurrentYear() {
+		return new Date().getFullYear();
+	}
 }

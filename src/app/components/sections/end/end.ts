@@ -60,4 +60,8 @@ export class End {
 			container.scrollTo({ left: 0, behavior: "smooth" });
 		}
 	}
+
+	getCurrentYear() {
+		return new Date().getFullYear();
+	}
 }
