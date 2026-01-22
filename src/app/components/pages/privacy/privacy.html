@@ -9,338 +9,685 @@
 		</h2>
 		<div class="content">
 			<div class="paragraph">
-				<span class="comp-text"> Impressum </span>
-				<p>Calvin Hanisch Ferdinand-Jost-Straße 14 04299 Leipzig</p>
-			</div>
-			<div class="paragraph">
-				<span class="comp-text"> Kontakt </span>
-				<p>E-Mail: calvin.hanisch&#64;gmail.com</p>
-			</div>
-			<div class="paragraph">
-				<span class="comp-text"> Allgemeine Hinweise </span>
-				<p>
-					Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
-					personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten
-					sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche
-					Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten
-					Datenschutzerklärung.
-				</p>
-			</div>
-			<div class="paragraph">
 				<span class="comp-text">
-					Wer ist verantwortlich für die Datenerfassung auf dieser Website?
+					@if (language() === "EN") {
+						Legal Notice
+					} @else {
+						Impressum
+					}
 				</span>
 				<p>
-					Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen
-					Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser
-					Datenschutzerklärung entnehmen.
+					@if (language() === "EN") {
+						Calvin Hanisch, Ferdinand-Jost-Straße 14, 04299 Leipzig
+					} @else {
+						Calvin Hanisch Ferdinand-Jost-Straße 14 04299 Leipzig
+					}
 				</p>
 			</div>
+
 			<div class="paragraph">
-				<span class="comp-text"> Wie erfassen wir Ihre Daten? </span>
+				<span class="comp-text">
+					@if (language() === "EN") {
+						Contact
+					} @else {
+						Kontakt
+					}
+				</span>
 				<p>
-					Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es
-					sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden
-					automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere ITSysteme
-					erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder
-					Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie
-					diese Website betreten.
+					@if (language() === "EN") {
+						Email: calvin.hanisch&#64;gmail.com
+					} @else {
+						E-Mail: calvin.hanisch&#64;gmail.com
+					}
+				</p>
+			</div>
+
+			<div class="paragraph">
+				<span class="comp-text">
+					@if (language() === "EN") {
+						General Information
+					} @else {
+						Allgemeine Hinweise
+					}
+				</span>
+				<p>
+					@if (language() === "EN") {
+						The following information provides a simple overview of what happens to your personal
+						data when you visit this website. Personal data is any data by which you can be
+						personally identified. Detailed information on data protection can be found in our
+						privacy policy listed below.
+					} @else {
+						Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
+						personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene
+						Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+						Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text
+						aufgeführten Datenschutzerklärung.
+					}
+				</p>
+			</div>
+
+			<div class="paragraph">
+				<span class="comp-text">
+					@if (language() === "EN") {
+						Who is responsible for data collection on this website?
+					} @else {
+						Wer ist verantwortlich für die Datenerfassung auf dieser Website?
+					}
+				</span>
+				<p>
+					@if (language() === "EN") {
+						Data processing on this website is carried out by the website operator. You can find
+						their contact details in the section “Information about the responsible entity” in this
+						privacy policy.
+					} @else {
+						Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen
+						Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser
+						Datenschutzerklärung entnehmen.
+					}
+				</p>
+			</div>
+
+			<div class="paragraph">
+				<span class="comp-text">
+					@if (language() === "EN") {
+						How do we collect your data?
+					} @else {
+						Wie erfassen wir Ihre Daten?
+					}
+				</span>
+				<p>
+					@if (language() === "EN") {
+						On the one hand, your data is collected when you provide it to us. This may include, for
+						example, data you enter into a contact form. Other data is collected automatically or
+						with your consent when you visit the website through our IT systems. This primarily
+						includes technical data (e.g., internet browser, operating system, or time of page
+						access). This data is collected automatically as soon as you enter this website.
+					} @else {
+						Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann
+						es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten
+						werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere
+						IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser,
+						Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt
+						automatisch, sobald Sie diese Website betreten.
+					}
 				</p>
 			</div>
 		</div>
 	</div>
 	<app-link-arrow fragment="privacy-2" [alignSelf]="alignArrow" show="desktop" />
 </section>
+
 <section class="second" id="privacy-2">
 	<div class="content">
 		<div class="paragraph">
-			<span class="comp-text"> Wofür nutzen wir Ihre Daten? </span>
+			<span class="comp-text">
+				@if (language() === "EN") {
+					What do we use your data for?
+				} @else {
+					Wofür nutzen wir Ihre Daten?
+				}
+			</span>
 			<p>
-				Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu
-				gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.
-				Sofern über die Website Verträge geschlossen oder angebahnt werden können, werden die
-				übermittelten Daten auch für Vertragsangebote,Bestellungen oder sonstige Auftragsanfragen
-				verarbeitet.
+				@if (language() === "EN") {
+					Some of the data is collected to ensure error-free operation of the website. Other data
+					may be used to analyze user behavior. If contracts can be concluded or initiated through
+					the website, the transmitted data will also be used for contract offers, orders, or other
+					service requests.
+				} @else {
+					Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu
+					gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.
+					Sofern über die Website Verträge geschlossen oder angebahnt werden können, werden die
+					übermittelten Daten auch für Vertragsangebote, Bestellungen oder sonstige Auftragsanfragen
+					verarbeitet.
+				}
 			</p>
 		</div>
+
 		<div class="paragraph">
-			<span class="comp-text"> Welche Rechte haben Sie bezüglich Ihrer Daten? </span>
+			<span class="comp-text">
+				@if (language() === "EN") {
+					What rights do you have regarding your data?
+				} @else {
+					Welche Rechte haben Sie bezüglich Ihrer Daten?
+				}
+			</span>
 			<p>
-				Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck
-				Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die
-				Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur
-				Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft
-				widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der
-				Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein
-				Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Hierzu sowie zu weiteren Fragen zum
-				Thema Datenschutz können Sie sich jederzeit an uns wenden.
+				@if (language() === "EN") {
+					You have the right at any time to obtain free information about the origin, recipients,
+					and purpose of your stored personal data. You also have the right to request correction or
+					deletion of this data. If you have given consent for data processing, you may revoke it at
+					any time for the future. You also have the right to request restriction of processing of
+					your personal data under certain circumstances. Furthermore, you have the right to lodge a
+					complaint with the relevant supervisory authority. For this and other data protection
+					questions, you may contact us at any time.
+				} @else {
+					Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck
+					Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die
+					Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur
+					Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft
+					widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der
+					Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein
+					Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Hierzu sowie zu weiteren Fragen
+					zum Thema Datenschutz können Sie sich jederzeit an uns wenden.
+				}
 			</p>
 		</div>
+
 		<div class="paragraph">
-			<span class="comp-text"> Externes Hosting </span>
+			<span class="comp-text">
+				@if (language() === "EN") {
+					External Hosting
+				} @else {
+					Externes Hosting
+				}
+			</span>
 			<p>
-				Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website
-				erfasst werden, werden auf den Servern des Hosters / der Hoster gespeichert. Hierbei kann es
-				sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten,
-				Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert
-				werden, handeln. Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber
-				unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse
-				einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen
-				professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO). Sofern eine entsprechende
-				Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art.
-				6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von
-				Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B.
-				Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit
-				widerrufbar. Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten, wie dies
-				zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf
-				diese Daten befolgen. Wir setzen folgende(n) Hoster ein: Hostinger International Limited 61
-				Lordou Vironos Street 6023 Larnaca Zypern
+				@if (language() === "EN") {
+					This website is hosted externally. The personal data collected on this website is stored
+					on the servers of the host(s). This may include IP addresses, contact requests, meta and
+					communication data, contract data, contact details, names, website visits, and other data
+					generated via a website. External hosting is carried out to fulfill contractual
+					obligations to our potential and existing customers (Art. 6(1)(b) GDPR) and in the
+					interest of secure, fast, and efficient delivery of our online services by a professional
+					provider (Art. 6(1)(f) GDPR). If consent has been given, processing is carried out based
+					on Art. 6(1)(a) GDPR and §25(1) TDDDG, as far as consent covers storage of cookies or
+					access to information on the user's device (e.g., device fingerprinting). Consent can be
+					revoked at any time. Our host(s) will only process your data to the extent necessary to
+					fulfill their obligations and will follow our instructions regarding this data. We use the
+					following host(s): Hostinger International Limited, 61 Lordou Vironos Street, 6023
+					Larnaca, Cyprus.
+				} @else {
+					Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website
+					erfasst werden, werden auf den Servern des Hosters / der Hoster gespeichert. Hierbei kann
+					es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten,
+					Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine
+					Website generiert werden, handeln. Das externe Hosting erfolgt zum Zwecke der
+					Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1
+					lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung
+					unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).
+					Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung
+					ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit
+					die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im
+					Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die
+					Einwilligung ist jederzeit widerrufbar. Unser(e) Hoster wird bzw. werden Ihre Daten nur
+					insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist
+					und unsere Weisungen in Bezug auf diese Daten befolgen. Wir setzen folgende(n) Hoster ein:
+					Hostinger International Limited 61 Lordou Vironos Street 6023 Larnaca Zypern
+				}
 			</p>
 		</div>
 	</div>
 	<app-link-arrow fragment="privacy-3" [alignSelf]="alignArrow" show="desktop" />
 </section>
+
 <section class="third" id="privacy-3">
 	<div class="content">
 		<div class="paragraph">
-			<span class="comp-text"> Datenschutz </span>
+			<span class="comp-text">
+				@if (language() === "EN") {
+					Data Protection
+				} @else {
+					Datenschutz
+				}
+			</span>
 			<p>
-				Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir
-				behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen
-				Datenschutzvorschriften sowie dieser Datenschutzerklärung. Wenn Sie diese Website benutzen,
-				werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit
-				denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung
-				erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu
-				welchem Zweck das geschieht. Wir weisen darauf hin, dass die Datenübertragung im Internet
-				(z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser
-				Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+				@if (language() === "EN") {
+					The operators of this website take the protection of your personal data very seriously. We
+					handle your personal data confidentially and in accordance with legal data protection
+					regulations and this privacy policy. When using this website, various personal data is
+					collected. Personal data is data that can be used to personally identify you. This privacy
+					policy explains which data we collect and what we use it for. It also explains how and for
+					what purpose this occurs. Please note that data transmission over the internet (e.g., via
+					email) may have security gaps. Complete protection against access by third parties is not
+					possible.
+				} @else {
+					Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir
+					behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen
+					Datenschutzvorschriften sowie dieser Datenschutzerklärung. Wenn Sie diese Website
+					benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind
+					Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende
+					Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie
+					erläutert auch, wie und zu welchem Zweck das geschieht. Wir weisen darauf hin, dass die
+					Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken
+					aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht
+					möglich.
+				}
 			</p>
 		</div>
+
 		<div class="paragraph">
-			<span class="comp-text"> Hinweis zur verantwortlichen Stelle </span>
+			<span class="comp-text">
+				@if (language() === "EN") {
+					Information about the responsible entity
+				} @else {
+					Hinweis zur verantwortlichen Stelle
+				}
+			</span>
 			<p>
-				Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist: Calvin Hanisch
-				Ferdinand-Jost-Straße 14 04299 Leipzig E-Mail: calvin.hanisch&#64;gmail.com, Verantwortliche
-				Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen
-				über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen,
-				E-Mail-Adressen o. Ä.) entscheidet.
+				@if (language() === "EN") {
+					The entity responsible for data processing on this website is: Calvin Hanisch,
+					Ferdinand-Jost-Straße 14, 04299 Leipzig, Email: calvin.hanisch&#64;gmail.com. The
+					responsible entity is the natural or legal person who alone or jointly with others
+					determines the purposes and means of processing personal data (e.g., names, email
+					addresses, etc.).
+				} @else {
+					Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist: Calvin
+					Hanisch Ferdinand-Jost-Straße 14 04299 Leipzig E-Mail: calvin.hanisch&#64;gmail.com,
+					Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder
+					gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen
+					Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
+				}
 			</p>
 		</div>
+
 		<div class="paragraph">
-			<span class="comp-text"> Speicherdauer </span>
+			<span class="comp-text">
+				@if (language() === "EN") {
+					Storage duration
+				} @else {
+					Speicherdauer
+				}
+			</span>
 			<p>
-				Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde,
-				verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung
-				entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur
-				Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich
-				zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer-
-				oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung
-				nach Fortfall dieser Gründe.
+				@if (language() === "EN") {
+					Unless a more specific storage period is stated in this privacy policy, your personal data
+					will remain with us until the purpose for data processing no longer applies. If you make a
+					legitimate request for deletion or revoke your consent to data processing, your data will
+					be deleted unless we have other legally permissible reasons for storing your personal data
+					(e.g., tax or commercial retention periods); in the latter case, deletion occurs after
+					these reasons no longer apply.
+				} @else {
+					Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt
+					wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die
+					Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder
+					eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir
+					keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen
+					Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten
+					Fall erfolgt die Löschung nach Fortfall dieser Gründe.
+				}
 			</p>
 		</div>
 	</div>
 	<app-link-arrow fragment="privacy-4" [alignSelf]="alignArrow" show="desktop" />
 </section>
+
 <section class="fourth" id="privacy-4">
 	<div class="content">
 		<div class="paragraph">
 			<span class="comp-text">
-				Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website
+				@if (language() === "EN") {
+					General information on the legal basis of data processing on this website
+				} @else {
+					Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website
+				}
 			</span>
 			<p>
-				Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre
-				personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit.
-				a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im
-				Falle einer ausdrücklichen Einwilligung in die Übertragung personenbezogener Daten in
-				Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. 49 Abs. 1 lit. a
-				DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf Informationen in
-				Ihr Endgerät (z. B. via Device-Fingerprinting) eingewilligt haben, erfolgt die
-				Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TDDDG. Die Einwilligung ist
-				jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung oder zur Durchführung
-				vorvertraglicher Maßnahmen erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art. 6
-				Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erfüllung
-				einer rechtlichen Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c
-				DSGVO. Die Datenverarbeitung kann ferner auf Grundlage unseres berechtigten Interesses nach
-				Art. 6 Abs. 1 lit. f DSGVO erfolgen. Über die jeweils im Einzelfall einschlägigen
-				Rechtsgrundlagen wird in den folgenden Absätzen dieser Datenschutzerklärung informiert.
-			</p>
-		</div>
-		<div class="paragraph">
-			<span class="comp-text"> Empfänger von personenbezogenen Daten </span>
-			<p>
-				Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen externen Stellen
-				zusammen. Dabei ist teilweise auch eine Übermittlung von personenbezogenen Daten an diese
-				externen Stellen erforderlich. Wir geben personenbezogene Daten nur dann an externe Stellen
-				weiter, wenn dies im Rahmen einer Vertragserfüllung erforderlich ist, wenn wir gesetzlich
-				hierzu verpflichtet sind (z. B. Weitergabe von Daten an Steuerbehörden), wenn wir ein
-				berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO an der Weitergabe haben oder wenn
-				eine sonstige Rechtsgrundlage die Datenweitergabe erlaubt. Beim Einsatz von
-				Auftragsverarbeitern geben wir personenbezogene Daten unserer Kunden nur auf Grundlage eines
-				gültigen Vertrags über Auftragsverarbeitung weiter. Im Falle einer gemeinsamen Verarbeitung
-				wird ein Vertrag über gemeinsame Verarbeitung geschlossen.
+				@if (language() === "EN") {
+					If you have consented to data processing, we process your personal data based on Art.
+					6(1)(a) GDPR or Art. 9(2)(a) GDPR if special categories of data pursuant to Art. 9(1) GDPR
+					are processed. In the case of explicit consent to the transfer of personal data to third
+					countries, data processing also occurs on the basis of Art. 49(1)(a) GDPR. If you have
+					consented to the storage of cookies or access to information on your device (e.g., via
+					device fingerprinting), processing is also based on §25(1) TDDDG. Consent can be revoked
+					at any time. If your data is necessary for contract fulfillment or the performance of
+					pre-contractual measures, we process your data based on Art. 6(1)(b) GDPR. Furthermore, we
+					process your data if required to fulfill a legal obligation on the basis of Art. 6(1)(c)
+					GDPR. Data processing may also occur based on our legitimate interest according to Art.
+					6(1)(f) GDPR. The applicable legal basis in each individual case is explained in the
+					following paragraphs of this privacy policy.
+				} @else {
+					Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre
+					personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2
+					lit. a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet
+					werden. Im Falle einer ausdrücklichen Einwilligung in die Übertragung personenbezogener
+					Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. 49
+					Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf
+					Informationen in Ihr Endgerät (z. B. via Device-Fingerprinting) eingewilligt haben,
+					erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TDDDG. Die
+					Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung oder zur
+					Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeiten wir Ihre Daten auf
+					Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern
+					diese zur Erfüllung einer rechtlichen Verpflichtung erforderlich sind auf Grundlage von
+					Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner auf Grundlage unseres
+					berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. Über die jeweils im
+					Einzelfall einschlägigen Rechtsgrundlagen wird in den folgenden Absätzen dieser
+					Datenschutzerklärung informiert.
+				}
 			</p>
 		</div>
 	</div>
 	<app-link-arrow fragment="privacy-5" [alignSelf]="alignArrow" show="desktop" />
 </section>
+
 <section class="fifth" id="privacy-5">
 	<div class="content">
 		<div class="paragraph">
-			<span class="comp-text"> Widerruf Ihrer Einwilligung zur Datenverarbeitung </span>
-			<p>
-				Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie
-				können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis
-				zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
-			</p>
-		</div>
-		<div class="paragraph">
 			<span class="comp-text">
-				Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung
-				(Art. 21 DSGVO)
+				@if (language() === "EN") {
+					Revocation of your consent to data processing
+				} @else {
+					Widerruf Ihrer Einwilligung zur Datenverarbeitung
+				}
 			</span>
 			<p>
-				WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT,
-				HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN,
-				GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH
-				FÜR EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF
-				DENEN EINE VERARBEITUNG BERUHT, ENTNEHMEN SIE DIESER DATENSCHUTZERKLÄRUNG. WENN SIE
-				WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR
-				VERARBEITEN, ES SEI DENN, WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG
-				NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN ÜBERWIEGEN ODER DIE VERARBEITUNG
-				DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH
-				ART. 21 ABS. 1 DSGVO). WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU
-				BETREIBEN, SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE
-				BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN; DIES GILT
-				AUCH FÜR DAS PROFILING, SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN VERBINDUNG STEHT. WENN SIE
-				WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER
-				DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).
+				@if (language() === "EN") {
+					Many data processing operations are only possible with your explicit consent. You may
+					revoke consent at any time. The lawfulness of data processing carried out up to the point
+					of revocation remains unaffected.
+				} @else {
+					Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich.
+					Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der
+					bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
+				}
 			</p>
 		</div>
+
 		<div class="paragraph">
-			<span class="comp-text"> Beschwerderecht bei der zuständigen Aufsichtsbehörde </span>
+			<span class="comp-text">
+				@if (language() === "EN") {
+					Right to object in specific cases and against direct marketing (Art. 21 GDPR)
+				} @else {
+					Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung
+					(Art. 21 DSGVO)
+				}
+			</span>
 			<p>
-				Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer
-				Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres
-				Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht
-				unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
+				@if (language() === "EN") {
+					IF DATA PROCESSING IS BASED ON ART. 6(1)(E) OR (F) GDPR, YOU HAVE THE RIGHT TO OBJECT AT
+					ANY TIME, FOR REASONS ARISING FROM YOUR PARTICULAR SITUATION, TO THE PROCESSING OF YOUR
+					PERSONAL DATA; THIS ALSO APPLIES TO PROFILING BASED ON THESE PROVISIONS. THE RELEVANT
+					LEGAL BASIS ON WHICH PROCESSING IS BASED CAN BE FOUND IN THIS PRIVACY POLICY. IF YOU
+					OBJECT, WE WILL NO LONGER PROCESS YOUR PERSONAL DATA UNLESS WE CAN DEMONSTRATE COMPELLING
+					LEGITIMATE GROUNDS FOR PROCESSING WHICH OVERRIDE YOUR INTERESTS, RIGHTS, AND FREEDOMS, OR
+					IF PROCESSING IS NECESSARY FOR THE ESTABLISHMENT, EXERCISE, OR DEFENSE OF LEGAL CLAIMS
+					(OBJECTION ACCORDING TO ART. 21(1) GDPR). IF YOUR PERSONAL DATA IS PROCESSED FOR DIRECT
+					MARKETING, YOU HAVE THE RIGHT TO OBJECT AT ANY TIME TO THE PROCESSING OF YOUR PERSONAL
+					DATA FOR SUCH PURPOSES; THIS ALSO APPLIES TO PROFILING TO THE EXTENT IT RELATES TO SUCH
+					DIRECT MARKETING. IF YOU OBJECT, YOUR PERSONAL DATA WILL NO LONGER BE USED FOR DIRECT
+					MARKETING PURPOSES (OBJECTION ACCORDING TO ART. 21(2) GDPR).
+				} @else {
+					WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT,
+					HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION
+					ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES
+					GILT AUCH FÜR EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING. DIE JEWEILIGE
+					RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNEHMEN SIE DIESER
+					DATENSCHUTZERKLÄRUNG. WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN
+					PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR KÖNNEN ZWINGENDE
+					SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND
+					FREIHEITEN ÜBERWIEGEN ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER
+					VERTEIDIGUNG VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO). WERDEN IHRE
+					PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HABEN SIE DAS
+					RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER
+					DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN; DIES GILT AUCH FÜR DAS PROFILING, SOWEIT
+					ES MIT SOLCHER DIREKTWERBUNG IN VERBINDUNG STEHT. WENN SIE WIDERSPRECHEN, WERDEN IHRE
+					PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET
+					(WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).
+				}
+			</p>
+		</div>
+
+		<div class="paragraph">
+			<span class="comp-text">
+				@if (language() === "EN") {
+					Right to lodge a complaint with the competent supervisory authority
+				} @else {
+					Beschwerderecht bei der zuständigen Aufsichtsbehörde
+				}
+			</span>
+			<p>
+				@if (language() === "EN") {
+					In case of violations of the GDPR, data subjects have the right to lodge a complaint with
+					a supervisory authority, especially in the member state of their habitual residence, place
+					of work, or place of the alleged violation. This right to lodge a complaint exists without
+					prejudice to other administrative or judicial remedies.
+				} @else {
+					Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer
+					Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres
+					Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht
+					unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
+				}
 			</p>
 		</div>
 	</div>
 	<app-link-arrow fragment="privacy-6" [alignSelf]="alignArrow" show="desktop" />
 </section>
+
 <section class="sixth" id="privacy-6">
 	<div class="content">
 		<div class="paragraph">
-			<span class="comp-text"> Recht auf Datenübertragbarkeit </span>
+			<span class="comp-text">
+				@if (language() === "EN") {
+					Right to data portability
+				} @else {
+					Recht auf Datenübertragbarkeit
+				}
+			</span>
 			<p>
-				Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines
-				Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen,
-				maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten
-				an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar
-				ist.
+				@if (language() === "EN") {
+					You have the right to receive data that we process automatically based on your consent or
+					in fulfillment of a contract in a common, machine-readable format, either directly or
+					through a third party. If you request the direct transfer of data to another controller,
+					this will only be done to the extent technically feasible.
+				} @else {
+					Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung
+					eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen,
+					maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der
+					Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch
+					machbar ist.
+				}
 			</p>
 		</div>
+
 		<div class="paragraph">
-			<span class="comp-text"> Auskunft, Berichtigung und Löschung </span>
+			<span class="comp-text">
+				@if (language() === "EN") {
+					Right to access, rectification, and deletion
+				} @else {
+					Auskunft, Berichtigung und Löschung
+				}
+			</span>
 			<p>
-				Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf
-				unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und
-				Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder
-				Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten
-				können Sie sich jederzeit an uns wenden.
+				@if (language() === "EN") {
+					You have the right under applicable law at any time to obtain free information about your
+					stored personal data, its origin, recipients, and the purpose of processing, and, if
+					necessary, the right to correction or deletion of this data. For this and other questions
+					on personal data, you may contact us at any time.
+				} @else {
+					Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf
+					unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft
+					und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder
+					Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten
+					können Sie sich jederzeit an uns wenden.
+				}
 			</p>
 		</div>
+
 		<div class="paragraph">
-			<span class="comp-text"> Recht auf Einschränkung der Verarbeitung </span>
+			<span class="comp-text">
+				@if (language() === "EN") {
+					Right to restrict processing
+				} @else {
+					Recht auf Einschränkung der Verarbeitung
+				}
+			</span>
 			<p>
-				Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu
-				verlangen. Hierzu können Sie sich jederzeit an uns wenden. Das Recht auf Einschränkung der
-				Verarbeitung besteht in folgenden Fällen: Wenn Sie die Richtigkeit Ihrer bei uns
-				gespeicherten personenbezogenen Daten bestreiten, benötigen wir in der Regel Zeit, um dies
-				zu überprüfen. Für die Dauer der Prüfung haben Sie das Recht, die Einschränkung der
-				Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Wenn die Verarbeitung Ihrer
-				personenbezogenen Daten unrechtmäßig geschah/geschieht, können Sie statt der Löschung die
-				Einschränkung der Datenverarbeitung verlangen. Wenn wir Ihre personenbezogenen Daten nicht
-				mehr benötigen, Sie sie jedoch zur Ausübung, Verteidigung oder Geltendmachung von
-				Rechtsansprüchen benötigen, haben Sie das Recht, statt der Löschung die Einschränkung der
-				Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Wenn Sie einen Widerspruch nach
-				Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abwägung zwischen Ihren und unseren
-				Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen überwiegen,
-				haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu
-				verlangen. Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschränkt haben,
-				dürfen diese Daten – von ihrer Speicherung abgesehen – nur mit Ihrer Einwilligung oder zur
-				Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte
-				einer anderen natürlichen oder juristischen Person oder aus Gründen eines wichtigen
-				öffentlichen Interesses der Europäischen Union oder eines Mitgliedstaats verarbeitet werden.
+				@if (language() === "EN") {
+					You have the right to request the restriction of processing of your personal data. You may
+					contact us at any time. The right to restrict processing exists in the following cases: If
+					you dispute the accuracy of your personal data stored with us, we generally need time to
+					verify it. During the verification period, you have the right to request restriction of
+					processing. If the processing of your personal data was/is unlawful, you may request
+					restriction instead of deletion. If we no longer need your personal data, but you need it
+					for asserting, exercising, or defending legal claims, you have the right to request
+					restriction instead of deletion. If you have objected under Art. 21(1) GDPR, a balancing
+					of interests between yours and ours must be carried out. As long as it is not clear whose
+					interests prevail, you have the right to request restriction of processing. Restricted
+					data may only be processed with your consent or for asserting, exercising, or defending
+					legal claims, protecting the rights of another person, or for important public interest
+					reasons of the EU or a member state.
+				} @else {
+					Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu
+					verlangen. Hierzu können Sie sich jederzeit an uns wenden. Das Recht auf Einschränkung der
+					Verarbeitung besteht in folgenden Fällen: Wenn Sie die Richtigkeit Ihrer bei uns
+					gespeicherten personenbezogenen Daten bestreiten, benötigen wir in der Regel Zeit, um dies
+					zu überprüfen. Für die Dauer der Prüfung haben Sie das Recht, die Einschränkung der
+					Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Wenn die Verarbeitung Ihrer
+					personenbezogenen Daten unrechtmäßig geschah/geschieht, können Sie statt der Löschung die
+					Einschränkung der Datenverarbeitung verlangen. Wenn wir Ihre personenbezogenen Daten nicht
+					mehr benötigen, Sie sie jedoch zur Ausübung, Verteidigung oder Geltendmachung von
+					Rechtsansprüchen benötigen, haben Sie das Recht, statt der Löschung die Einschränkung der
+					Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Wenn Sie einen Widerspruch nach
+					Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abwägung zwischen Ihren und unseren
+					Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen überwiegen,
+					haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu
+					verlangen. Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschränkt haben,
+					dürfen diese Daten - von ihrer Speicherung abgesehen - nur mit Ihrer Einwilligung oder zur
+					Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte
+					einer anderen natürlichen oder juristischen Person oder aus Gründen eines wichtigen
+					öffentlichen Interesses der Europäischen Union oder eines Mitgliedstaats verarbeitet
+					werden.
+				}
 			</p>
 		</div>
 	</div>
 	<app-link-arrow fragment="privacy-7" [alignSelf]="alignArrow" show="desktop" />
 </section>
+
 <section class="seventh" id="privacy-7">
 	<div class="content">
 		<div class="paragraph">
-			<span class="comp-text"> SSL- bzw. TLS-Verschlüsselung </span>
+			<span class="comp-text">
+				@if (language() === "EN") {
+					SSL or TLS encryption
+				} @else {
+					SSL- bzw. TLS-Verschlüsselung
+				}
+			</span>
 			<p>
-				Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher
-				Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber
-				senden, eine SSL- bzw. TLSVerschlüsselung. Eine verschlüsselte Verbindung erkennen Sie
-				daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem
-				Schloss-Symbol in Ihrer Browserzeile. Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist,
-				können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.
+				@if (language() === "EN") {
+					This website uses SSL or TLS encryption for security reasons and to protect the
+					transmission of confidential content, such as orders or inquiries you send to us as
+					website operators. A secure connection can be recognized by the browser address bar
+					changing from "http://" to "https://" and by the lock icon in your browser. When SSL or
+					TLS encryption is enabled, the data you transmit to us cannot be read by third parties.
+				} @else {
+					Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher
+					Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber
+					senden, eine SSL- bzw. TLSVerschlüsselung. Eine verschlüsselte Verbindung erkennen Sie
+					daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem
+					Schloss-Symbol in Ihrer Browserzeile. Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert
+					ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.
+				}
 			</p>
 		</div>
+
 		<div class="paragraph">
-			<span class="comp-text"> Widerspruch gegen Werbe-E-Mails </span>
+			<span class="comp-text">
+				@if (language() === "EN") {
+					Objection to advertising emails
+				} @else {
+					Widerspruch gegen Werbe-E-Mails
+				}
+			</span>
 			<p>
-				Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur
-				Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird
-				hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche
-				Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch
-				Spam-E-Mails, vor.
+				@if (language() === "EN") {
+					The use of contact details published in accordance with the legal notice obligation for
+					sending unsolicited advertising and informational material is hereby objected to. The
+					website operators expressly reserve the right to take legal action in the event of
+					unsolicited sending of advertising information, e.g., via spam emails.
+				} @else {
+					Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur
+					Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird
+					hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche
+					Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch
+					Spam-E-Mails, vor.
+				}
 			</p>
 		</div>
+
 		<div class="paragraph">
-			<span class="comp-text"> Kontaktformular </span>
+			<span class="comp-text">
+				@if (language() === "EN") {
+					Contact form
+				} @else {
+					Kontaktformular
+				}
+			</span>
 			<p>
-				Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem
-				Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der
-				Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir
-				nicht ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf Grundlage von
-				Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags
-				zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen
-				übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven
-				Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer
-				Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist
-				jederzeit widerrufbar. Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei
-				uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder
-				der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer
-				Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben
-				unberührt.
+				@if (language() === "EN") {
+					If you contact us via the contact form, your details from the inquiry form, including the
+					contact information you provide, will be stored by us for the purpose of processing the
+					inquiry and in case of follow-up questions. We do not pass on this data without your
+					consent. The processing of this data is based on Art. 6(1)(b) GDPR if your inquiry is
+					related to the fulfillment of a contract or necessary for pre-contractual measures. In all
+					other cases, processing is based on our legitimate interest in effectively handling
+					inquiries addressed to us (Art. 6(1)(f) GDPR) or on your consent (Art. 6(1)(a) GDPR) if
+					this was requested; consent can be revoked at any time. The data you enter in the contact
+					form will remain with us until you request deletion, revoke your consent to storage, or
+					the purpose for data storage no longer applies (e.g., after your inquiry has been
+					processed). Mandatory legal provisions - in particular retention periods - remain
+					unaffected.
+				} @else {
+					Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem
+					Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung
+					der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben
+					wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf
+					Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines
+					Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist.
+					In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der
+					effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder
+					auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die
+					Einwilligung ist jederzeit widerrufbar. Die von Ihnen im Kontaktformular eingegebenen
+					Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur
+					Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach
+					abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen -
+					insbesondere Aufbewahrungsfristen - bleiben unberührt.
+				}
 			</p>
 		</div>
 	</div>
 	<app-link-arrow fragment="privacy-8" [alignSelf]="alignArrow" show="desktop" />
 </section>
+
 <section class="eighth last" id="privacy-8">
 	<div class="content">
 		<div class="paragraph">
-			<span class="comp-text"> Anfrage per E-Mail, Telefon oder Telefax </span>
+			<span class="comp-text">
+				@if (language() === "EN") {
+					Contact by email, phone, or fax
+				} @else {
+					Anfrage per E-Mail, Telefon oder Telefax
+				}
+			</span>
 			<p>
-				Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive
-				aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der
-				Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht
-				ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art.
-				6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt
-				oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen
-				beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der
-				an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6
-				Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit
-				widerrufbar. Die von Ihnen an uns per Kontaktanfragen übersandten Daten verbleiben bei uns,
-				bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der
-				Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihres
-				Anliegens). Zwingende gesetzliche Bestimmungen – insbesondere gesetzliche
-				Aufbewahrungsfristen – bleiben unberührt.
+				@if (language() === "EN") {
+					If you contact us by email, phone, or fax, your inquiry, including all resulting personal
+					data (name, inquiry), will be stored and processed by us for the purpose of handling your
+					request. We do not pass on this data without your consent. Processing of this data is
+					based on Art. 6(1)(b) GDPR if your inquiry is related to the fulfillment of a contract or
+					necessary for pre-contractual measures. In all other cases, processing is based on our
+					legitimate interest in effectively handling inquiries addressed to us (Art. 6(1)(f) GDPR)
+					or on your consent (Art. 6(1)(a) GDPR) if this was requested; consent can be revoked at
+					any time. The data you send to us via contact inquiries will remain with us until you
+					request deletion, revoke your consent to storage, or the purpose for data storage no
+					longer applies (e.g., after processing your request). Mandatory legal provisions - in
+					particular statutory retention periods - remain unaffected.
+				} @else {
+					Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive
+					aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der
+					Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir
+					nicht ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf Grundlage
+					von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags
+					zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen
+					übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der
+					effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder
+					auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die
+					Einwilligung ist jederzeit widerrufbar. Die von Ihnen an uns per Kontaktanfragen
+					übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre
+					Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt
+					(z. B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche
+					Bestimmungen - insbesondere gesetzliche Aufbewahrungsfristen - bleiben unberührt.
+				}
 			</p>
 		</div>
 	</div>
