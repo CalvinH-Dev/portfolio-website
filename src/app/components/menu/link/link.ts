@@ -11,6 +11,9 @@ import { ScrollNavigationService } from "app/services/scroll-navigation";
 	templateUrl: "./link.html",
 	styleUrl: "./link.scss",
 	changeDetection: ChangeDetectionStrategy.OnPush,
+	host: {
+		role: "none",
+	},
 })
 export class MenuLink {
 	fragment = input<string>("");

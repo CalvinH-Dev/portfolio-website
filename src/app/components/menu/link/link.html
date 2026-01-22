@@ -5,6 +5,7 @@
 		routerLink="/"
 		[fragment]="fragment() !== 'root' ? fragment() : undefined"
 		(click)="onLinkClicked($event, fragment().toString())"
+		[attr.aria-label]="text()"
 	>
 		<app-svg-round-text [text]="text() | uppercase" [rotate]="rotate()" />
 	</a>

@@ -1,3 +1,7 @@
+   <link rel="preconnect" href="https://hanisch-dev.de">
+<link rel="preload" as="image" href="/img/loader/480/480_hero.avif" 
+      fetchpriority="high" type="image/avif">
+   
     <link
   rel="preload"
   href="/media/sofia-sans-condensed-v6-latin-regular-ACDFYOBC.woff2"
@@ -13,3 +17,4 @@
   type="font/woff2"
   crossorigin
 />
+
