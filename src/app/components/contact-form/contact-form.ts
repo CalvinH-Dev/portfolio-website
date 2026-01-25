@@ -145,7 +145,6 @@ export class ContactForm {
 							csrf: this.contactData.csrf,
 						});
 						this.toast()!.nativeElement.style.animationPlayState = "running";
-						console.log(this.contactData);
 					},
 					error: (error) => {
 						console.error(error);
