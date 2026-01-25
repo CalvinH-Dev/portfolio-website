@@ -17,12 +17,12 @@ $allowedOrigins = [
 ];
 
 $recipientEmail = 'info@hanisch-dev.de';
-$fromEmail      = 'info@hanisch-dev.de'; // ← MUSS EXISTIERENDE MAIL ADRESSE SEIN
+$fromEmail      = 'info@hanisch-dev.de';
 
-/* SMTP CONFIG (Hostinger SSL) */
+/* SMTP CONFIG */
 $smtpHost   = 'smtp.hostinger.com';
-$smtpUser   = 'info@hanisch-dev.de';     // ← EXISTIERENDER SMTP USER
-$smtpPass   = 'COPY_PW_HERE';
+$smtpUser   = 'info@hanisch-dev.de';
+$smtpPass   = getenv('SMTP_PASS'); // Passwort aus Server-Umgebungsvariable
 $smtpPort   = 465;
 $smtpSecure = PHPMailer::ENCRYPTION_SMTPS;
 
@@ -73,17 +73,12 @@ if ($name === '' || $email === '' || $message === '') {
     exit('All fields are required');
 }
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if (!filter_var($email, FILTER_VALIDATE_EMAIL) || preg_match('/[\r\n]/', $email)) {
     http_response_code(400);
     exit('Invalid email address');
 }
 
-if (preg_match('/[\r\n]/', $email)) {
-    http_response_code(400);
-    exit('Invalid email');
-}
-
-if (strlen($message) < 1 || strlen($message) > 2000) {
+if (strlen($message) > 2000) {
     http_response_code(400);
     exit('Invalid message length');
 }
@@ -121,15 +116,12 @@ try {
     $mail->SMTPSecure = $smtpSecure;
     $mail->Port       = $smtpPort;
 
-    // Debug aktivieren
-    $mail->SMTPDebug = 2; // 0 = aus, 1 = Befehle, 2 = Befehle + Antworten
-    $mail->Debugoutput = function($str, $level) {
-        echo nl2br(htmlspecialchars($str));
-    };
+    // KEIN Debug im Livebetrieb
+    $mail->SMTPDebug = 0;
 
-    $mail->setFrom($fromEmail, 'Kontaktformular'); // ← EXISTIERENDER USER
+    $mail->setFrom($fromEmail, 'Kontaktformular');
     $mail->addAddress($recipientEmail);
-    $mail->addReplyTo($email, $name); // ← Antwort geht an Formular-Absender
+    $mail->addReplyTo($email, $name);
 
     $mail->isHTML(true);
     $mail->Subject = $subject;
@@ -141,6 +133,7 @@ try {
     echo 'OK';
 
 } catch (Exception $e) {
+    error_log('Mailer Error: ' . $e->getMessage());
     http_response_code(500);
-    echo 'Mailer Error: ' . htmlspecialchars($e->getMessage());
+    echo 'Mail could not be sent';
 }
